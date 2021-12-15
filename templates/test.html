@@ -1,0 +1,80 @@
+<!doctype html>{% extends 'base.html' %} {% block content %}
+<div class="PageContentBody-contentBody-1kgeZ" style="position: absolute; inset: 0px; overflow: scroll; margin-right: -17px; margin-bottom: -17px;">
+    <div class="MovieDetails-innerContentBody-2bewJ">
+        <div class="MovieDetails-header-2L_jz">
+            <div class="MovieDetails-backdrop-1o88P" style="background-image: url(&quot;/MediaCover/1232/fanart.jpg?lastWrite=637706149340799933&quot;);">
+                <div class="MovieDetails-backdropOverlay-1gehK"></div>
+            </div>
+            <div class="MovieDetails-headerContent-2DsXR">
+                <img class="MovieDetails-poster-ULJtO" src="/MediaCover/1232/poster-500.jpg?lastWrite=637691235554690933">
+                <div class="MovieDetails-info-3YQhF">
+                    <div class="MovieDetails-titleRow-1uyzc">
+                        <div class="MovieDetails-titleContainer-kQFAD">
+                            <div class="MovieDetails-toggleMonitoredContainer-3Chyx">
+                                <button title="Monitored, click to unmonitor" type="button" class="MovieDetails-monitorToggleButton-3iyEJ MonitorToggleButton-toggleButton-3iXhl IconButton-button-10Sdd Link-link-1HpiV Link-link-1HpiV">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark"
+                                        class="svg-inline--fa fa-bookmark fa-w-12 Icon-default-1HNIe" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512"
+                                        style="font-size: 40px;">
+                                        <path fill="currentColor"
+                                            d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="MovieDetails-title-2Ek6Q" style="width: 617.8px;">
+                                <div class="ui-marquee undefined" style="overflow: hidden;">
+                                    <span title="Original Title: The Blues Brothers" style="position: relative; right: 0px; white-space: nowrap;">{{movies.title}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="MovieDetails-details-191vz">
+                        <div>
+                            <span class="MovieDetails-year-1dlBF">
+                                <span>1980</span>
+                            </span>
+                            <span class="MovieDetails-runtime-3WyYA">{{movies.runtime}} min</span>
+                            <span class="MovieDetails-rating-JhQVF">
+                                <span>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart"
+                                        class="svg-inline--fa fa-heart fa-w-16 HeartRating-heart-OxNUg Icon-default-1HNIe"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"
+                                        style="font-size: 20px;">
+                                        <path fill="currentColor"
+                                            d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z">
+                                        </path>
+                                    </svg>{{movies.vote_average*10}}%</span>
+                            </span>
+                            <span class="MovieDetails-links-Zd0qh">
+                                <span>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                        data-icon="external-link-alt"
+                                        class="svg-inline--fa fa-external-link-alt fa-w-16 Icon-default-1HNIe"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"
+                                        style="font-size: 20px;">
+                                        <path fill="currentColor"
+                                            d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="MovieDetails-detailsInfoLabel-3Fjze InfoLabel-label--Cczb InfoLabel-large-3blYf">
+                            <div class="InfoLabel-title-SaF3g">Studio</div>
+                            <div>
+                                <span class="MovieDetails-studio-35joC">{{movies.production_companies[0].name}}</span>
+                    </div>
+                    </span>
+                </div>
+                <div class="MovieDetails-overview-Y9u6-">
+                    <div style="overflow: hidden;"><span>{{movies.overview}}</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
