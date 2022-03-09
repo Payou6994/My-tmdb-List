@@ -1,20 +1,45 @@
 <!doctype html> {% extends 'base.html' %} {% block content %}
-<div style="width:100%">
-    <div style="display: flex; flex-wrap: wrap;">
+<div>
+    <!--Movies-->
+    <div>
+        <span class="Index-Title">Films Populaires</span>
+    </div>
+    <div style="display: flex; flex-wrap: wrap;justify-content: center;">
         {% for movie in movies %}
         <div>
             <div style=" height: 277px; left: 0px; top: 0px; width: 159px; padding: 10px;">
                 <div>
-                    <a href="/movie/{{ movie['id']}}" title="{{ movie['title']}}">
-                        <img style="width: 139px; height: 205px;" loading="lazy" src="https://image.tmdb.org/t/p/w220_and_h330_face{{ movie['poster_path']}}" srcset="https://image.tmdb.org/t/p/w220_and_h330_face{{ movie['poster_path']}} 1x, /t/p/w440_and_h660_face{{ movie['poster_path']}} 2x"
+                    <a href="/movie/{{movie['id']}}" title="{{movie['title']}}">
+                        <img class="IndexPoster-image" style="width: 139px; height: 205px;" loading="lazy" src="https://image.tmdb.org/t/p/w220_and_h330_face{{movie['poster_path']}}" srcset="https://image.tmdb.org/t/p/w220_and_h330_face{{movie['poster_path']}} 1x, /t/p/w440_and_h660_face{{movie['poster_path']}} 2x"
                             alt="">
                     </a>
                 </div>
-                <div class="MovieIndexPoster-title"><a title="{{ movie['title']}}">{{ movie['title']}}</a></div>
-                <div class="MovieIndexPoster-title">{{ movie['release_date']}}</div>
+                <div class="IndexPoster-title"><a title="{{movie['title']}}">{{movie['title']}}</a></div>
+                <div class="IndexPoster-title">{{movie['release_date']}}</div>
             </div>
         </div>
         {% endfor %}
+    </div>
+
+    <!--TV-->
+    <div>
+        <span class="Index-Title">Series Populaires</span>
+    </div>
+    <div style="display: flex; flex-wrap: wrap;justify-content: center;">
+        {% for tv in tvs %}
         <div>
+            <div style=" height: 277px; left: 0px; top: 0px; width: 159px; padding: 10px;">
+                <div>
+                    <a href="/movie/{{tv['id']}}" title="{{tv['title']}}">
+                        <img class="IndexPoster-image" style="width: 139px; height: 205px;" loading="lazy" src="https://image.tmdb.org/t/p/w220_and_h330_face{{tv['poster_path']}}" srcset="https://image.tmdb.org/t/p/w220_and_h330_face{{tv['poster_path']}} 1x, /t/p/w440_and_h660_face{{tv['poster_path']}} 2x"
+                            alt="">
+                    </a>
+                </div>
+                <div class="IndexPoster-title"><a title="{{tv['name']}}">{{tv['name']}}</a></div>
+                <div class="IndexPoster-title">{{tv['first_air_date']}}</div>
+            </div>
         </div>
-        {% endblock %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

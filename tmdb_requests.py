@@ -11,19 +11,18 @@ def popular_movie():
     movies = movies.popular()
     return movies
 
-def details_movie(id):
-    movies = Movie()
-    movies = movies.details(id)
-    movies.vote_average = int(movies.vote_average*10)
-    for i in range(len(movies.release_dates.results)):
-        print(i)
-        if movies.release_dates.results[i].iso_3166_1 =='FR':
-            movies.certification = movies.release_dates.results[i].release_dates[0].certification
-            break
-    return movies
+# def details_movie(id:int):
+#     movies = Movie()
+#     movies = movies.details(id)
+#     movies.vote_average = int(movies.vote_average*10)
+#     for i in range(len(movies.release_dates.results)):
+#         if movies.release_dates.results[i].iso_3166_1 =='FR':
+#             movies.certification = movies.release_dates.results[i].release_dates[0].certification
+#             break
+#     return movies
     
 def popular_tv():
     tv = TV()
     tv = tv.popular()
-    tv = [ob.__dict__ for ob in tv]
+    # tv = [ob.__dict__ for ob in tv]
     return tv
