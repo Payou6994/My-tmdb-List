@@ -3,13 +3,6 @@
     margin-left: 15px;
 }
 
-
-/* .page {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-} */
-
 .IndexPoster-title {
     white-space: break-spaces;
     text-align: center;
@@ -19,3 +12,4 @@
 .IndexPoster-image {
     border-radius: 10px;
 }
+
