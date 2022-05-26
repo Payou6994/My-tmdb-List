@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url("/static/font/Product-Sans.woff2") format('woff2');
+  }
+  
+body
+{
+    font-family: 'Product sans';
+}
+
+header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(var(--tmdbDarkBlue), 1);
+    height: 56px;
+    width: 100%;
+    z-index: 10;
+    transition: top 0.2s linear;
+    padding: 0.5rem 1rem;
+}
+
+main {
+    padding-top: 56px;
+}
+
+.nav-up {
+    top: -56px;
+}
+
+.Index-Title {
+    font-size: xx-large;
+    margin-left: 15px;
+}
+
+.IndexPoster-title {
+    white-space: break-spaces;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+.IndexPoster-date {
+    white-space: break-spaces;
+    text-align: center;
+    font-size: 10px;
+    font-style: italic;
+}
+
+.IndexPoster-image {
+    border-radius: 10px;
+}
