@@ -2,7 +2,7 @@ import requests
 
 
 class tmdb(object):
-    api_key = "8455657f72d491d8c72563e88212ce94"
+    api_key = "YOUR_API_KEY"
     language = "fr-FR"
 
     def __init__(self):
