@@ -1,48 +1,24 @@
-<!doctype html> {% extends 'base.html' %} {% block content %}
+<!DOCTYPE html> {% extends 'base.html' %} {% block content %}
 <div>
+  <div>
     <!--Movies-->
     <div>
-        <span class="Index-Title">Populaires</span>
+      <span class="Index-Title">Populaires</span>
     </div>
-    <div style="display: flex; flex-wrap: wrap;justify-content: center;">
-        {% for popular in populars %}
-        <div>
-            <div style=" height: 277px; left: 0px; top: 0px; width: 159px; padding: 10px;">
-                <div>
-                    <a>
-                        <img class="IndexPoster-image" style="width: 139px; height: 205px;" loading="lazy"
-                            src="https://image.tmdb.org/t/p/w220_and_h330_face{{popular['poster_path']}}"
-                            srcset="https://image.tmdb.org/t/p/w220_and_h330_face{{popular['poster_path']}} 1x, /t/p/w440_and_h660_face{{popular['poster_path']}} 2x"
-                            alt="">
-                    </a>
-                </div>
-                <div class="IndexPoster-title"><a title="{{popular['title']}}">{{popular['title']}}</a></div>
-                <div class="IndexPoster-date">{{popular['release_date']}}</div>
-            </div>
-        </div>
-        {% endfor %}
+    <div style="display: flex; flex-wrap: wrap; justify-content: center">
+      {% with entitys=populars %} {% include'popular_trending.html' %} {%
+      endwith %}
     </div>
+  </div>
+  <div>
     <!--Trendings-->
-    <div>
-        <span class="Index-Title">Tendances</span>
+    <div class="column_header">
+      <span class="Index-Title">Tendances</span>
     </div>
-    <div style="display: flex; flex-wrap: wrap;justify-content: center;">
-        {% for trending in trendings %}
-        <div>
-            <div style=" height: 277px; left: 0px; top: 0px; width: 159px; padding: 10px;">
-                <div>
-                    <a>
-                        <img class="IndexPoster-image" style="width: 139px; height: 205px;" loading="lazy"
-                            src="https://image.tmdb.org/t/p/w220_and_h330_face{{trending['poster_path']}}"
-                            srcset="https://image.tmdb.org/t/p/w220_and_h330_face{{trending['poster_path']}} 1x, /t/p/w440_and_h660_face{{trending['poster_path']}} 2x"
-                            alt="">
-                    </a>
-                </div>
-                <div class="IndexPoster-title"><a title="{{trending['title']}}">{{trending['title']}}</a></div>
-                <div class="IndexPoster-date">{{trending['release_date']}}</div>
-            </div>
-        </div>
-        {% endfor %}
+    <div style="display: flex; flex-wrap: wrap; justify-content: center">
+      {% with entitys=trendings %} {% include'popular_trending.html' %} {%
+      endwith %}
     </div>
+  </div>
 </div>
 {% endblock %}

@@ -2,11 +2,12 @@ import requests
 
 
 class tmdb(object):
-    api_key = "YOUR_API_KEY"
+    api_key = "8455657f72d491d8c72563e88212ce94"
     language = "fr-FR"
 
     def __init__(self):
         self._base = "https://api.themoviedb.org/3"
+        
     def _call(self, action):
         url = f"{self._base}{action}?api_key={self.api_key}&language={self.language}"
         result = requests.get(url)

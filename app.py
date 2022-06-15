@@ -14,11 +14,7 @@ def index():
     popularsTv = tmdb.popular_tv()
     trendingMovies = tmdb.trending("all", "week")
 
-    for i in range(len(popularsTv)):
-        popularsTv[i]['title'] = popularsTv[i].pop('name')
-        popularsTv[i]['release_date'] = popularsTv[i].pop('first_air_date')
-
     populars = popularsMovie + popularsTv
     random.shuffle(populars)
-    
+
     return render_template("index.html", populars=populars, trendings=trendingMovies)

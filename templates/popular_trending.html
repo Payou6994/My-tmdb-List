@@ -1,0 +1,29 @@
+{% for entity in entitys %}
+<div>
+  <div style="height: 100%; left: 0px; top: 0px; width: 100%; padding: 10px">
+    <div>
+      <a>
+        <img
+          class="IndexPoster-image"
+          style="width: 139px; height: 205px"
+          loading="lazy"
+          src="https://image.tmdb.org/t/p/w220_and_h330_face{{entity.poster_path}}"
+          srcset="
+            https://image.tmdb.org/t/p/w220_and_h330_face{{entity.poster_path}} 1x,
+            /t/p/w440_and_h660_face{{entity.poster_path}}                       2x
+          "
+          alt=""
+        />
+      </a>
+    </div>
+    <div class="IndexPoster-title">
+      <a title="{{entity.title or entity.name}}"
+        >{{entity.title or entity.name}}</a
+      >
+    </div>
+    <div class="IndexPoster-date">
+      <a>{{entity.release_date or entity.first_air_date}}</a>
+    </div>
+  </div>
+</div>
+{% endfor %}
