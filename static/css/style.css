@@ -23,12 +23,14 @@ header {
     padding: 0.5rem 1rem;
 }
 
-.content {
-    background-color: #f5f7fa;
-}
+
 
 main {
     padding-top: 56px;
+}
+
+.content {
+    background-color: #f5f7fa;
 }
 
 .nav-up {
@@ -60,4 +62,84 @@ main {
 
 .IndexPoster-image {
     border-radius: 5px;
+}
+
+div.content_entity {
+    padding-bottom: 0;
+}
+
+div.content_entity {
+    width: 100%;
+    /* padding: 26px 10px 12px 10px; */
+    position: relative;
+    white-space: normal;
+}
+
+div.content_entity div.vote {
+    position: absolute;
+    top: -200px;
+    left: 5px;
+    background-color: #000000c2;
+    border-radius: 100%;
+
+}
+
+div.vote {
+    width: 38px;
+    height: 38px;
+    box-sizing: border-box;
+}
+
+@property --p {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 1;
+}
+
+.pie {
+    --p: 20;
+    --b: 5px;
+    --c: darkred;
+    --w: 38px;
+
+    width: var(--w);
+    aspect-ratio: 1;
+    position: relative;
+    display: inline-grid;
+    place-content: center;
+    font-size: 8px;
+    font-weight: bold;
+    color: white;
+}
+
+.pie:before,
+.pie:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.pie:before {
+    inset: 0;
+    background:
+        radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b) var(--b) no-repeat,
+        conic-gradient(var(--c) calc(var(--p)*1%), #0000 0);
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+    mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+}
+
+.pie:after {
+    inset: calc(50% - var(--b)/2);
+    background: var(--c);
+    transform: rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+}
+
+.animate {
+    animation: p 1s .5s both;
+}
+
+@keyframes p {
+    from {
+        --p: 0
+    }
 }
