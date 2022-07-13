@@ -2,10 +2,11 @@ $(function () {
   var didScroll;
   var lastScrollTop = 0;
   var delta = 10;
-  var navbarHeight = $('header').outerHeight();
+  var navbarHeight = $('#navbar').outerHeight();
 
   $(window).scroll(function (event) {
     didScroll = true;
+    console.log('scroll');
   });
 
   setInterval(function () {
@@ -22,10 +23,12 @@ $(function () {
       return;
 
     if (st > lastScrollTop && st > navbarHeight) {
-      $('header').removeClass('nav-down').addClass('nav-up');
+      $('#navbar').removeClass('nav-down').addClass('nav-up');
+      console.log('affiche nav bar');
     } else {
       if (st + $(window).height() < $(document).height()) {
-        $('header').removeClass('nav-up').addClass('nav-down');
+        $('#navbar').removeClass('nav-up').addClass('nav-down');
+        console.log('masque nav bar');
       }
     }
 

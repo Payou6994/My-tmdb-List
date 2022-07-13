@@ -1,34 +1,37 @@
 from flask import Flask, render_template, request
+
+# from flask_caching import Cache, CachedResponse
 from tmdbapi import tmdb
 import random
+
+# from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "your secret key"
 tmdb = tmdb()
 
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/")
 def index():
-    popularsMovie = tmdb.popular_movies()
-    popularsTv = tmdb.popular_tv()
+    popularsMovies = tmdb.popular_movies()
+    popularsTvs = tmdb.popular_tv()
+    trendingMovies = tmdb.trending("all", "day")
 
-    if request.method == "POST":
-        if request.form.get("trending_day") == "Aujourd'hui":
-            trendingMovies = tmdb.trending("all", "day")
-        elif request.form.get("trending_week") == "Cette semaine":
-            trendingMovies = tmdb.trending("all", "week")
-        else:
-            trendingMovies = tmdb.trending("all", "day")
-    elif request.method == "GET":
-        trendingMovies = tmdb.trending("all", "day")
+    return render_template(
+        "index.html",
+        popularsMovies=popularsMovies,
+        popularsTvs=popularsTvs,
+        trendings=trendingMovies,
+    )
 
-    populars = popularsMovie + popularsTv
-    random.shuffle(populars)
 
-    for i in range(len(populars)):
-        populars[i]["vote_average"] = round(populars[i]["vote_average"])
+@app.route("/movie/<id>")
+def movie(id):
+    movie = tmdb.movie(id)
+    return render_template("movie.html", movie=movie)
 
-    for i in range(len(trendingMovies)):
-        trendingMovies[i]["vote_average"] = round(trendingMovies[i]["vote_average"])
 
-    return render_template("index.html", populars=populars, trendings=trendingMovies)
+@app.route("/tv/<id>")
+def tv(id):
+    tv = tmdb.tv(id)
+    return render_template("tv.html", tv=tv)

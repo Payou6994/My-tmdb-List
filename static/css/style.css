@@ -9,7 +9,7 @@ body {
     font-family: 'Product sans';
 }
 
-header {
+div #navbar {
     display: flex;
     align-items: center;
     position: fixed;
@@ -23,14 +23,9 @@ header {
     padding: 0.5rem 1rem;
 }
 
-
-
-main {
-    padding-top: 56px;
-}
-
-.content {
+div.content {
     background-color: #f5f7fa;
+    padding-top: 56px;
 }
 
 .nav-up {
@@ -142,4 +137,8 @@ div.vote {
     from {
         --p: 0
     }
+}
+
+div.mouse_hands {
+    cursor: pointer;
 }

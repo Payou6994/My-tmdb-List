@@ -1,64 +1,38 @@
-<!DOCTYPE html> {% extends 'base.html' %} {% block content %}
-<script
-  src="https://code.jquery.com/jquery-3.5.1.js"
-  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"
-></script>
-
-<script type="text/javascript">
-  $(document).on("submit", "#trending_day", function (e) {
-    console.log("hello");
-    e.preventDefault();
-    $.ajax({
-      type: "POST",
-      url: "/",
-      data: {
-        todo: $("#trending_day").val(),
-      },
-      success: function () {
-        alert("saved");
-      },
-    });
-  });
-  $(document).on("submit", "#trending_week", function (e) {
-    console.log("hello");
-    e.preventDefault();
-    $.ajax({
-      type: "POST",
-      url: "/",
-      data: {
-        todo: $("#trending_week").val(),
-      },
-      success: function () {
-        alert("saved");
-      },
-    });
-  });
-</script>
-<div>
-  <!--Movies-->
-  <section>
-    <div class="column_header">
-      <span class="Index-Title">Populaires</span>
-    </div>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center">
-      {% with entitys=populars %} {% include'popular_trending.html' %} {%
-      endwith %}
-    </div>
-  </section>
-  <!--Trendings-->
-  <section>
-    <div class="column_header">
-      <span class="Index-Title">Tendances</span>
-      <form method="post" id="trending-form">
-        <input type="submit" value="Aujourd'hui" name="trending_day" />
-        <input type="submit" value="Cette semaine" name="trending_week" />
-      </form>
-    </div>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center">
-      {% with entitys=trendings %} {% include'popular_trending.html' %} {%
-      endwith %}
-    </div>
-  </section>
+{%extends "base.html"%} {% import 'macros.html' as macro%} {% block content %}
+{% block head%} {{ super() }} {% endblock %}
+<div class="content">
+  <div>
+    <!--Movies-->
+    <section>
+      <div class="column_header">
+        <span class="Index-Title">Films Populaires</span>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center">
+        {{macro.displayMovieList(popularsMovies,"movie")}}
+      </div>
+    </section>
+    <!--Show-->
+    <section>
+      <div class="column_header">
+        <span class="Index-Title">Serie Populaires</span>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center">
+        {{macro.displayMovieList(popularsTvs,"tv")}}
+      </div>
+    </section>
+    <!--Trendings-->
+    <section>
+      <div class="column_header">
+        <span class="Index-Title">Tendances ajourd'hui</span>
+        <!-- <form method="post" id="trending-form">
+          <input type="submit" value="Aujourd'hui" name="trending_day" />
+          <input type="submit" value="Cette semaine" name="trending_week" />
+        </form> -->
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center">
+        {{ macro.displayMovieList(trendings,"movie")}}
+      </div>
+    </section>
+  </div>
 </div>
 {% endblock %}

@@ -1,0 +1,49 @@
+{% macro displayMovieList(entitys,type) %} {% for entity in entitys %} {%if
+type=="movie"%}
+<div
+  class="mouse_hands"
+  style="height: 258px; left: 0px; top: 0px; width: 159px; padding: 10px"
+  onclick="window.location='/movie/{{entity.id}}'"
+>
+{%elif type=="tv"%}
+<div
+  class="mouse_hands"
+  style="height: 258px; left: 0px; top: 0px; width: 159px; padding: 10px"
+  onclick="window.location='/tv/{{entity.id}}'"
+>
+{%endif%}
+    <div>
+      <a>
+        <img
+          class="IndexPoster-image"
+          style="width: 139px; height: 205px"
+          loading="lazy"
+          src="https://image.tmdb.org/t/p/w220_and_h330_face{{entity.poster_path}}"
+          alt=""
+        />
+      </a>
+    </div>
+    <div class="content_entity">
+      <div class="vote">
+        {%if entity.vote_average | round | int >= 7%} {% set color_vote =
+        '#6ECE8F' -%} {%elif entity.vote_average | round | int >= 4%} {% set
+        color_vote = '#FF9640' -%} {%elif entity.vote_average | round | int <
+        4%} {% set color_vote = '#E83F40' -%} {%endif%}
+        <div
+          class="pie animate"
+          style="--p: {{entity.vote_average*10 | round | int}}; --c: {{color_vote}}"
+        >
+          {{entity.vote_average*10 | round | int}}%
+        </div>
+      </div>
+      <div class="IndexPoster-title">
+        <a title="{{entity.title or entity.name}}"
+          >{{entity.title or entity.name}}</a
+        >
+      </div>
+      <div class="IndexPoster-date">
+        <a>{{entity.release_date or entity.first_air_date}}</a>
+      </div>
+    </div>
+  </div>
+{% endfor %} {% endmacro %}
