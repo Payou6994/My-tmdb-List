@@ -1,0 +1,8 @@
+{%extends "base.html"%} {% block content %}
+<div class="content">
+    {% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+    {% endfor %}
+<div>
+{%endblock%}
