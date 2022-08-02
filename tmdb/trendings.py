@@ -1,4 +1,4 @@
-from .tmdb import Tmdb
+from tmdb import Tmdb
 
 
 class Trendings(Tmdb):
@@ -35,7 +35,7 @@ class Trendings(Tmdb):
         :param page: int
         :return:
         """
-        return self._call(self._urls["movie_day"], "page={}".format(page))
+        return self._call(self._urls["movie_day"], f"page={page}")
 
     def movie_week(self, page=1):
         """
@@ -43,7 +43,7 @@ class Trendings(Tmdb):
         :param page: int
         :return:
         """
-        return self._call(self._urls["movie_week"], "page={}".format(page))
+        return self._call(self._urls["movie_week"], f"page={page}")
 
     def tv_day(self, page=1):
         """
@@ -51,7 +51,7 @@ class Trendings(Tmdb):
         :param page: int
         :return:
         """
-        return self._call(self._urls["tv_day"], "page={}".format(page))
+        return self._call(self._urls["tv_day"], f"page={page}")
 
     def tv_week(self, page=1):
         """
@@ -59,4 +59,4 @@ class Trendings(Tmdb):
         :param page: int
         :return:
         """
-        return self._call(self._urls["tv_week"], "page={}".format(page))
+        return self._call(self._urls["tv_week"], f"page={page}")

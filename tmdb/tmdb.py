@@ -1,10 +1,11 @@
-import requests
 import os
+
+import requests
 
 # from .exceptions import TMDbException
 
 
-class Tmdb(object):
+class Tmdb:
     TMDB_API_KEY = "TMDB_API_KEY"
     TMDB_LANGUAGE = "TMDB_LANGUAGE"
 
