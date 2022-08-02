@@ -1,6 +1,7 @@
 import requests
 import os
-from .exceptions import TMDbException
+
+# from .exceptions import TMDbException
 
 
 class Tmdb(object):
@@ -30,21 +31,18 @@ class Tmdb(object):
 
     def _call(self, action, append_to_response):
         if append_to_response:
-            url = (
-                f"{self._base}{action}?api_key={self.api_key}"
-                f"&language={self.language}"
-                f"&append_to_response={append_to_response}"
-            )
+            url = (f"{self._base}{action}?api_key={self.api_key}"
+                   f"&language={self.language}"
+                   f"&append_to_response={append_to_response}")
         else:
             url = (
                 f"{self._base}{action}?api_key={self.api_key}"
                 f"&language={self.language}"
             )
         result = requests.get(url)
-
-        rslt_json = result.json()
-
-        if rslt_json["success"] is False:
-            raise TMDbException(rslt_json["status_message"])
+        try:
+            rslt_json = result.json()["results"]
+        except KeyError:
+            rslt_json = result.json()
 
         return rslt_json

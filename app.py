@@ -1,6 +1,5 @@
 from flask import Flask, render_template
 from tmdb import tmdb, movies, tv, trendings
-# from tmdb import movies
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "your secret key"

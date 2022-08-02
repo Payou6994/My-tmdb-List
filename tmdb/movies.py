@@ -28,6 +28,7 @@ class Movies(Tmdb):
     }
 
     def populars(self):
+        # super().Tmdb()
         # Get Popular movie list
         return self._call(self._urls["popular"], "")
 
@@ -36,8 +37,7 @@ class Movies(Tmdb):
             self._urls["details"] % movie_id,
             "videos,trailers,images,casts,translations,keywords,release_dates",
         )
-        rslt_json["genres"] = [i["name"] for i in rslt_json["genres"]]
-        for i in rslt_json["release_dates"]["results"]:
+        for i in rslt_json["release_dates"]:
             if i["iso_3166_1"] in self.language:
                 for d in i["release_dates"]:
                     d["release_date"][:-1] = datetime.fromisoformat(
