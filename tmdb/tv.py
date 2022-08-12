@@ -1,5 +1,4 @@
-from tmdb import Tmdb
-
+from .tmdb import Tmdb
 
 
 class TV(Tmdb):
@@ -21,7 +20,5 @@ class TV(Tmdb):
         "watch_providers": "/tv/%s/watch/providers",
     }
 
-    def populars(self):
-        # rslt_json = self.__call("/movie/popular", "")
-        # return rslt_json
+    def populars(self: object):
         return self._call(self._urls["popular"], "")

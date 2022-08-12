@@ -1,4 +1,4 @@
-from tmdb import Tmdb
+from .tmdb import Tmdb
 
 
 class Trendings(Tmdb):
@@ -10,10 +10,10 @@ class Trendings(Tmdb):
         "tv_day": "/trending/tv/day",
         "tv_week": "/trending/tv/week",
         "person_day": "/trending/person/day",
-        "person_week": "/trending/person/week"
+        "person_week": "/trending/person/week",
     }
 
-    def all_day(self):
+    def all_day(self: object):
         """
         Get all daily trending
         :param page: int
@@ -21,7 +21,7 @@ class Trendings(Tmdb):
         """
         return self._call(self._urls["all_day"], "")
 
-    def all_week(self):
+    def all_week(self: object):
         """
         Get all weekly trending
         :param page: int
@@ -29,7 +29,7 @@ class Trendings(Tmdb):
         """
         return self._call(self._urls["all_week"], "")
 
-    def movie_day(self, page=1):
+    def movie_day(self: object, page=1):
         """
         Get movie daily trending
         :param page: int
@@ -37,7 +37,7 @@ class Trendings(Tmdb):
         """
         return self._call(self._urls["movie_day"], f"page={page}")
 
-    def movie_week(self, page=1):
+    def movie_week(self: object, page=1):
         """
         Get movie weekly trending
         :param page: int
@@ -45,7 +45,7 @@ class Trendings(Tmdb):
         """
         return self._call(self._urls["movie_week"], f"page={page}")
 
-    def tv_day(self, page=1):
+    def tv_day(self: object, page=1):
         """
         Get tv daily trending
         :param page: int
@@ -53,7 +53,7 @@ class Trendings(Tmdb):
         """
         return self._call(self._urls["tv_day"], f"page={page}")
 
-    def tv_week(self, page=1):
+    def tv_week(self: object, page=1):
         """
         Get tv weekly trending
         :param page: int

@@ -1,6 +1,6 @@
 from datetime import datetime
-
-from tmdb import Tmdb
+import json
+from .tmdb import Tmdb
 
 
 class Movies(Tmdb):
@@ -28,23 +28,12 @@ class Movies(Tmdb):
         "watch_providers": "/movie/%s/watch/providers",
     }
 
-    def populars(self):
+    def populars(self: object):
         return self._call(self._urls["popular"], "")
 
-    def details(self, movie_id):
+    def details(self: object, movie_id: int):
         rslt_json = self._call(
             self._urls["details"] % movie_id,
             "videos,trailers,images,casts,translations,keywords,release_dates",
         )
-        for i in rslt_json["release_dates"]:
-            if i["iso_3166_1"] in self.language:
-                for date in i["release_dates"]:
-                    date["release_date"][:-1] = datetime.fromisoformat(
-                        date["release_date"][:-1]
-                    )
-                    rslt_json["release_date"] = datetime.fromisoformat(
-                        rslt_json["release_date"]
-                    )
-                    if date["release_date"][:-1] == rslt_json["release_date"]:
-                        rslt_json["certification"] = date["certification"]
         return rslt_json

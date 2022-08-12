@@ -1,8 +1,115 @@
 {%extends "base.html"%} {% block content %}
-<div class="content">
-    {% for table in tables %}
-            {{titles[loop.index]}}
-            {{ table|safe }}
-    {% endfor %}
-<div>
+<div class="MovieDetails-innerContentBody">
+    <div class="MovieDetails-header">
+        <div class="MovieDetails-backdrop"
+            style="background-image: url(&quot;https://image.tmdb.org/t/p/w1920_and_h800_multi_faces{{entity.backdrop_path}}&quot;);">
+            <div class="MovieDetails-backdropOverlay"></div>
+        </div>
+        <div class="MovieDetails-headerContent"><img class="MovieDetails-poster"
+                src="https://image.tmdb.org/t/p/original{{entity.poster_path}}">
+            <div class="MovieDetails-info">
+                <div class="MovieDetails-titleRow">
+                    <div class="MovieDetails-titleContainer">
+                        <div class="MovieDetails-title" style="width: 1248px;">
+                            <div style="overflow: hidden;">
+                                <span title="{{entity.title}}"
+                                    style="position: relative; right: 0px; white-space: nowrap;">{{entity.title}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="MovieDetails-details">
+                    <div>
+                        <span class="MovieDetails-year">
+                            <span>{{entity.release_date}}</span>
+                        </span>
+                        <span class="MovieDetails-runtime">{{entity.runtime}}m</span>
+                        <span class="MovieDetails-links">
+                            <span>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                    data-icon="up-right-from-square"
+                                    class="svg-inline--fa fa-up-right-from-square Icon-default" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="font-size: 20px;">
+                                    <path fill="currentColor"
+                                        d="M384 320c-17.67 0-32 14.33-32 32v96H64V160h96c17.67 0 32-14.32 32-32s-14.33-32-32-32L64 96c-35.35 0-64 28.65-64 64V448c0 35.34 28.65 64 64 64h288c35.35 0 64-28.66 64-64v-96C416 334.3 401.7 320 384 320zM488 0H352c-12.94 0-24.62 7.797-29.56 19.75c-4.969 11.97-2.219 25.72 6.938 34.88L370.8 96L169.4 297.4c-12.5 12.5-12.5 32.75 0 45.25C175.6 348.9 183.8 352 192 352s16.38-3.125 22.62-9.375L416 141.3l41.38 41.38c9.156 9.141 22.88 11.84 34.88 6.938C504.2 184.6 512 172.9 512 160V24C512 10.74 501.3 0 488 0z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="MovieDetails-details">
+                    <span class="MovieDetails-rating">
+                        <span title="{{entity.vote_count}} votes">
+                            <img class="TmdbRating-image"
+                                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTAuMjQgODEuNTIiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeTE9IjQwLjc2IiB4Mj0iMTkwLjI0IiB5Mj0iNDAuNzYiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM5MGNlYTEiLz48c3RvcCBvZmZzZXQ9Ii41NiIgc3RvcC1jb2xvcj0iIzNjYmVjOSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwYjNlNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGQ9Ik0xMDUuNjcgMzYuMDZoNjYuOWExNy42NyAxNy42NyAwIDAwMTcuNjctMTcuNjZBMTcuNjcgMTcuNjcgMCAwMDE3Mi41Ny43M2gtNjYuOUExNy42NyAxNy42NyAwIDAwODggMTguNGExNy42NyAxNy42NyAwIDAwMTcuNjcgMTcuNjZ6bS04OCA0NWg3Ni45YTE3LjY3IDE3LjY3IDAgMDAxNy42Ny0xNy42NiAxNy42NyAxNy42NyAwIDAwLTE3LjY3LTE3LjY3aC03Ni45QTE3LjY3IDE3LjY3IDAgMDAwIDYzLjRhMTcuNjcgMTcuNjcgMCAwMDE3LjY3IDE3LjY2em0tNy4yNi00NS42NGg3LjhWNi45MmgxMC4xVjBoLTI4djYuOWgxMC4xem0yOC4xIDBoNy44VjguMjVoLjFsOSAyNy4xNWg2bDkuMy0yNy4xNWguMVYzNS40aDcuOFYwSDY2Ljc2bC04LjIgMjMuMWgtLjFMNTAuMzEgMGgtMTEuOHptMTEzLjkyIDIwLjI1YTE1LjA3IDE1LjA3IDAgMDAtNC41Mi01LjUyIDE4LjU3IDE4LjU3IDAgMDAtNi42OC0zLjA4IDMzLjU0IDMzLjU0IDAgMDAtOC4wNy0xaC0xMS43djM1LjRoMTIuNzVhMjQuNTggMjQuNTggMCAwMDcuNTUtMS4xNSAxOS4zNCAxOS4zNCAwIDAwNi4zNS0zLjMyIDE2LjI3IDE2LjI3IDAgMDA0LjM3LTUuNSAxNi45MSAxNi45MSAwIDAwMS42My03LjU4IDE4LjUgMTguNSAwIDAwLTEuNjgtOC4yNXpNMTQ1IDY4LjZhOC44IDguOCAwIDAxLTIuNjQgMy40IDEwLjcgMTAuNyAwIDAxLTQgMS44MiAyMS41NyAyMS41NyAwIDAxLTUgLjU1aC00LjA1di0yMWg0LjZhMTcgMTcgMCAwMTQuNjcuNjMgMTEuNjYgMTEuNjYgMCAwMTMuODggMS44N0E5LjE0IDkuMTQgMCAwMTE0NSA1OWE5Ljg3IDkuODcgMCAwMTEgNC41MiAxMS44OSAxMS44OSAwIDAxLTEgNS4wOHptNDQuNjMtLjEzYTggOCAwIDAwLTEuNTgtMi42MiA4LjM4IDguMzggMCAwMC0yLjQyLTEuODUgMTAuMzEgMTAuMzEgMCAwMC0zLjE3LTF2LS4xYTkuMjIgOS4yMiAwIDAwNC40Mi0yLjgyIDcuNDMgNy40MyAwIDAwMS42OC01IDguNDIgOC40MiAwIDAwLTEuMTUtNC42NSA4LjA5IDguMDkgMCAwMC0zLTIuNzIgMTIuNTYgMTIuNTYgMCAwMC00LjE4LTEuMyAzMi44NCAzMi44NCAwIDAwLTQuNjItLjMzaC0xMy4ydjM1LjRoMTQuNWEyMi40MSAyMi40MSAwIDAwNC43Mi0uNSAxMy41MyAxMy41MyAwIDAwNC4yOC0xLjY1IDkuNDIgOS40MiAwIDAwMy4xLTMgOC41MiA4LjUyIDAgMDAxLjItNC42OCA5LjM5IDkuMzkgMCAwMC0uNTUtMy4xOHptLTE5LjQyLTE1Ljc1aDUuM2ExMCAxMCAwIDAxMS44NS4xOCA2LjE4IDYuMTggMCAwMTEuNy41NyAzLjM5IDMuMzkgMCAwMTEuMjIgMS4xMyAzLjIyIDMuMjIgMCAwMS40OCAxLjgyIDMuNjMgMy42MyAwIDAxLS40MyAxLjggMy40IDMuNCAwIDAxLTEuMTIgMS4yIDQuOTIgNC45MiAwIDAxLTEuNTguNjUgNy41MSA3LjUxIDAgMDEtMS43Ny4yaC01LjY1em0xMS43MiAyMGEzLjkgMy45IDAgMDEtMS4yMiAxLjMgNC42NCA0LjY0IDAgMDEtMS42OC43IDguMTggOC4xOCAwIDAxLTEuODIuMmgtN3YtOGg1LjlhMTUuMzUgMTUuMzUgMCAwMTIgLjE1IDguNDcgOC40NyAwIDAxMi4wNS41NSA0IDQgMCAwMTEuNTcgMS4xOCAzLjExIDMuMTEgMCAwMS42MyAyIDMuNzEgMy43MSAwIDAxLS40MyAxLjkyeiIgZmlsbD0idXJsKCNhKSIvPjwvc3ZnPg=="
+                                style="height: 20px;">{{entity.vote_average*10}}%</span>
+                    </span>
+                </div>
+                <div>
+                    <span class="MovieDetails-detailsInfoLabel InfoLabel-label InfoLabel-large">
+                        <div class="InfoLabel-title">Chemin</div>
+                        <div>
+                            <span class="MovieDetails-path">/volume1/Movies/Films/11.6 (2013)</span>
+                        </div>
+                    </span>
+                    <span class="MovieDetails-detailsInfoLabel InfoLabel-label InfoLabel-large">
+                        <div class="InfoLabel-title">Statut</div>
+                        <div>
+                            <span class="MovieDetails-statusName">
+                                <span class="MovieStatusLabel-ended">{{entity.status}}</span></span>
+                        </div>
+                    </span>
+                    <span class="MovieDetails-detailsInfoLabel InfoLabel-label InfoLabel-large">
+                        <div class="InfoLabel-title">Profil qualité</div>
+                        <div>
+                            <span class="MovieDetails-qualityProfileName">
+                                <span>Any</span>
+                            </span>
+                        </div>
+                    </span>
+                    <span class="MovieDetails-detailsInfoLabel InfoLabel-label InfoLabel-large">
+                        <div class="InfoLabel-title">Taille</div>
+                        <div>
+                            <span class="MovieDetails-sizeOnDisk">1.4 GB</span>
+                        </div>
+                    </span>
+                    <span class="MovieDetails-detailsInfoLabel InfoLabel-label InfoLabel-large">
+                        <div class="InfoLabel-title">Studio</div>
+                        <div>
+                            <span class="MovieDetails-studio">Wild Bunch Distribution</span>
+                        </div>
+                    </span>
+                    <span class="MovieDetails-detailsInfoLabel InfoLabel-label InfoLabel-large">
+                        <div class="InfoLabel-title">Genres</div>
+                        <div>
+                            <span class="MovieDetails-genres">Thriller, Drama</span>
+                        </div>
+                    </span>
+                </div>
+                <div class="MovieDetails-overview">
+                    <div style="overflow: hidden;">
+                        <span>{{entity.overview}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="MovieDetails-contentContainer">
+        <div class="react-tabs" data-tabs="true">
+            <ul class="MovieDetails-tabList" role="tablist">
+                <li class="MovieDetails-tab MovieDetails-selectedTab" role="tab" id="react-tabs-0" aria-selected="true"
+                    aria-disabled="false" aria-controls="react-tabs-1" tabindex="0">Casting</li>
+                <li class="MovieDetails-tab MovieDetails-selectedTab" role="tab" id="react-tabs-0" aria-selected="true"
+                    aria-disabled="false" aria-controls="react-tabs-1" tabindex="0">Test</li>
+            </ul>
+            <div class="react-tabs__tab-panel react-tabs__tab-panel--selected" role="tabpanel" id="react-tabs-1"
+                aria-labelledby="react-tabs-0">
+                <div>
+                    <div class="MovieHistoryTableContent-blankpad-LOxwb">Pas d'historique</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {%endblock%}

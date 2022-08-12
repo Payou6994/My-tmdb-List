@@ -1,295 +1,312 @@
 @font-face {
-    font-family: 'Product Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans'), local('OpenSans'), url("/static/font/Product-Sans.woff2") format('woff2');
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url("/static/font/Product-Sans.woff2") format('woff2');
 }
 
 body {
-    font-family: 'Product sans';
+  font-family: 'Product sans';
 }
 
 div #navbar {
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(var(--tmdbDarkBlue), 1);
-    height: 56px;
-    width: 100%;
-    z-index: 10;
-    transition: top 0.2s linear;
-    padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(var(--tmdbDarkBlue), 1);
+  height: 56px;
+  width: 100%;
+  z-index: 10;
+  transition: top 0.2s linear;
+  padding: 0.5rem 1rem;
 }
 
 div.content {
-    background-color: #f5f7fa;
-    padding-top: 56px;
-    margin-right: auto;
-    margin-left: auto;
+  background-color: #f5f7fa;
+  padding-top: 56px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .nav-up {
-    top: -56px;
+  top: -56px;
 }
 
 .Index-Title {
-    font-size: xx-large;
-    margin-left: 15px;
+  font-size: xx-large;
+  margin-left: 15px;
 }
 
 .IndexPoster-title {
-    text-align: center;
-    font-size: 12px;
-    font-weight: bold;
-    background-color: #fafbfc;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #fafbfc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .IndexPoster-date {
-    text-align: center;
-    font-size: 10px;
-    font-style: italic;
-    background-color: #fafbfc;
-    border-end-end-radius: 5px;
+  text-align: center;
+  font-size: 10px;
+  font-style: italic;
+  background-color: #fafbfc;
+  border-end-end-radius: 5px;
 }
 
 .IndexPoster-image {
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
 div.content_entity {
-    padding-bottom: 0;
-}
-
-div.content_entity {
-    width: 100%;
-    /* padding: 26px 10px 12px 10px; */
-    position: relative;
-    white-space: normal;
+  padding-bottom: 0;
+  width: 100%;
+  position: relative;
+  white-space: normal;
 }
 
 div.content_entity div.vote {
-    position: absolute;
-    top: -200px;
-    left: 5px;
-    background-color: #000000c2;
-    border-radius: 100%;
+  position: absolute;
+  top: -200px;
+  left: 5px;
+  background-color: #000000c2;
+  border-radius: 100%;
 
 }
 
 div.vote {
-    width: 38px;
-    height: 38px;
-    box-sizing: border-box;
+  width: 38px;
+  height: 38px;
+  box-sizing: border-box;
 }
 
 @property --p {
-    syntax: '<number>';
-    inherits: true;
-    initial-value: 1;
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 1;
 }
 
 .pie {
-    --p: 20;
-    --b: 5px;
-    --c: darkred;
-    --w: 38px;
+  --p: 20;
+  --b: 5px;
+  --c: darkred;
+  --w: 38px;
 
-    width: var(--w);
-    aspect-ratio: 1;
-    position: relative;
-    display: inline-grid;
-    place-content: center;
-    font-size: 8px;
-    font-weight: bold;
-    color: white;
+  width: var(--w);
+  aspect-ratio: 1;
+  position: relative;
+  display: inline-grid;
+  place-content: center;
+  font-size: 8px;
+  font-weight: bold;
+  color: white;
 }
 
 .pie:before,
 .pie:after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
 }
 
 .pie:before {
-    inset: 0;
-    background:
-        radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b) var(--b) no-repeat,
-        conic-gradient(var(--c) calc(var(--p)*1%), #0000 0);
-    -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
-    mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+  inset: 0;
+  background:
+    radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b) var(--b) no-repeat,
+    conic-gradient(var(--c) calc(var(--p)*1%), #0000 0);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+  mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
 }
 
 .pie:after {
-    inset: calc(50% - var(--b)/2);
-    background: var(--c);
-    transform: rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+  inset: calc(50% - var(--b)/2);
+  background: var(--c);
+  transform: rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
 }
 
 .animate {
-    animation: p 1s .5s both;
+  animation: p 1s .5s both;
 }
 
 @keyframes p {
-    from {
-        --p: 0
-    }
+  from {
+    --p: 0
+  }
 }
 
 div.mouse_hands {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /******Movie details***/
 
 .MovieDetails-innerContentBody {
-    padding-top: 56px;
-  }
-  
-  .MovieDetails-header {
-    position: relative;
-    width: 100%;
-    height: 375px;
-  }
-    
-  .MovieDetails-backdrop {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-  }
-  
-  .MovieDetails-backdropOverlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    opacity: 0.7;
-  }
-  
-  .MovieDetails-headerContent {
-    display: flex;
-    padding: 30px;
-    width: 100%;
-    height: 100%;
-    color: #fff;
-  }
-  
-  .MovieDetails-poster {
-    flex-shrink: 0;
-    margin-right: 35px;
-    width: 217px;
-    height: 319px;
-  }
-  
-  .MovieDetails-info {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    overflow: hidden;
-  }
-  
-  .MovieDetails-titleRow {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex: 0 0 auto;
-  }
-  
-  .MovieDetails-titleContainer {
-    display: flex;
-    margin-bottom: 5px;
-  }
-  
-  .MovieDetails-title {
-    font-weight: 300;
-    font-size: 50px;
-    line-height: 60px;
-  }
-  
-  /* .toggleMonitoredContainer {
-    align-self: center;
-    margin-right: 10px;
-  } */
-  
-  /* .monitorToggleButton {
-    composes: toggleButton from '~Components/MonitorToggleButton.css';
-  
-    width: 40px;
-  
-    &:hover {
-      color: $iconButtonHoverLightColor;
-    }
-  } */
-  
-  
-  .MovieDetails-details {
-    margin-bottom: 8px;
-    padding-left: 7px;
-    font-weight: 300;
-    font-size: 20px;
-  }
-  
-  .links,
-  .rating,
-  .year,
-  .runtime {
-    margin-right: 14px;
-  }
-  
-  .MovieDetails-certification {
-    margin-right: 15px;
-    padding: 0 5px;
-    border: 1px solid;
-    border-radius: 5px;
-  }
-  
-  /* .detailsLabel {
-    composes: label from '~Components/Label.css';
-  
-    margin: 5px 10px 5px 0;
-  } */
-  
-  .MovieDetails-detailsInfoLabel {
-    /* composes: label from '~Components/InfoLabel.css'; */
-    /* padding: 3px 7px; */
-    margin: 5px 10px 5px 0;
-  }
-  
-  .MovieDetails-studio,
-  .MovieDetails-collection,
-  .MovieDetails-genres {
-    font-weight: 300;
-    font-size: 17px;
-  }
-  
-  .MovieDetails-overview {
-    flex: 1 0 auto;
-    margin-top: 8px;
-    padding-left: 7px;
-    min-height: 0;
-    font-size: #fff;
-  }
-  .InfoLabel-title {
-    margin-bottom: 2px;
-    color: #909293;
-    font-size: 10px;
-  }
-  .InfoLabel-large {
-    padding: 3px 7px;
-    font-size: 14px;
-  }
-  .InfoLabel-label {
-    display: inline-block;
-    margin: 2px;
-    color: #fff;
-    white-space: nowrap;
-    line-height: 1;
-    cursor: default;
-  }
+  padding-top: 56px;
+}
+
+.MovieDetails-header {
+  position: relative;
+  width: 100%;
+  height: 375px;
+}
+
+.MovieDetails-backdrop {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.MovieDetails-backdropOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.7;
+}
+
+.MovieDetails-headerContent {
+  display: flex;
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+.MovieDetails-poster {
+  flex-shrink: 0;
+  margin-right: 35px;
+  width: 217px;
+  height: 319px;
+}
+
+
+.MovieDetails-titleRow {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex: 0 0 auto;
+}
+
+.MovieDetails-titleContainer {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.MovieDetails-title {
+  font-weight: 300;
+  font-size: 50px;
+  line-height: 60px;
+}
+
+
+.MovieDetails-details {
+  margin-bottom: 8px;
+  padding-left: 7px;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+
+.MovieDetails-certification {
+  margin-right: 15px;
+  padding: 0 5px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+
+.MovieDetails-detailsInfoLabel {
+  /* composes: label from '~Components/InfoLabel.css'; */
+  /* padding: 3px 7px; */
+  margin: 5px 10px 5px 0;
+}
+
+.MovieDetails-overview {
+  flex: 1 0 auto;
+  margin-top: 8px;
+  padding-left: 7px;
+  min-height: 0;
+  font-size: #fff;
+}
+
+.InfoLabel-title {
+  margin-bottom: 2px;
+  color: #909293;
+  font-size: 10px;
+}
+
+.InfoLabel-large {
+  padding: 3px 7px;
+  font-size: 14px;
+}
+
+.InfoLabel-label {
+  display: inline-block;
+  margin: 2px;
+  color: #fff;
+  white-space: nowrap;
+  line-height: 1;
+  cursor: default;
+}
+
+.MovieDetails-contentContainer {
+  padding: 20px;
+}
+
+.MovieDetails-tabList {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.MovieDetails-tab {
+  position: relative;
+  bottom: -1px;
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  border-top: none;
+  list-style: none;
+  cursor: pointer;
+}
+
+.MovieDetails-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.MovieDetails-links,
+.MovieDetails-rating,
+.MovieDetails-year,
+.MovieDetails-runtime {
+  margin-right: 14px;
+}
+
+.TmdbRating-image {
+  align-content: center;
+  margin-right: 5px;
+  vertical-align: -0.125em;
+}
+
+.MovieStatusLabel-ended {
+  padding-left: 2px;
+  border-left: 4px solid #27c24c;
+}
+
+.MovieDetails-path,
+.MovieDetails-sizeOnDisk,
+.MovieDetails-qualityProfileName,
+.MovieDetails-statusName,
+.MovieDetails-studio,
+.MovieDetails-collection,
+.MovieDetails-genres {
+  font-weight: 300;
+  font-size: 17px;
+}

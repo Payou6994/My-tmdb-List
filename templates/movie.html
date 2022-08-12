@@ -3,15 +3,15 @@
   <!-- Poster background -->
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 posterPath">
-      <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="{{movie.title}}" class="img-responsive" />
+      <img src="https://image.tmdb.org/t/p/w500{{entity.poster_path}}" alt="{{entity.title}}" class="img-responsive" />
     </div>
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 movie-details">
       <div class="thumbnail" style="border: none">
-        <h1>{{ movie.title }}</h1>
-        <p class="overview">{{ movie.overview }}</p>
+        <h1>{{ entity.title }}</h1>
+        <p class="overview">{{ entity.overview }}</p>
         <p class="ratings">
-          <b> {{ movie.vote_average*10 | round(0) | int }}%</b> -
-          <i>{{movie.vote_count}} votes </i>
+          <b> {{ entity.vote_average*10 | round(0) | int }}%</b> -
+          <i>{{entity.vote_count}} votes </i>
         </p>
       </div>
     </div>
