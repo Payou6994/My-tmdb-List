@@ -1,7 +1,18 @@
 import os
 import requests
-import dateutil.parser
 from .exceptions import TMDbException
+import sqlite3
+
+
+def insert_to_db(db, data):
+    con = sqlite3.connect("Mylist.db")
+    cur = con.cursor()
+    cur.execute(
+        f"INSERT INTO {db} (tmdb_id,imdb_id)"
+        f"VALUES( {data['id']},'{data['imdb_id']}');"
+    )
+    con.commit()
+    con.close()
 
 
 class Tmdb:
@@ -56,9 +67,9 @@ class Tmdb:
                 f"{self._base}{action}?api_key={self.api_key}"
                 f"&language={self.language}"
             )
-        result = requests.get(url)
-        # rslt_json = result.json(object_hook=DecodeDateTime)
-        rslt_json = result.json()
+
+        rslt_json = requests.get(url).json()
+        # rslt_json = result.json()
 
         if "success" in rslt_json and rslt_json["success"] is False:
             raise TMDbException(rslt_json["status_message"])
@@ -67,9 +78,3 @@ class Tmdb:
             return rslt_json["results"]
         else:
             return rslt_json
-
-
-def DecodeDateTime(rslt):
-    if "release_date" in rslt:
-        rslt["release_date"] = dateutil.parser.parse(rslt["release_date"])
-        return rslt

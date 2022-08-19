@@ -1,5 +1,5 @@
-from datetime import datetime
-import json
+# from datetime import datetime
+# import json
 from .tmdb import Tmdb
 
 
@@ -32,8 +32,8 @@ class Movies(Tmdb):
         return self._call(self._urls["popular"], "")
 
     def details(self: object, movie_id: int):
-        rslt_json = self._call(
+        result = self._call(
             self._urls["details"] % movie_id,
             "videos,trailers,images,casts,translations,keywords,release_dates",
         )
-        return rslt_json
+        return result

@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from tmdb import tmdb, movies, tv, trendings
-
+from db_request import get_data
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "your secret key"
@@ -17,17 +17,21 @@ trendings = trendings.Trendings()
 def index():
     populars_movies = movies.populars()
     populars_tvs = tv.populars()
-    tredings_all_day = trendings.all_day()
+    trendings_all_day = trendings.all_day()
 
     return render_template(
         "index.html",
         popularsMovies=populars_movies,
         popularsTvs=populars_tvs,
-        trendings=tredings_all_day,
+        trendings=trendings_all_day,
     )
 
 
 @app.route("/movie/<movie_id>")
 def movie_details(movie_id: int):
-    movie = movies.details(movie_id)
+    data = get_data("movies_items", movie_id)
+    if data:
+        movie = data
+    else:
+        movie = movies.details(movie_id)
     return render_template("movie-dev.html", entity=movie, date_format=tmdb.date_format)
