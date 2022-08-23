@@ -1,0 +1,2317 @@
+{
+    "adult": false,
+    "backdrop_path": "/nmGWzTLMXy9x7mKd8NKPLmHtWGa.jpg",
+    "belongs_to_collection": {
+        "id": 544669,
+        "name": "Les Minions - Saga",
+        "poster_path": "/yG4ZgrIinuQJGuFQfXZc1fB2UHN.jpg",
+        "backdrop_path": "/62Qe28oi9PaK3P2ljDYUDTGAyST.jpg"
+    },
+    "budget": 85000000,
+    "genres": [
+        {
+            "id": 16,
+            "name": "Animation"
+        },
+        {
+            "id": 12,
+            "name": "Aventure"
+        },
+        {
+            "id": 35,
+            "name": "Com\u00e9die"
+        },
+        {
+            "id": 14,
+            "name": "Fantastique"
+        }
+    ],
+    "homepage": "",
+    "id": 438148,
+    "imdb_id": "tt5113044",
+    "original_language": "en",
+    "original_title": "Minions: The Rise of Gru",
+    "overview": "Alors que les ann\u00e9es 70 battent leur plein, Gru qui grandit en banlieue au milieu des jeans \u00e0 pattes d\u2019\u00e9l\u00e9phants et des chevelures en fleur, met sur pied un plan machiav\u00e9lique \u00e0 souhait pour r\u00e9ussir \u00e0 int\u00e9grer un groupe c\u00e9l\u00e8bre de super m\u00e9chants, connu sous le nom de Vicious 6, dont il est le plus grand fan. Il est second\u00e9 dans sa t\u00e2che par les Minions, ses petits compagnons aussi turbulents que fid\u00e8les. Avec l\u2019aide de Kevin, Stuart, Bob et Otto \u2013 un nouveau Minion arborant un magnifique appareil dentaire et un besoin d\u00e9sesp\u00e9r\u00e9 de plaire - ils vont d\u00e9ployer ensemble des tr\u00e9sors d\u2019ing\u00e9niosit\u00e9 afin de construire leur premier repaire, exp\u00e9rimenter leurs premi\u00e8res armes, et lancer leur premi\u00e8re mission. Lorsque les Vicious 6 limogent leur chef, le l\u00e9gendaire \" Wild Knuckles \", Gru passe l\u2019audition pour int\u00e9grer l\u2019\u00e9quipe. Le moins qu\u2019on puisse dire c\u2019est que l\u2019entrevue tourne mal, et soudain court quand Gru leur d\u00e9montre sa sup\u00e9riorit\u00e9 et se retrouve soudain leur ennemi jur\u00e9.",
+    "popularity": 3673.683,
+    "poster_path": "/pA05WmBZLEu32peDDh3I4VuVPsu.jpg",
+    "production_companies": [
+        {
+            "id": 33,
+            "logo_path": "/8lvHyhjr8oUKOOy2dKXoALWKdp0.png",
+            "name": "Universal Pictures",
+            "origin_country": "US"
+        },
+        {
+            "id": 6704,
+            "logo_path": "/acf3yqGq8Bm9smHwkQGRDVO5CM5.png",
+            "name": "Illumination Entertainment",
+            "origin_country": "US"
+        }
+    ],
+    "production_countries": [
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "2022-06-29",
+    "revenue": 833623000,
+    "runtime": 87,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        }
+    ],
+    "status": "Released",
+    "tagline": "L'ascension d'un super-vilain.",
+    "title": "Les Minions 2 - Il \u00e9tait une fois Gru",
+    "video": false,
+    "vote_average": 7.761,
+    "vote_count": 1545,
+    "videos": {
+        "results": [
+            {
+                "iso_639_1": "fr",
+                "iso_3166_1": "FR",
+                "name": "Les Minions 2 : Il \u00c9tait Une Fois Gru - Bande annonce VF [Au cin\u00e9ma le 6 juillet]",
+                "key": "Cm6wpegvRpA",
+                "site": "YouTube",
+                "size": 1080,
+                "type": "Trailer",
+                "official": true,
+                "published_at": "2022-06-06T15:00:15.000Z",
+                "id": "62cd3d24498bc21e72543f71"
+            },
+            {
+                "iso_639_1": "fr",
+                "iso_3166_1": "FR",
+                "name": "Les Minions 2 - \"Joyeuses F\u00eates\" [VF]",
+                "key": "XlknPDrooNU",
+                "site": "YouTube",
+                "size": 1080,
+                "type": "Clip",
+                "official": true,
+                "published_at": "2020-12-19T16:00:20.000Z",
+                "id": "5fdf1bd5f706de003e8008ff"
+            },
+            {
+                "iso_639_1": "fr",
+                "iso_3166_1": "FR",
+                "name": "Minions 2 : Il \u00c9tait Une Fois Gru - Bande Annonce [VF]",
+                "key": "E9X9OTMP7_A",
+                "site": "YouTube",
+                "size": 1080,
+                "type": "Trailer",
+                "official": true,
+                "published_at": "2020-02-05T17:23:11.000Z",
+                "id": "5e3b09a2c144dd00190edf98"
+            },
+            {
+                "iso_639_1": "fr",
+                "iso_3166_1": "FR",
+                "name": "Minions 2 : Il \u00c9tait Une Fois Gru - Bande Annonce [VOST]",
+                "key": "dRvjlz5G-KI",
+                "site": "YouTube",
+                "size": 1080,
+                "type": "Trailer",
+                "official": true,
+                "published_at": "2020-02-05T17:21:10.000Z",
+                "id": "5e3b09b998f1f10012096966"
+            }
+        ]
+    },
+    "casts": {
+        "cast": [
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 4495,
+                "known_for_department": "Acting",
+                "name": "Steve Carell",
+                "original_name": "Steve Carell",
+                "popularity": 49.013,
+                "profile_path": "/dzJtsLspH5Bf8Tvw7OQC47ETNfJ.jpg",
+                "cast_id": 6,
+                "character": "Gru (voice)",
+                "credit_id": "5dec1a93eee18600128b94f8",
+                "order": 0
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 124747,
+                "known_for_department": "Acting",
+                "name": "Pierre Coffin",
+                "original_name": "Pierre Coffin",
+                "popularity": 10.981,
+                "profile_path": "/5HojYPP34c4agydy7D90apCMNHn.jpg",
+                "cast_id": 0,
+                "character": "Kevin / Stuart / Bob / Minions",
+                "credit_id": "588fdb0a92514133a50000f5",
+                "order": 1
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 59919,
+                "known_for_department": "Acting",
+                "name": "Russell Brand",
+                "original_name": "Russell Brand",
+                "popularity": 16.636,
+                "profile_path": "/fJ9oOcEeBzDT4hHFh0GNogV6l7l.jpg",
+                "cast_id": 7,
+                "character": "Dr. Nefario (voice)",
+                "credit_id": "5e38c74da7e3630013e9c237",
+                "order": 2
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 1903,
+                "known_for_department": "Acting",
+                "name": "Alan Arkin",
+                "original_name": "Alan Arkin",
+                "popularity": 41.342,
+                "profile_path": "/mhACkTNrnwR4E115h8EfCZ263zH.jpg",
+                "cast_id": 8,
+                "character": "Wild Knuckles (voice)",
+                "credit_id": "5e3ae8910c2710001a768bff",
+                "order": 3
+            },
+            {
+                "adult": false,
+                "gender": 1,
+                "id": 40036,
+                "known_for_department": "Acting",
+                "name": "Taraji P. Henson",
+                "original_name": "Taraji P. Henson",
+                "popularity": 12.571,
+                "profile_path": "/2jC09Wj8BZAl27W8oTp9r7dRhC5.jpg",
+                "cast_id": 9,
+                "character": "Belle Bottom (voice)",
+                "credit_id": "5e3ae8c6ac8e6b0011ca3150",
+                "order": 4
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 15111,
+                "known_for_department": "Acting",
+                "name": "Jean-Claude Van Damme",
+                "original_name": "Jean-Claude Van Damme",
+                "popularity": 41.805,
+                "profile_path": "/qAHXPJ4IybMsCbNY3811CytFj3H.jpg",
+                "cast_id": 10,
+                "character": "Jean Clawed (voice)",
+                "credit_id": "5e3ae90e91745b001a2e3a23",
+                "order": 5
+            },
+            {
+                "adult": false,
+                "gender": 1,
+                "id": 20584,
+                "known_for_department": "Acting",
+                "name": "Lucy Lawless",
+                "original_name": "Lucy Lawless",
+                "popularity": 11.759,
+                "profile_path": "/s3FqnfsjIEkWibx8QFtbyq5VnZL.jpg",
+                "cast_id": 11,
+                "character": "Nunchuck (voice)",
+                "credit_id": "5e3ae92d98f1f100180a7570",
+                "order": 6
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 16644,
+                "known_for_department": "Acting",
+                "name": "Dolph Lundgren",
+                "original_name": "Dolph Lundgren",
+                "popularity": 31.067,
+                "profile_path": "/t3hMzibYVUS1KBXFgtxuNnax8qX.jpg",
+                "cast_id": 12,
+                "character": "Svengeance (voice)",
+                "credit_id": "5e3ae95f91745b00172e27c4",
+                "order": 7
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 11160,
+                "known_for_department": "Acting",
+                "name": "Danny Trejo",
+                "original_name": "Danny Trejo",
+                "popularity": 27.572,
+                "profile_path": "/iSZbMYL2vuYtLY86da1TP1ScDTT.jpg",
+                "cast_id": 13,
+                "character": "Stronghold (voice)",
+                "credit_id": "5e3ae97cac8e6b0015c9bb1d",
+                "order": 8
+            },
+            {
+                "adult": false,
+                "gender": 1,
+                "id": 1620,
+                "known_for_department": "Acting",
+                "name": "Michelle Yeoh",
+                "original_name": "Michelle Yeoh",
+                "popularity": 69.938,
+                "profile_path": "/6oxvfyrrM3YmhgFZSqc8ESqPZoC.jpg",
+                "cast_id": 14,
+                "character": "Master Chow (voice)",
+                "credit_id": "5e3ae9a743250f0017c62cd1",
+                "order": 9
+            },
+            {
+                "adult": false,
+                "gender": 1,
+                "id": 5823,
+                "known_for_department": "Acting",
+                "name": "Julie Andrews",
+                "original_name": "Julie Andrews",
+                "popularity": 13.864,
+                "profile_path": "/kTXM2KfsXh2vSav0s9vaDKfs4lR.jpg",
+                "cast_id": 15,
+                "character": "Gru's Mom (voice)",
+                "credit_id": "5e3ae9c591745b00172e2869",
+                "order": 10
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 150,
+                "known_for_department": "Sound",
+                "name": "RZA",
+                "original_name": "RZA",
+                "popularity": 9.16,
+                "profile_path": "/2PVYCKXb1X3PLawJNoYGLN1x0In.jpg",
+                "cast_id": 43,
+                "character": "Biker (voice)",
+                "credit_id": "60247ae7abf8e2003ea43723",
+                "order": 11
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 21200,
+                "known_for_department": "Acting",
+                "name": "Will Arnett",
+                "original_name": "Will Arnett",
+                "popularity": 19.993,
+                "profile_path": "/cXupYqk2ERP13XBkw816skYdVDO.jpg",
+                "cast_id": 49,
+                "character": "Mr. Perkins (voice)",
+                "credit_id": "62bceffbe1faed1dc776d567",
+                "order": 12
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 4581,
+                "known_for_department": "Acting",
+                "name": "Steve Coogan",
+                "original_name": "Steve Coogan",
+                "popularity": 8.732,
+                "profile_path": "/tT7OXc2qA6hlREHXdwGLp0XihzA.jpg",
+                "cast_id": 50,
+                "character": "Silas Ramsbottom (voice)",
+                "credit_id": "62bcf02563d9370051f2b96e",
+                "order": 13
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 1468779,
+                "known_for_department": "Acting",
+                "name": "Jimmy O. Yang",
+                "original_name": "Jimmy O. Yang",
+                "popularity": 7.588,
+                "profile_path": "/1QfCVmdNo4AqBdN54kc9DTBx84X.jpg",
+                "cast_id": 51,
+                "character": "Henchman 1 (voice)",
+                "credit_id": "62bcf03384f2491739394040",
+                "order": 14
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 24362,
+                "known_for_department": "Acting",
+                "name": "Kevin Michael Richardson",
+                "original_name": "Kevin Michael Richardson",
+                "popularity": 17.678,
+                "profile_path": "/xXt9Nh7RAT5bOen66TaXreNYmCl.jpg",
+                "cast_id": 52,
+                "character": "Henchman 2 (voice)",
+                "credit_id": "62bcf03e63d9370092b9dc47",
+                "order": 15
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 31531,
+                "known_for_department": "Acting",
+                "name": "John DiMaggio",
+                "original_name": "John DiMaggio",
+                "popularity": 9.508,
+                "profile_path": "/awmyFwU6ErFJbGFFzhBYZ9AQn8m.jpg",
+                "cast_id": 53,
+                "character": "Henchman 3 (voice)",
+                "credit_id": "62bcf04d1b722c005147e886",
+                "order": 16
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 73476,
+                "known_for_department": "Acting",
+                "name": "Michael Beattie",
+                "original_name": "Michael Beattie",
+                "popularity": 1.412,
+                "profile_path": "/gDuLXdt6xXMjGOmdqoLymyra55n.jpg",
+                "cast_id": 54,
+                "character": "VNC Announcer / Guru Rick (voice)",
+                "credit_id": "62bcf06484f2491739394080",
+                "order": 17
+            },
+            {
+                "adult": false,
+                "gender": 1,
+                "id": 1443485,
+                "known_for_department": "Acting",
+                "name": "Colette Whitaker",
+                "original_name": "Colette Whitaker",
+                "popularity": 2.532,
+                "profile_path": null,
+                "cast_id": 55,
+                "character": "Gru's Teacher (voice)",
+                "credit_id": "62bcf07a7304b52384a1f189",
+                "order": 18
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 1223658,
+                "known_for_department": "Acting",
+                "name": "Raymond S. Persi",
+                "original_name": "Raymond S. Persi",
+                "popularity": 4.986,
+                "profile_path": "/37HnYfTAHhtAmWdl4NlVAOR7vCW.jpg",
+                "cast_id": 56,
+                "character": "Birthday Kid (voice)",
+                "credit_id": "62bcf08a1b722c005147e8d0",
+                "order": 19
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 8023,
+                "known_for_department": "Directing",
+                "name": "Kyle Balda",
+                "original_name": "Kyle Balda",
+                "popularity": 8.614,
+                "profile_path": "/7GeE6VwoLu1NL8R0lEgDrOooa5.jpg",
+                "cast_id": 59,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c0761328723c007c130655",
+                "order": 20
+            },
+            {
+                "adult": false,
+                "gender": 1,
+                "id": 83105,
+                "known_for_department": "Acting",
+                "name": "Debra Wilson",
+                "original_name": "Debra Wilson",
+                "popularity": 9.301,
+                "profile_path": "/2bsguOhkeCrSFMhWQZ9xUrQcaFw.jpg",
+                "cast_id": 91,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c07856f1b571007ca005e8",
+                "order": 21
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 78317,
+                "known_for_department": "Acting",
+                "name": "Bob Bergen",
+                "original_name": "Bob Bergen",
+                "popularity": 4.425,
+                "profile_path": "/soDD1xiV3zVQWOJzVdJwfgIqzfe.jpg",
+                "cast_id": 60,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c0761d0bb0760dcb64df8e",
+                "order": 22
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 78494,
+                "known_for_department": "Acting",
+                "name": "Beau Billingslea",
+                "original_name": "Beau Billingslea",
+                "popularity": 1.768,
+                "profile_path": "/tU2NJQ5m1sRlwpw9ljyt5NJB0Bf.jpg",
+                "cast_id": 61,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c076339672ed007ee9d3f0",
+                "order": 23
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 3243214,
+                "known_for_department": "Acting",
+                "name": "David Chen",
+                "original_name": "David Chen",
+                "popularity": 0.84,
+                "profile_path": null,
+                "cast_id": 63,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c0765a63d713026c2eee24",
+                "order": 24
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 105191,
+                "known_for_department": "Acting",
+                "name": "Will Collyer",
+                "original_name": "Will Collyer",
+                "popularity": 1.4,
+                "profile_path": null,
+                "cast_id": 64,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c07666f1b5710059a8cc33",
+                "order": 25
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 2005573,
+                "known_for_department": "Acting",
+                "name": "Nisa Ward",
+                "original_name": "Nisa Ward",
+                "popularity": 0.6,
+                "profile_path": null,
+                "cast_id": 90,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c07842a67254004c697696",
+                "order": 26
+            },
+            {
+                "adult": false,
+                "gender": 1,
+                "id": 2322348,
+                "known_for_department": "Acting",
+                "name": "Nora Wyman",
+                "original_name": "Nora Wyman",
+                "popularity": 0.6,
+                "profile_path": null,
+                "cast_id": 92,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c07869c2bcc60059f7ed54",
+                "order": 27
+            },
+            {
+                "adult": false,
+                "gender": 1,
+                "id": 1728454,
+                "known_for_department": "Acting",
+                "name": "Regina Taufen",
+                "original_name": "Regina Taufen",
+                "popularity": 4.427,
+                "profile_path": "/uawDYFYJ4cMJurfYRrA9BgAD3BS.jpg",
+                "cast_id": 89,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c07830f1b571007ca005d4",
+                "order": 28
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 60279,
+                "known_for_department": "Acting",
+                "name": "Fred Tatasciore",
+                "original_name": "Fred Tatasciore",
+                "popularity": 14.021,
+                "profile_path": "/busoEz4khUJ0hOoKHexjXwGrsit.jpg",
+                "cast_id": 88,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c0781d0bb0760dcc4c6f24",
+                "order": 29
+            },
+            {
+                "adult": false,
+                "gender": 1,
+                "id": 13924,
+                "known_for_department": "Acting",
+                "name": "Mindy Sterling",
+                "original_name": "Mindy Sterling",
+                "popularity": 7.476,
+                "profile_path": "/hX99KTTCFxB4a2rB1SpDbr8imrK.jpg",
+                "cast_id": 87,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c0781522e4800fa656182e",
+                "order": 30
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 154657,
+                "known_for_department": "Acting",
+                "name": "James Sie",
+                "original_name": "James Sie",
+                "popularity": 2.773,
+                "profile_path": "/yZ8SFsJJNmhgtNizwcWfknyBoBt.jpg",
+                "cast_id": 86,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c0780c924ce60059cd6442",
+                "order": 31
+            },
+            {
+                "adult": false,
+                "gender": 1,
+                "id": 64948,
+                "known_for_department": "Acting",
+                "name": "Cathy Cavadini",
+                "original_name": "Cathy Cavadini",
+                "popularity": 3.6,
+                "profile_path": "/wPC9ElskzT3qNsQm0waKdKtk0ak.jpg",
+                "cast_id": 62,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c0764c532acb0327a86107",
+                "order": 32
+            },
+            {
+                "adult": false,
+                "gender": 1,
+                "id": 1502907,
+                "known_for_department": "Acting",
+                "name": "Nev Scharrel",
+                "original_name": "Nev Scharrel",
+                "popularity": 5.694,
+                "profile_path": "/lRIFp4WDbzDMkUwcHhqlZl2NMk.jpg",
+                "cast_id": 85,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c077fd325a5100c3a4ac5c",
+                "order": 33
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 3609133,
+                "known_for_department": "Acting",
+                "name": "Carla Rempp",
+                "original_name": "Carla Rempp",
+                "popularity": 0.6,
+                "profile_path": null,
+                "cast_id": 84,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c077eea67254007ee65ea7",
+                "order": 34
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 954335,
+                "known_for_department": "Acting",
+                "name": "David J. Randolph",
+                "original_name": "David J. Randolph",
+                "popularity": 1.38,
+                "profile_path": null,
+                "cast_id": 83,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c077d271f095004c450273",
+                "order": 35
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 1546631,
+                "known_for_department": "Acting",
+                "name": "Alex Puccinelli",
+                "original_name": "Alex Puccinelli",
+                "popularity": 1.8,
+                "profile_path": "/4iTBlmw8uOPbpgnBCXm58YAjAcC.jpg",
+                "cast_id": 82,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c077ac924ce6004cb237d1",
+                "order": 36
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 3463959,
+                "known_for_department": "Acting",
+                "name": "Benjamin Plessala",
+                "original_name": "Benjamin Plessala",
+                "popularity": 0.6,
+                "profile_path": null,
+                "cast_id": 81,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c0779e9672ed005b84497b",
+                "order": 37
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 584023,
+                "known_for_department": "Acting",
+                "name": "Levi Nunez",
+                "original_name": "Levi Nunez",
+                "popularity": 0.6,
+                "profile_path": null,
+                "cast_id": 80,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c0777f1056110ed018d6fa",
+                "order": 38
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 2732113,
+                "known_for_department": "Acting",
+                "name": "Amari McCoy",
+                "original_name": "Amari McCoy",
+                "popularity": 2.269,
+                "profile_path": null,
+                "cast_id": 79,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c07772924ce6007c9d753a",
+                "order": 39
+            },
+            {
+                "adult": false,
+                "gender": 1,
+                "id": 87819,
+                "known_for_department": "Acting",
+                "name": "Dawnn Lewis",
+                "original_name": "Dawnn Lewis",
+                "popularity": 20.64,
+                "profile_path": "/ppxGgmkTczev2VsiOSMfaGUy580.jpg",
+                "cast_id": 78,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c077651056110ecf310261",
+                "order": 40
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 1328978,
+                "known_for_department": "Acting",
+                "name": "Sam Lavagnino",
+                "original_name": "Sam Lavagnino",
+                "popularity": 5.492,
+                "profile_path": "/zTKuiH43wspXMigVAiGMF4rUKUs.jpg",
+                "cast_id": 77,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c07759924ce60059cd63d4",
+                "order": 41
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 1503726,
+                "known_for_department": "Acting",
+                "name": "Evan Kishiyama",
+                "original_name": "Evan Kishiyama",
+                "popularity": 1.176,
+                "profile_path": "/tL0bxnvJNvCWbysjQuh6lcboJGx.jpg",
+                "cast_id": 76,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c07749c2bcc6004c900730",
+                "order": 42
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 1541380,
+                "known_for_department": "Acting",
+                "name": "JP Karliak",
+                "original_name": "JP Karliak",
+                "popularity": 2.271,
+                "profile_path": "/7Rc3n8KmKUaztqfsIpddO1a2ggn.jpg",
+                "cast_id": 75,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c0773aa67254005bd2e802",
+                "order": 43
+            },
+            {
+                "adult": false,
+                "gender": 1,
+                "id": 30618,
+                "known_for_department": "Acting",
+                "name": "Barbara Harris",
+                "original_name": "Barbara Harris",
+                "popularity": 5.938,
+                "profile_path": "/9gFrDXHT42V8v8rn931ZNsB7DyQ.jpg",
+                "cast_id": 74,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c07728a67254005bd2e7f4",
+                "order": 44
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 61536,
+                "known_for_department": "Acting",
+                "name": "Aaron Hendry",
+                "original_name": "Aaron Hendry",
+                "popularity": 3.91,
+                "profile_path": "/lOA25S5b1fkBL6fnG3u33mFtTdE.jpg",
+                "cast_id": 73,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c076de325a5100c25ed96d",
+                "order": 45
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 1379104,
+                "known_for_department": "Acting",
+                "name": "Ramone Hamilton",
+                "original_name": "Ramone Hamilton",
+                "popularity": 3.931,
+                "profile_path": "/vA7iiobQkwtfyseHnz4ZJbvhuX3.jpg",
+                "cast_id": 72,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c076cbf1b571004cf68c71",
+                "order": 46
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 3455062,
+                "known_for_department": "Acting",
+                "name": "Isa Hall",
+                "original_name": "Isa Hall",
+                "popularity": 0.6,
+                "profile_path": null,
+                "cast_id": 71,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c076c1f1b5710059a8cc63",
+                "order": 47
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 2016862,
+                "known_for_department": "Acting",
+                "name": "Jake Green",
+                "original_name": "Jake Green",
+                "popularity": 1.485,
+                "profile_path": "/3bfUpMgBCJw1Serr18Qm8tDJQvE.jpg",
+                "cast_id": 70,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c076b9af6e94125decd999",
+                "order": 48
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 1807446,
+                "known_for_department": "Acting",
+                "name": "Kellen Goff",
+                "original_name": "Kellen Goff",
+                "popularity": 3.38,
+                "profile_path": "/ujzQjAPx04ID2HUeEc8C05jazLu.jpg",
+                "cast_id": 69,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c076b0a67254004c6975c8",
+                "order": 49
+            },
+            {
+                "adult": false,
+                "gender": 1,
+                "id": 1512021,
+                "known_for_department": "Acting",
+                "name": "Scarlett Estevez",
+                "original_name": "Scarlett Estevez",
+                "popularity": 41.305,
+                "profile_path": "/c8T1SJxcHs0bV1W66qvWVfaINOt.jpg",
+                "cast_id": 68,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c076a1532acb0328d24917",
+                "order": 50
+            },
+            {
+                "adult": false,
+                "gender": 1,
+                "id": 73016,
+                "known_for_department": "Acting",
+                "name": "Debi Derryberry",
+                "original_name": "Debi Derryberry",
+                "popularity": 11.432,
+                "profile_path": "/aCVgHnvGBw7ssZA9kl1Pnr5pJjU.jpg",
+                "cast_id": 67,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c076921056110ecf3101bf",
+                "order": 51
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 1710790,
+                "known_for_department": "Acting",
+                "name": "Antonio Raul Corbo",
+                "original_name": "Antonio Raul Corbo",
+                "popularity": 6.089,
+                "profile_path": "/slBvNn8bPsHKTFkVbyeEnfw7rmu.jpg",
+                "cast_id": 66,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c076889672ed005b8448fc",
+                "order": 52
+            },
+            {
+                "adult": false,
+                "gender": 1,
+                "id": 2032819,
+                "known_for_department": "Acting",
+                "name": "Meilee Condron",
+                "original_name": "Meilee Condron",
+                "popularity": 1.788,
+                "profile_path": "/z7j0JGXX5iU9sp6lnnkUGKO0339.jpg",
+                "cast_id": 65,
+                "character": "Additional Voices (voice)",
+                "credit_id": "62c07677a67254004c6975b4",
+                "order": 53
+            }
+        ],
+        "crew": [
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 5720,
+                "known_for_department": "Production",
+                "name": "Christopher Meledandri",
+                "original_name": "Christopher Meledandri",
+                "popularity": 4.088,
+                "profile_path": "/iRcvLhuIzkUkjCR4C3NKbi2juuv.jpg",
+                "credit_id": "5e3aea0443250f0015c74505",
+                "department": "Production",
+                "job": "Producer"
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 7963,
+                "known_for_department": "Visual Effects",
+                "name": "Carter Goodrich",
+                "original_name": "Carter Goodrich",
+                "popularity": 1.019,
+                "profile_path": null,
+                "credit_id": "62bf906428723c004c809ff3",
+                "department": "Visual Effects",
+                "job": "Character Designer"
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 8023,
+                "known_for_department": "Directing",
+                "name": "Kyle Balda",
+                "original_name": "Kyle Balda",
+                "popularity": 8.614,
+                "profile_path": "/7GeE6VwoLu1NL8R0lEgDrOooa5.jpg",
+                "credit_id": "629f852ea8b2ca00a717ebd2",
+                "department": "Directing",
+                "job": "Director"
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 94028,
+                "known_for_department": "Production",
+                "name": "Robert Taylor",
+                "original_name": "Robert Taylor",
+                "popularity": 0.652,
+                "profile_path": "/6FcK6D1kj4TTOyh6TJHaLCFKq7V.jpg",
+                "credit_id": "5e6d1026a9b9a40012a0727e",
+                "department": "Production",
+                "job": "Associate Producer"
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 52361,
+                "known_for_department": "Writing",
+                "name": "Cinco Paul",
+                "original_name": "Cinco Paul",
+                "popularity": 4.55,
+                "profile_path": "/phZeM2oJ8jclBfCWzxgE6y9RiR6.jpg",
+                "credit_id": "5e6d0f3bcabfe4001813046c",
+                "department": "Writing",
+                "job": "Characters"
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 59706,
+                "known_for_department": "Sound",
+                "name": "Heitor Pereira",
+                "original_name": "Heitor Pereira",
+                "popularity": 3.567,
+                "profile_path": null,
+                "credit_id": "626d592fe004a6009d48e75e",
+                "department": "Sound",
+                "job": "Original Music Composer"
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 65674,
+                "known_for_department": "Production",
+                "name": "Janet Healy",
+                "original_name": "Janet Healy",
+                "popularity": 3.4,
+                "profile_path": null,
+                "credit_id": "5e3aea2991745b00142e1253",
+                "department": "Production",
+                "job": "Producer"
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 124748,
+                "known_for_department": "Acting",
+                "name": "Chris Renaud",
+                "original_name": "Chris Renaud",
+                "popularity": 1.713,
+                "profile_path": "/sumBJgBqRkK4XEJ2JYXpad3MTJs.jpg",
+                "credit_id": "5e3aea3c98f1f100180a76b1",
+                "department": "Production",
+                "job": "Producer"
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 555795,
+                "known_for_department": "Writing",
+                "name": "Mark Oftedal",
+                "original_name": "Mark Oftedal",
+                "popularity": 0.98,
+                "profile_path": null,
+                "credit_id": "5e6d11ee356a710011790dd6",
+                "department": "Visual Effects",
+                "job": "Visual Development"
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 928660,
+                "known_for_department": "Visual Effects",
+                "name": "Brett Nystul",
+                "original_name": "Brett Nystul",
+                "popularity": 0.766,
+                "profile_path": null,
+                "credit_id": "5e6d11b82f3b1700174300d8",
+                "department": "Visual Effects",
+                "job": "Visual Development"
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 931162,
+                "known_for_department": "Acting",
+                "name": "Jack Antonoff",
+                "original_name": "Jack Antonoff",
+                "popularity": 4.203,
+                "profile_path": "/ggQT8h3ygt6c5ZyUEQW5okGYRcl.jpg",
+                "credit_id": "5e3aeae0ac8e6b0015c9bc36",
+                "department": "Sound",
+                "job": "Music Producer"
+            },
+            {
+                "adult": false,
+                "gender": 1,
+                "id": 936669,
+                "known_for_department": "Acting",
+                "name": "Latifa Ouaou",
+                "original_name": "Latifa Ouaou",
+                "popularity": 1.963,
+                "profile_path": "/tqH1mKrJoVGcMmlCQpw4vnjyLjE.jpg",
+                "credit_id": "5e6d0fe5357c000011422f4d",
+                "department": "Production",
+                "job": "Executive Producer"
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 998575,
+                "known_for_department": "Visual Effects",
+                "name": "Gregory Georges",
+                "original_name": "Gregory Georges",
+                "popularity": 0.6,
+                "profile_path": null,
+                "credit_id": "5e6d10e4357c000013427407",
+                "department": "Visual Effects",
+                "job": "Color Designer"
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 998584,
+                "known_for_department": "Visual Effects",
+                "name": "Jonathan del Val",
+                "original_name": "Jonathan del Val",
+                "popularity": 0.6,
+                "profile_path": null,
+                "credit_id": "629f854553866e006687ecc1",
+                "department": "Directing",
+                "job": "Co-Director"
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 1024175,
+                "known_for_department": "Writing",
+                "name": "Brian Lynch",
+                "original_name": "Brian Lynch",
+                "popularity": 5.728,
+                "profile_path": "/dprj5Un51JO2QzQnDmHuBrqRQc3.jpg",
+                "credit_id": "62bcf0e012aabc0e419d13e7",
+                "department": "Writing",
+                "job": "Story"
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 1035822,
+                "known_for_department": "Writing",
+                "name": "Brad Ableson",
+                "original_name": "Brad Ableson",
+                "popularity": 0.6,
+                "profile_path": null,
+                "credit_id": "629f85977d5db508699c573e",
+                "department": "Directing",
+                "job": "Co-Director"
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 1218549,
+                "known_for_department": "Writing",
+                "name": "Mark O'Hare",
+                "original_name": "Mark O'Hare",
+                "popularity": 1.38,
+                "profile_path": null,
+                "credit_id": "5e6d11d0357c0000114233c6",
+                "department": "Art",
+                "job": "Additional Storyboarding"
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 1531911,
+                "known_for_department": "Editing",
+                "name": "Claire Dodgson",
+                "original_name": "Claire Dodgson",
+                "popularity": 0.607,
+                "profile_path": null,
+                "credit_id": "5e6d105b356a710011790cd8",
+                "department": "Editing",
+                "job": "Editor"
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 1535020,
+                "known_for_department": "Directing",
+                "name": "Mark Koetsier",
+                "original_name": "Mark Koetsier",
+                "popularity": 2.351,
+                "profile_path": null,
+                "credit_id": "5e6d110d356a7100177902e3",
+                "department": "Art",
+                "job": "Storyboard Artist"
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 1705477,
+                "known_for_department": "Directing",
+                "name": "Habib Louati",
+                "original_name": "Habib Louati",
+                "popularity": 0.6,
+                "profile_path": null,
+                "credit_id": "5e6d1146cabfe40018130563",
+                "department": "Art",
+                "job": "Storyboard Artist"
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 1777724,
+                "known_for_department": "Writing",
+                "name": "Matt Fogel",
+                "original_name": "Matt Fogel",
+                "popularity": 4.641,
+                "profile_path": null,
+                "credit_id": "5e6d0ef4cedac400134a9e28",
+                "department": "Writing",
+                "job": "Screenplay"
+            },
+            {
+                "adult": false,
+                "gender": 2,
+                "id": 1777724,
+                "known_for_department": "Writing",
+                "name": "Matt Fogel",
+                "original_name": "Matt Fogel",
+                "popularity": 4.641,
+                "profile_path": null,
+                "credit_id": "5e6d0ed4cabfe400111387ae",
+                "department": "Writing",
+                "job": "Writer"
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 1814615,
+                "known_for_department": "Production",
+                "name": "Jean-Luc Florinda",
+                "original_name": "Jean-Luc Florinda",
+                "popularity": 0.6,
+                "profile_path": null,
+                "credit_id": "5e6d0f81cabfe400111388ab",
+                "department": "Production",
+                "job": "Co-Producer"
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 1815493,
+                "known_for_department": "Art",
+                "name": "Patrick Muylkens",
+                "original_name": "Patrick Muylkens",
+                "popularity": 0.6,
+                "profile_path": null,
+                "credit_id": "5e6d11a2357c00001342753f",
+                "department": "Visual Effects",
+                "job": "Color Designer"
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 1999780,
+                "known_for_department": "Visual Effects",
+                "name": "Darren Webb",
+                "original_name": "Darren Webb",
+                "popularity": 0.6,
+                "profile_path": null,
+                "credit_id": "5e6d1219459ad60018634196",
+                "department": "Art",
+                "job": "Storyboard Artist"
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 2016629,
+                "known_for_department": "Directing",
+                "name": "Kelly Lake",
+                "original_name": "Kelly Lake",
+                "popularity": 0.6,
+                "profile_path": null,
+                "credit_id": "5e6d0fc4cabfe40013134545",
+                "department": "Production",
+                "job": "Associate Producer"
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 2016630,
+                "known_for_department": "Art",
+                "name": "Edwin Rhemrev",
+                "original_name": "Edwin Rhemrev",
+                "popularity": 1.286,
+                "profile_path": null,
+                "credit_id": "5e6d1202357c0000134275b9",
+                "department": "Art",
+                "job": "Set Designer"
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 2566188,
+                "known_for_department": "Art",
+                "name": "Nima Azarba",
+                "original_name": "Nima Azarba",
+                "popularity": 0.6,
+                "profile_path": null,
+                "credit_id": "5e6d10b6cedac400194b028d",
+                "department": "Art",
+                "job": "Storyboard Artist"
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 2566190,
+                "known_for_department": "Art",
+                "name": "J\u00e9r\u00e9mie Droulers",
+                "original_name": "J\u00e9r\u00e9mie Droulers",
+                "popularity": 0.6,
+                "profile_path": null,
+                "credit_id": "5e6d10cc459ad6001364667c",
+                "department": "Art",
+                "job": "Sculptor"
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 2566194,
+                "known_for_department": "Visual Effects",
+                "name": "Claire Lentz",
+                "original_name": "Claire Lentz",
+                "popularity": 0.6,
+                "profile_path": null,
+                "credit_id": "5e6d1125356a710011790d3a",
+                "department": "Visual Effects",
+                "job": "Color Designer"
+            },
+            {
+                "adult": false,
+                "gender": 0,
+                "id": 2566196,
+                "known_for_department": "Art",
+                "name": "James Moreau",
+                "original_name": "James Moreau",
+                "popularity": 0.6,
+                "profile_path": null,
+                "credit_id": "5e6d1178357c0000134274c6",
+                "department": "Art",
+                "job": "Graphic Designer"
+            }
+        ]
+    },
+    "keywords": {
+        "keywords": [
+            {
+                "id": 179431,
+                "name": "duringcreditsstinger"
+            },
+            {
+                "id": 255024,
+                "name": "shared universe"
+            }
+        ]
+    },
+    "images": {
+        "backdrops": [],
+        "logos": [],
+        "posters": []
+    },
+    "translations": {
+        "translations": [
+            {
+                "iso_3166_1": "SA",
+                "iso_639_1": "ar",
+                "name": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+                "english_name": "Arabic",
+                "data": {
+                    "homepage": "",
+                    "overview": "\u0641\u064a \u0641\u062a\u0631\u0629 \u0627\u0644\u0633\u0628\u0639\u064a\u0646\u064a\u0627\u062a \u0628\u0627\u0644\u0642\u0631\u0646 \u0627\u0644\u0645\u0627\u0636\u064a\u060c \u064a\u0646\u0637\u0644\u0642 \u062c\u0631\u0648 \u0627\u0644\u0641\u062a\u0649 \u0630\u0648 \u0627\u0644\u0625\u0646\u062b\u0649 \u0639\u0634\u0631 \u0639\u0627\u0645\u064b\u0627 \u0644\u062a\u0646\u0641\u064a\u0630 \u062e\u0637\u062a\u0647 \u0648\u0627\u0644\u062a\u064a \u064a\u0623\u0645\u0644 \u062e\u0644\u0627\u0644\u0647\u0627 \u0641\u064a \u0623\u0646 \u064a\u0635\u0628\u062d \u0627\u0644\u0634\u062e\u0635 \u0627\u0644\u0623\u0643\u062b\u0631 \u0634\u0631\u064b\u0627 \u0639\u0644\u0649 \u0648\u062c\u0647 \u0627\u0644\u0623\u0631\u0636\u060c \u0648\u0641\u064a \u0637\u0631\u064a\u0642\u0647 \u064a\u062a\u0642\u0627\u0628\u0644 \u0645\u0639 \u0645\u062e\u0644\u0648\u0642\u0627\u062a \u063a\u0631\u064a\u0628\u0629.",
+                    "runtime": 0,
+                    "tagline": "",
+                    "title": "\u0627\u0644\u0645\u064a\u0646\u064a\u0648\u0646\u0632 2: \u0635\u0639\u0648\u062f \u062c\u0631\u0648"
+                }
+            },
+            {
+                "iso_3166_1": "BG",
+                "iso_639_1": "bg",
+                "name": "\u0431\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438 \u0435\u0437\u0438\u043a",
+                "english_name": "Bulgarian",
+                "data": {
+                    "homepage": "",
+                    "overview": "\u041d\u0430 \u0421\u0442\u044e\u0430\u0440\u0442, \u041a\u0435\u0432\u0438\u043d \u0438 \u0411\u043e\u0431 \u0438\u043c \u043e\u0442\u043a\u0430\u0437\u0432\u0430\u0442 \u0431\u0430\u043d\u0430\u043d\u0438 \u0432 \u0441\u0443\u043f\u0435\u0440\u043c\u0430\u0440\u043a\u0435\u0442\u0430 \u0438 \u0442\u0435 \u043e\u0442\u0438\u0432\u0430\u0442 \u0434\u0430 \u0441\u0435 \u043e\u043f\u043b\u0430\u0447\u0430\u0442 \u0432 \u0411\u0435\u043b\u0438\u044f \u0434\u043e\u043c. \u041e\u0442\u0442\u0430\u043c \u043e\u0431\u0430\u0447\u0435 \u0433\u0438 \u0438\u0437\u0445\u0432\u044a\u0440\u043b\u044f\u0442, \u043f\u043e\u0440\u0430\u0434\u0438 \u043a\u043e\u0435\u0442\u043e \u043c\u0438\u043d\u044c\u043e\u043d\u0438\u0442\u0435 \u0440\u0435\u0448\u0430\u0432\u0430\u0442 \u0434\u0430 \u0441\u0432\u0430\u043b\u044f\u0442 \u043f\u0440\u0430\u0432\u0438\u0442\u0435\u043b\u0441\u0442\u0432\u043e\u0442\u043e. \u041c\u0430\u043b\u043a\u0438\u044f\u0442 \u0413\u0440\u0443 \u043c\u0435\u0436\u0434\u0443\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e \u0441\u0442\u0430\u0432\u0430 \u043b\u044e\u0431\u0438\u043c\u0435\u0446 \u043d\u0430 \u043c\u0438\u043d\u044c\u043e\u043d\u0438\u0442\u0435 \u0441 \u043a\u0440\u0435\u0442\u0435\u043d\u0441\u043a\u0438\u0442\u0435 \u0441\u0438 \u0438\u0437\u043f\u044a\u043b\u043d\u0435\u043d\u0438\u044f \u0438 \u0442\u0435 \u0441\u0430 \u0433\u043e\u0442\u043e\u0432\u0438 \u0434\u0430 \u043d\u0430\u043f\u0440\u0430\u0432\u044f\u0442 \u0432\u0441\u0438\u0447\u043a\u043e \u0437\u0430 \u043d\u0435\u0433\u043e. \u041a\u043e\u0433\u0430\u0442\u043e \u0433\u043e \u0433\u043e\u043d\u044f\u0442 \u043e\u0442 \u0433\u0440\u0430\u0434\u0430, \u0442\u043e\u0439 \u0433\u0438 \u0437\u0430\u043c\u0440\u0430\u0437\u044f\u0432\u0430...",
+                    "runtime": 0,
+                    "tagline": "\u0413\u043e\u0442\u043e\u0432\u0438? \u0422\u0435 \u0438\u0434\u0432\u0430\u0442.",
+                    "title": "\u041c\u0438\u043d\u044c\u043e\u043d\u0438\u0442\u0435 2"
+                }
+            },
+            {
+                "iso_3166_1": "ES",
+                "iso_639_1": "ca",
+                "name": "Catal\u00e0",
+                "english_name": "Catalan",
+                "data": {
+                    "homepage": "",
+                    "overview": "En Gru creix, als anys 70, en un barri residencial. \u00c9s tan dolent que pret\u00e9n demostrar a una famosa colla de dolents que ho \u00e9s prou com per treballar amb ells. Per a aix\u00f2, comptar\u00e0 amb la inestimable ajuda dels minions, sempre disposats a fer trapelleries.",
+                    "runtime": 0,
+                    "tagline": "Ha nascut un dolent",
+                    "title": "Minions: L'origen de Gru"
+                }
+            },
+            {
+                "iso_3166_1": "CZ",
+                "iso_639_1": "cs",
+                "name": "\u010cesk\u00fd",
+                "english_name": "Czech",
+                "data": {
+                    "homepage": "",
+                    "overview": "V neutuchaj\u00edc\u00ed touze naj\u00edt toho nejv\u011bt\u0161\u00edho padoucha v\u0161ech dob, aby mu mohli v\u011brn\u011b slou\u017eit, naraz\u00ed Mimoni na mal\u00e9ho nosat\u00e9ho \u010dernovlas\u00e9ho chlapce, kter\u00fd vyr\u016fst\u00e1 jen se svou n\u011bmeckou matkou. Jmenuje se Gru a ani\u017e to tu\u0161\u00ed, tohle setk\u00e1n\u00ed mu z\u00e1sadn\u011b zm\u011bn\u00ed \u017eivot.",
+                    "runtime": 0,
+                    "tagline": "",
+                    "title": "Mimoni 2: Padouch p\u0159ich\u00e1z\u00ed"
+                }
+            },
+            {
+                "iso_3166_1": "DK",
+                "iso_639_1": "da",
+                "name": "Dansk",
+                "english_name": "Danish",
+                "data": {
+                    "homepage": "",
+                    "overview": "Historien tager os tilbage til 70'erne, hvor Gru er barn i en tid, hvor bukser med svaj og disco er et hit. Men Gru er kun optaget af superskurke  og specielt The Vicious 6, en gruppe som han dr\u00f8mmer om at blive medlem af. Derfor har Gru udt\u00e6nkt en plan, s\u00e5 han kan blive en \u00e6gte superskurk.  Heldigvis, hvis man kan sige det, f\u00e5r han hj\u00e6lp af sine loyale f\u00f8lgere, de gule, kaosskabende minions. Kevin, Stuart, Bob og Otto \u2013 og en nye minion med b\u00f8jle \u2013 g\u00e5r i gang med at bygge Grus f\u00f8rste skurketilholdssted, eksperimenterer med v\u00e5ben og s\u00e6tte deres f\u00f8rste mission i s\u00f8en.",
+                    "runtime": 0,
+                    "tagline": "Det k\u00f8rer p\u00e5 skinner",
+                    "title": "Minions - Historien om Gru"
+                }
+            },
+            {
+                "iso_3166_1": "AT",
+                "iso_639_1": "de",
+                "name": "Deutsch",
+                "english_name": "German",
+                "data": {
+                    "homepage": "https://www.universalpictures.at/micro/minions2",
+                    "overview": "",
+                    "runtime": 0,
+                    "tagline": "",
+                    "title": "Minions \u2013 Auf der Suche nach dem Mini-Boss"
+                }
+            },
+            {
+                "iso_3166_1": "DE",
+                "iso_639_1": "de",
+                "name": "Deutsch",
+                "english_name": "German",
+                "data": {
+                    "homepage": "",
+                    "overview": "Die kleinen gelben Minions treiben einmal mehr ihr Unwesen auf der gro\u00dfen Kinoleinwand. Diesmal legen sie sich ins Zeug, um Gru zum gr\u00f6\u00dften Schurken der Welt zu machen. Doch dabei richten sie wie immer gewaltiges Chaos an.",
+                    "runtime": 0,
+                    "tagline": "",
+                    "title": "Minions - Auf der Suche nach dem Mini-Boss"
+                }
+            },
+            {
+                "iso_3166_1": "GR",
+                "iso_639_1": "el",
+                "name": "\u03b5\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac",
+                "english_name": "Greek",
+                "data": {
+                    "homepage": "https://www.minionsmovie.com/",
+                    "overview": "\u0392\u03c1\u03b9\u03c3\u03ba\u03cc\u03bc\u03b1\u03c3\u03c4\u03b5 \u03c3\u03c4\u03b7\u03bd \u03ba\u03b1\u03c1\u03b4\u03b9\u03ac \u03c4\u03b7\u03c2 \u03b4\u03b5\u03ba\u03b1\u03b5\u03c4\u03af\u03b1\u03c2 \u03c4\u03bf\u03c5 '70, \u03cc\u03c0\u03bf\u03c5 \u03cc\u03bb\u03bf\u03b9 \u03ad\u03c7\u03bf\u03c5\u03bd \u03bb\u03bf\u03c5\u03bb\u03bf\u03cd\u03b4\u03b9\u03b1 \u03c3\u03c4\u03b1 \u03bc\u03b1\u03bb\u03bb\u03b9\u03ac \u03ba\u03b1\u03b9 \u03c7\u03c1\u03c9\u03bc\u03b1\u03c4\u03b9\u03c3\u03c4\u03ac \u03c0\u03b1\u03bd\u03c4\u03b5\u03bb\u03cc\u03bd\u03b9\u03b1 \u03ba\u03b1\u03b9 \u03bf \u03bc\u03b9\u03ba\u03c1\u03cc\u03c2 \u0393\u03ba\u03c1\u03bf\u03c5 \u03bc\u03b5\u03b3\u03b1\u03bb\u03ce\u03bd\u03b5\u03b9 \u03c3\u03c4\u03b1 \u03c0\u03c1\u03bf\u03ac\u03c3\u03c4\u03b5\u03b9\u03b1.\r \u03a9\u03c2 \u03c6\u03b1\u03bd\u03b1\u03c4\u03b9\u03ba\u03cc\u03c2 \u03bf\u03c0\u03b1\u03b4\u03cc\u03c2 \u03bc\u03b9\u03b1 \u03bf\u03bc\u03ac\u03b4\u03b1\u03c2 \u03c3\u03bf\u03cd\u03c0\u03b5\u03c1 \u03ba\u03b1\u03ba\u03ce\u03bd \u03bc\u03b5 \u03c4\u03bf \u03cc\u03bd\u03bf\u03bc\u03b1 \u00abVicious 6\u00bb, \u03bf \u0393\u03ba\u03c1\u03bf\u03c5 \u03b8\u03ad\u03bb\u03b5\u03b9 \u03bd\u03b1 \u03b3\u03af\u03bd\u03b5\u03b9 \u03b1\u03c1\u03ba\u03b5\u03c4\u03ac \u03ba\u03b1\u03ba\u03cc\u03c2 \u03ce\u03c3\u03c4\u03b5 \u03bc\u03b9\u03b1 \u03bc\u03ad\u03c1\u03b1 \u03bd\u03b1 \u03bc\u03c0\u03bf\u03c1\u03ad\u03c3\u03b5\u03b9 \u03bd\u03b1 \u03b3\u03af\u03bd\u03b5\u03b9 \u03bc\u03ad\u03bb\u03bf\u03c2 \u03c4\u03b7\u03c2 \u03bf\u03bc\u03ac\u03b4\u03b1\u03c2 \u03c4\u03bf\u03c5\u03c2. \u0395\u03c5\u03c4\u03c5\u03c7\u03ce\u03c2, \u03c3\u03c4\u03b7\u03bd \u03c0\u03c1\u03bf\u03c3\u03c0\u03ac\u03b8\u03b5\u03b9\u03ac \u03c4\u03bf\u03c5 \u03bd\u03b1 \u03c3\u03c0\u03b5\u03af\u03c1\u03b5\u03b9 \u03c4\u03bf \u03c7\u03ac\u03bf\u03c2, \u03c4\u03bf\u03bd \u03b2\u03bf\u03b7\u03b8\u03bf\u03cd\u03bd \u03bf\u03b9 \u03bc\u03b9\u03ba\u03c1\u03bf\u03af \u03c4\u03bf\u03c5 \u03b1\u03ba\u03cc\u03bb\u03bf\u03c5\u03b8\u03bf\u03b9, \u03c4\u03b1 \u03bb\u03b1\u03c4\u03c1\u03b5\u03bc\u03ad\u03bd\u03b1 Minions. \u038c\u03bb\u03bf\u03b9 \u03bc\u03b1\u03b6\u03af, \u03bf \u039a\u03ad\u03b2\u03b9\u03bd, \u03bf \u03a3\u03c4\u03b9\u03bf\u03cd\u03b1\u03c1\u03c4, \u03bf \u039c\u03c0\u03bf\u03bc\u03c0 \u03ba\u03b1\u03b9 \u03bf \u038c\u03c4\u03c4\u03bf, \u03ad\u03bd\u03b1 \u03bd\u03ad\u03bf minion \u03bc\u03b5 \u00ab\u03c3\u03b9\u03b4\u03b5\u03c1\u03ac\u03ba\u03b9\u03b1\u00bb \u03c3\u03c4\u03b1 \u03b4\u03cc\u03bd\u03c4\u03b9\u03b1 \u03ba\u03b1\u03b9 \u03bc\u03b5 \u03c4\u03b7\u03bd \u03b1\u03c0\u03b5\u03c1\u03b9\u03cc\u03c1\u03b9\u03c3\u03c4\u03b7 \u03b5\u03c0\u03b9\u03b8\u03c5\u03bc\u03af\u03b1 \u03bd\u03b1 \u03b5\u03af\u03bd\u03b1\u03b9 \u03b1\u03c1\u03b5\u03c3\u03c4\u03cc\u03c2 \u03c3\u03b5 \u03cc\u03bb\u03bf\u03c5\u03c2, \u03b1\u03bd\u03b1\u03c0\u03c4\u03cd\u03c3\u03c3\u03bf\u03c5\u03bd \u03c4\u03b9\u03c2 \u03b9\u03ba\u03b1\u03bd\u03cc\u03c4\u03b7\u03c4\u03ad\u03c2 \u03c4\u03bf\u03c5\u03c2 \u03ba\u03b1\u03b8\u03ce\u03c2 \u03b5\u03c4\u03bf\u03b9\u03bc\u03ac\u03b6\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bd\u03b1 \u03c0\u03b5\u03b9\u03c1\u03b1\u03bc\u03b1\u03c4\u03b9\u03c3\u03c4\u03bf\u03cd\u03bd \u03bc\u03b5 \u03c4\u03b1 \u03c0\u03c1\u03ce\u03c4\u03b1 \u03c4\u03bf\u03c5\u03c2 \u03cc\u03c0\u03bb\u03b1 \u03ba\u03b1\u03b9 \u03bd\u03b1 \u03c0\u03c1\u03b1\u03b3\u03bc\u03b1\u03c4\u03bf\u03c0\u03bf\u03b9\u03ae\u03c3\u03bf\u03c5\u03bd \u03c4\u03b9\u03c2 \u03c0\u03c1\u03ce\u03c4\u03b5\u03c2 \u03c4\u03bf\u03c5\u03c2 \u03bc\u03c5\u03c3\u03c4\u03b9\u03ba\u03ad\u03c2 \u03b1\u03c0\u03bf\u03c3\u03c4\u03bf\u03bb\u03ad\u03c2.",
+                    "runtime": 0,
+                    "tagline": "\u0388\u03bd\u03b1\u03c2 \u03ba\u03b1\u03ba\u03cc\u03c2 \u03b3\u03b5\u03bd\u03bd\u03b9\u03ad\u03c4\u03b1\u03b9",
+                    "title": "Minions 2: \u0397 \u0386\u03bd\u03bf\u03b4\u03bf\u03c2 \u03c4\u03bf\u03c5 \u0393\u03ba\u03c1\u03bf\u03c5"
+                }
+            },
+            {
+                "iso_3166_1": "US",
+                "iso_639_1": "en",
+                "name": "English",
+                "english_name": "English",
+                "data": {
+                    "homepage": "https://www.minionsmovie.com/",
+                    "overview": "A fanboy of a supervillain supergroup known as the Vicious 6, Gru hatches a plan to become evil enough to join them, with the backup of his followers, the Minions.",
+                    "runtime": 87,
+                    "tagline": "A villain will rise.",
+                    "title": ""
+                }
+            },
+            {
+                "iso_3166_1": "ES",
+                "iso_639_1": "es",
+                "name": "Espa\u00f1ol",
+                "english_name": "Spanish",
+                "data": {
+                    "homepage": "",
+                    "overview": "Mucho antes de convertirse en un genio del mal, Gru no era m\u00e1s que un chaval de 12 a\u00f1os en plenos a\u00f1os 70 tratando de conquistar el mundo desde el s\u00f3tano de su casa de un barrio residencial cualquiera. Y no le iba demasiado bien. Pero cuando Gru se cruza en su camino con Kevin, Stuart, Bob, y Otto \u2014un nuevo Minion con aparato en los dientes y desesperado por sentirse aceptado\u2014, esta inesperada familia unir\u00e1 fuerzas para construir su primera guarida, dise\u00f1ar sus primeras armas y llevar a cabo sus primeras misiones.",
+                    "runtime": 0,
+                    "tagline": "Ha nacido un villano.",
+                    "title": "Minions: El origen de Gru"
+                }
+            },
+            {
+                "iso_3166_1": "MX",
+                "iso_639_1": "es",
+                "name": "Espa\u00f1ol",
+                "english_name": "Spanish",
+                "data": {
+                    "homepage": "",
+                    "overview": "Mucho antes de convertirse en un genio del mal, Gru no era m\u00e1s que un ni\u00f1o de 12 a\u00f1os en plenos a\u00f1os 70 tratando de conquistar el mundo desde el s\u00f3tano de su casa de un barrio residencial cualquiera. Y no le iba demasiado bien. Pero cuando Gru se cruza en su camino con Kevin, Stuart, Bob, y Otto \u2014un nuevo Minion con aparato en los dientes y desesperado por sentirse aceptado\u2014, esta inesperada familia unir\u00e1 fuerzas para construir su primera guarida, dise\u00f1ar sus primeras armas y llevar a cabo sus primeras misiones.",
+                    "runtime": 0,
+                    "tagline": "Prep\u00e1rate",
+                    "title": "Minions: Nace un villano"
+                }
+            },
+            {
+                "iso_3166_1": "EE",
+                "iso_639_1": "et",
+                "name": "Eesti",
+                "english_name": "Estonian",
+                "data": {
+                    "homepage": "",
+                    "overview": "",
+                    "runtime": 0,
+                    "tagline": "",
+                    "title": ""
+                }
+            },
+            {
+                "iso_3166_1": "FI",
+                "iso_639_1": "fi",
+                "name": "suomi",
+                "english_name": "Finnish",
+                "data": {
+                    "homepage": "",
+                    "overview": "Kauan ennen kuin h\u00e4nest\u00e4 tulee pahuuden mestari, Gru on 1970-luvun esikaupunkialueella asuva 12-vuotias poika, joka juonii maailmanvalloitusta kellarissaan, tosin huonolla menestyksell\u00e4. Kun pahamaineinen supervorojen superryhm\u00e4 Konnakuusikko erottaa johtajansa - joka on legendaarinen taistelulajimestari Willi Koukku - Gru, heid\u00e4n innokkain ihailijansa, pyrkii ryhm\u00e4n tuoreimmaksi j\u00e4seneksi. Konnakuusikko ei ole vaikuttunut pienenpuoleisesta konnakokelaasta, mutta sitten Gru p\u00e4ihitt\u00e4\u00e4 heid\u00e4t oveluudessa (ja suututtaa heid\u00e4t), ja yht\u00e4kki\u00e4 h\u00e4n huomaa olevansa pahuuden perikuvien verivihollinen. Kun Gru on pakosalla, K\u00e4tyrit turvautuvat kungfu-taitoihin voidakseen pelastaa h\u00e4net. N\u00e4in Gru huomaa, ett\u00e4 pahiksetkin kaipaavat joskus yst\u00e4vien apua.",
+                    "runtime": 90,
+                    "tagline": "Ilkimys nousee",
+                    "title": "K\u00e4tyrit: Grun tarina"
+                }
+            },
+            {
+                "iso_3166_1": "CA",
+                "iso_639_1": "fr",
+                "name": "Fran\u00e7ais",
+                "english_name": "French",
+                "data": {
+                    "homepage": "https://universalpictures.ca/fr/movie/les-minions-2-il-etait-une-fois-gru/",
+                    "overview": "Au c\u0153ur des ann\u00e9es 1970, Gru grandit dans les banlieues. \u00c9tant fan d\u2019un super-groupe de super-m\u00e9chants, appel\u00e9 les Vicious 6, Gru manigance un plan suffisamment mal\u00e9fique pour pouvoir se joindre \u00e0 eux. Heureusement pour lui, ses fid\u00e8les mais chaotiques disciples, les Minions, lui viennent en aide.",
+                    "runtime": 87,
+                    "tagline": "Accrochez-vous!",
+                    "title": "Les Minions 2 : Il \u00e9tait une fois Gru"
+                }
+            },
+            {
+                "iso_3166_1": "FR",
+                "iso_639_1": "fr",
+                "name": "Fran\u00e7ais",
+                "english_name": "French",
+                "data": {
+                    "homepage": "",
+                    "overview": "Alors que les ann\u00e9es 70 battent leur plein, Gru qui grandit en banlieue au milieu des jeans \u00e0 pattes d\u2019\u00e9l\u00e9phants et des chevelures en fleur, met sur pied un plan machiav\u00e9lique \u00e0 souhait pour r\u00e9ussir \u00e0 int\u00e9grer un groupe c\u00e9l\u00e8bre de super m\u00e9chants, connu sous le nom de Vicious 6, dont il est le plus grand fan. Il est second\u00e9 dans sa t\u00e2che par les Minions, ses petits compagnons aussi turbulents que fid\u00e8les. Avec l\u2019aide de Kevin, Stuart, Bob et Otto \u2013 un nouveau Minion arborant un magnifique appareil dentaire et un besoin d\u00e9sesp\u00e9r\u00e9 de plaire - ils vont d\u00e9ployer ensemble des tr\u00e9sors d\u2019ing\u00e9niosit\u00e9 afin de construire leur premier repaire, exp\u00e9rimenter leurs premi\u00e8res armes, et lancer leur premi\u00e8re mission. Lorsque les Vicious 6 limogent leur chef, le l\u00e9gendaire \" Wild Knuckles \", Gru passe l\u2019audition pour int\u00e9grer l\u2019\u00e9quipe. Le moins qu\u2019on puisse dire c\u2019est que l\u2019entrevue tourne mal, et soudain court quand Gru leur d\u00e9montre sa sup\u00e9riorit\u00e9 et se retrouve soudain leur ennemi jur\u00e9.",
+                    "runtime": 87,
+                    "tagline": "L'ascension d'un super-vilain.",
+                    "title": "Les Minions 2 - Il \u00e9tait une fois Gru"
+                }
+            },
+            {
+                "iso_3166_1": "IL",
+                "iso_639_1": "he",
+                "name": "\u05e2\u05b4\u05d1\u05b0\u05e8\u05b4\u05d9\u05ea",
+                "english_name": "Hebrew",
+                "data": {
+                    "homepage": "",
+                    "overview": "\u05e1\u05d9\u05e4\u05d5\u05e8 \u05d4\u05de\u05e4\u05d2\u05e9 \u05d1\u05d9\u05df \u05d4\u05d9\u05e6\u05d5\u05e8\u05d9\u05dd \u05d4\u05e6\u05d4\u05d5\u05d1\u05d9\u05dd \u05dc\u05d1\u05d9\u05df \u05de\u05d9 \u05e9\u05d9\u05d4\u05e4\u05d5\u05da \u05dc\u05d1\u05d5\u05e1 \u05e9\u05dc\u05d4\u05dd: \u05d2\u05e8\u05d5 (\u05de\u05e1\u05d3\u05e8\u05ea \"\u05d2\u05e0\u05d5\u05d1 \u05e2\u05dc \u05d4\u05d9\u05e8\u05d7\"). \u05d2\u05e8\u05d5 \u05d7\u05d5\u05dc\u05dd \u05dc\u05d4\u05d9\u05d5\u05ea \u05e0\u05d1\u05dc \u05d4\u05e2\u05dc \u05d4\u05d2\u05d3\u05d5\u05dc \u05d1\u05d9\u05d5\u05ea\u05e8 \u05e9\u05d9\u05d3\u05e2 \u05d4\u05e2\u05d5\u05dc\u05dd \u05d5\u05d4\u05de\u05d9\u05e0\u05d9\u05d5\u05e0\u05d9\u05dd \u05e0\u05d7\u05d5\u05e9\u05d9\u05dd \u05dc\u05e2\u05d6\u05d5\u05e8 \u05dc\u05d5 \u05dc\u05d4\u05d2\u05e9\u05d9\u05dd \u05d0\u05ea \u05d4\u05e4\u05d5\u05d8\u05e0\u05e6\u05d9\u05d0\u05dc \u05d4\u05d2\u05dc\u05d5\u05dd \u05d1\u05d5. \u05d4\u05d1\u05e2\u05d9\u05d4 \u05d4\u05d9\u05d7\u05d9\u05d3\u05d4 - \u05d2\u05e8\u05d5 \u05e8\u05e7 \u05d1\u05df 12 \u05d5\u05d7\u05d1\u05d5\u05e8\u05d4 \u05de\u05e1\u05d5\u05db\u05e0\u05ea \u05e9\u05dc \u05e0\u05d1\u05dc\u05d9 \u05e2\u05dc \u05de\u05e4\u05d5\u05e8\u05e1\u05de\u05d9\u05dd \u05e9\u05de\u05d4 \u05e2\u05dc \u05d4\u05d9\u05e6\u05d5\u05e8\u05d9\u05dd \u05d4\u05de\u05e6\u05d7\u05d9\u05e7\u05d9\u05dd \u05de\u05d8\u05e8\u05d4.",
+                    "runtime": 87,
+                    "tagline": "\u05d9\u05d5\u05ea\u05e8 \u05db\u05d9\u05e3 \u05e4\u05d9 \u05de\u05d9\u05e0\u05d9\u05d5\u05df!",
+                    "title": "\u05d4\u05de\u05d9\u05e0\u05d9\u05d5\u05e0\u05d9\u05dd 2: \u05e2\u05dc\u05d9\u05d9\u05ea\u05d5 \u05e9\u05dc \u05d2\u05e8\u05d5"
+                }
+            },
+            {
+                "iso_3166_1": "HR",
+                "iso_639_1": "hr",
+                "name": "Hrvatski",
+                "english_name": "Croatian",
+                "data": {
+                    "homepage": "",
+                    "overview": "Sredinom 70-tih godina pro\u0161log stolje\u0107a 12 godi\u0161nji Gru odrasta u predgra\u0111u i ma\u0161ta o svojoj zlo\u010dina\u010dkoj karijeri. Kao veliki ljubitelj superzle supergrupe Evil 6 ima plan kako da im se pridru\u017ei. Zajedno sa svojim vjernim Malcima te prinovom, Ottom malcem sa zubnom protezom, gradi svoj prvi brlog i zavr\u0161avaju svoj prvi zlo\u010dina\u010dki zadatak. Pristupanje Evil 6 grupi ne prolazi bez problema i Gru ubrzo postaje njihov glavni neprijatelj.",
+                    "runtime": 0,
+                    "tagline": "Di\u0107i \u0107e se zlikovac.",
+                    "title": "Malci 2: Kako je Gru postao Gru"
+                }
+            },
+            {
+                "iso_3166_1": "HU",
+                "iso_639_1": "hu",
+                "name": "Magyar",
+                "english_name": "Hungarian",
+                "data": {
+                    "homepage": "",
+                    "overview": "A borzas haj\u00fa, trap\u00e9zgaty\u00e1s Gru kertv\u00e1rosi kamasz a 70-es \u00e9vekben. Az \u00c1lnok Hatos nev\u0171 szupergonosz szupercsoport rajong\u00f3jak\u00e9nt tervet kov\u00e1csol, hogy el\u00e9g gonosz legyen ahhoz, hogy be\u00e1llhasson k\u00f6z\u00e9j\u00fck. Szerencs\u00e9re seg\u00edts\u00e9ge is akad az \u00e1lland\u00f3an galib\u00e1t okoz\u00f3 h\u0171s\u00e9ges minyonok szem\u00e9ly\u00e9ben.",
+                    "runtime": 0,
+                    "tagline": "Mosolyogj. J\u00f6nnek.",
+                    "title": "Minyonok: Gru sz\u00ednre l\u00e9p"
+                }
+            },
+            {
+                "iso_3166_1": "ID",
+                "iso_639_1": "id",
+                "name": "Bahasa indonesia",
+                "english_name": "Indonesian",
+                "data": {
+                    "homepage": "https://www.minionsmovie.com/",
+                    "overview": "Seorang penggemar kelompok penjahat super yang dikenal sebagai Vicious 6, Gru menyusun rencana untuk menjadi cukup jahat untuk bergabung dengan mereka, dengan dukungan pengikutnya, para Minion.",
+                    "runtime": 87,
+                    "tagline": "Seorang penjahat akan bangkit.",
+                    "title": "Minions: Kebangkitan Gru"
+                }
+            },
+            {
+                "iso_3166_1": "IT",
+                "iso_639_1": "it",
+                "name": "Italiano",
+                "english_name": "Italian",
+                "data": {
+                    "homepage": "",
+                    "overview": "Siamo negli anni 70 e il non-ancora-famigerato Gru, al momento dodicenne di belle speranze, vive e cresce nella sua casetta di periferia. Ammiratore de \"I malefici sei\", una squadra di supercattivi, Gru decide che il suo obiettivo di vita \u00e8 diventare abbastanza cattivo per poter essere anche lui parte del gruppo. L'occasione sembra presentarsi quando il supergruppo caccia il proprio leader, rendendo vacante il suo posto: Gru si presenta alla porta dei Malefici sei e si propone, venendo per\u00f2 respinto. Innervosito e deluso, il nostro (anti)eroe decide di ribellarsi alla decisione rubando ai suoi ormai ex miti, che a questo punto lo prendono definitivamente di mira e decidono di inseguirlo per dargli una lezione che gli basti una volta per tutte. In fuga, Gru viene aiutato inaspettatamente proprio dall'ex capo dei Malefici sei, che decide di prenderlo con s\u00e9 e fargli da mentore: l\u2019aspirante supercattivo scopre cos\u00ec che persino le persone malvage, a volte, hanno bisogno di un amico.",
+                    "runtime": 87,
+                    "tagline": "Tieniti forte",
+                    "title": "Minions 2 - Come Gru diventa cattivissimo"
+                }
+            },
+            {
+                "iso_3166_1": "JP",
+                "iso_639_1": "ja",
+                "name": "\u65e5\u672c\u8a9e",
+                "english_name": "Japanese",
+                "data": {
+                    "homepage": "",
+                    "overview": "1970\u5e74\u4ee3\u300211\u6b73\u306e\u5c11\u5e74\u30b0\u30eb\u30fc\u3092\u30df\u30cb\u30dc\u30b9\u3068\u3057\u3066\u5d07\u62dd\u3057\u3001\u5f7c\u306e\u5b50\u5206\u3068\u306a\u3063\u305f\u30b1\u30d3\u30f3\u3001\u30b9\u30c1\u30e5\u30a2\u30fc\u30c8\u3001\u30dc\u30d6\u3089\u30df\u30cb\u30aa\u30f3\u305f\u3061\u3002\u30b0\u30eb\u30fc\u306e\u3082\u3068\u3067\u60aa\u4e8b\u3092\u50cd\u3044\u3066\u3044\u305f\u304c\u3001\u5f7c\u304c\u4f55\u8005\u304b\u306b\u9023\u308c\u53bb\u3089\u308c\u3066\u3057\u307e\u3046\u3002\u30b0\u30eb\u30fc\u6551\u51fa\u306b\u5411\u3051\u3066\u52d5\u304d\u51fa\u3057\u305f\u5f7c\u3089\u306f\u3001\u3042\u308b\u4e8b\u4ef6\u3092\u6a5f\u306b\u30ab\u30f3\u30d5\u30fc\u306e\u9054\u4eba\u30de\u30b9\u30bf\u30fc\u30fb\u30c1\u30e3\u30a6\u3068\u51fa\u4f1a\u3046\u3002\u30de\u30b9\u30bf\u30fc\u30fb\u30c1\u30e3\u30a6\u306e\u3082\u3068\u3067\u30ab\u30f3\u30d5\u30fc\u306e\u4fee\u884c\u306b\u52b1\u3080\u304c\u3001\u305d\u308c\u304c\u601d\u308f\u306c\u4e8b\u614b\u3092\u5f15\u304d\u8d77\u3053\u3059\u3002",
+                    "runtime": 0,
+                    "tagline": "",
+                    "title": "\u30df\u30cb\u30aa\u30f3\u30ba \u30d5\u30a3\u30fc\u30d0\u30fc"
+                }
+            },
+            {
+                "iso_3166_1": "GE",
+                "iso_639_1": "ka",
+                "name": "\u10e5\u10d0\u10e0\u10d7\u10e3\u10da\u10d8",
+                "english_name": "Georgian",
+                "data": {
+                    "homepage": "",
+                    "overview": "",
+                    "runtime": 0,
+                    "tagline": "",
+                    "title": "\u10db\u10d8\u10dc\u10d8\u10dd\u10dc\u10d4\u10d1\u10d8: \u10d2\u10e0\u10e3\u10e1 \u10d0\u10e6\u10d6\u10d4\u10d5\u10d4\u10d1\u10d0"
+                }
+            },
+            {
+                "iso_3166_1": "KR",
+                "iso_639_1": "ko",
+                "name": "\ud55c\uad6d\uc5b4/\uc870\uc120\ub9d0",
+                "english_name": "Korean",
+                "data": {
+                    "homepage": "",
+                    "overview": "\uc138\uacc4 \ucd5c\uace0\uc758 \uc288\ud37c \uc545\ub2f9\uc744 \uafc8\uafb8\ub294 \ubbf8\ub2c8\ubcf4\uc2a4 \u2018\uadf8\ub8e8\u2019\uc640 \uadf8\ub97c \ub530\ub77c\ub2e4\ub2c8\ub294 \ubbf8\ub2c8\uc5b8\ub4e4. \uc5b4\ub290 \ub0a0 \uadf8\ub8e8\ub294 \ucd5c\uace0\uc758 \uc545\ub2f9 \uc870\uc9c1 \u2018\ube4c\ub7f06\u2019\uc758 \ub9c8\ubc95 \uc2a4\ud1a4\uc744 \ud6d4\uce58\ub294 \ub370 \uc131\uacf5\ud558\uc9c0\ub9cc \ub274\ud398\uc774\uc2a4 \ubbf8\ub2c8\uc5b8 \u2018\uc624\ud1a0\u2019\uc758 \uc2e4\uc218\ub85c \uc2a4\ud1a4\uc744 \uc783\uc5b4\ubc84\ub9ac\uace0 \ube4c\ub7f06\uc5d0\uac8c \ub0a9\uce58\uae4c\uc9c0 \ub2f9\ud55c\ub2e4. \ubbf8\ub2c8\ubcf4\uc2a4\ub97c \uad6c\ud558\uae30 \uc704\ud574 \uc783\uc5b4\ubc84\ub9b0 \uc2a4\ud1a4\uc744 \ub418\ucc3e\uc544\uc57c \ud558\ub294 \u2018\uc624\ud1a0\u2019, \uadf8\ub9ac\uace0 \ucff5\ud478\ub97c \ub9c8\uc2a4\ud130\ud574\uc57c \ud558\ub294 \u2018\ucf00\ube48\u2019, \u2018\uc2a4\ud29c\uc5b4\ud2b8\u2019, \u2018\ubc25\u2019! \uc62c \uc5ec\ub984 \uadf9\uc7a5\uac00\ub97c \uc810\ub839\ud560 MCU(\ubbf8\ub2c8\uc5b8\uc988 \uc2dc\ub124\ub9c8\ud2f1 \uc720\ub2c8\ubc84\uc2a4)\uac00 \ub3cc\uc544\uc628\ub2e4!",
+                    "runtime": 0,
+                    "tagline": "\uc624\ub79c\ub9c8\ub2c8\uc5b8!",
+                    "title": "\ubbf8\ub2c8\uc5b8\uc988 2"
+                }
+            },
+            {
+                "iso_3166_1": "LT",
+                "iso_639_1": "lt",
+                "name": "Lietuvi\u0173",
+                "english_name": "Lithuanian",
+                "data": {
+                    "homepage": "",
+                    "overview": "Pasaulyje pilna blogiuk\u0173, bet vienas dvylikametis svajoja tapti did\u017eiausiu pasaulyje superblogiuku.\r Animacin\u0117s fran\u0161iz\u0117s \u201eBjaurusis A\u0161\u201c skyriaus \u201ePakalikai\u201c t\u0119sinys atskleis draugi\u0161kojo piktadario Felonijaus Gru kilm\u0117s istorij\u0105.\r Jaunasis Gru taikosi itin auk\u0161tai, nes planuoja su\u017eav\u0117ti Pikt\u0105j\u012f \u0160e\u0161et\u0105 \u2013 garsiausi\u0105 piktadari\u0173 grup\u0119 visame pasaulyje. Gru nusprend\u017eia net tapti naujuoju grup\u0117s vadeiva, ta\u010diau kaip jau \u012fprasta \u2013 viskas vyksta ne pagal i\u0161 anksto sumanyt\u0105 plan\u0105.\r Labai greitai Gru kartu su Bobu, Kevinu, Oto, Stiuartu ir kitais pakalikais tampa Piktojo \u0160e\u0161eto sekan\u010diu taikiniu. B\u0117gdami nuo kilusio pavojaus, jie sulaukia pagalbos pa\u010dioje netik\u0117\u010diausioje vietoje ir supranta, kad netgi blogiukams kartais prireikia draug\u0173 pagalbos.\r Eksperimentai su pirmaisiais Gru ginklais ir pirmosios pakalik\u0173 misijos \u017eada daug nuotyki\u0173 juoko ir geros nuotaikos.",
+                    "runtime": 0,
+                    "tagline": "",
+                    "title": "Pakalikai 2"
+                }
+            },
+            {
+                "iso_3166_1": "NL",
+                "iso_639_1": "nl",
+                "name": "Nederlands",
+                "english_name": "Dutch",
+                "data": {
+                    "homepage": "",
+                    "overview": "Als fan van een superschurkengroep die bekend staat als de Vicious 6, bedenkt Gru een plan om kwaadaardig genoeg te worden om zich bij hen aan te sluiten, met de steun van zijn volgelingen, de Minions.",
+                    "runtime": 0,
+                    "tagline": "",
+                    "title": ""
+                }
+            },
+            {
+                "iso_3166_1": "PL",
+                "iso_639_1": "pl",
+                "name": "Polski",
+                "english_name": "Polish",
+                "data": {
+                    "homepage": "",
+                    "overview": "Minionki Kevin, Stuart, Bob oraz Otto musz\u0105 ratowa\u0107 m\u0142odego Gru, kt\u00f3ry popad\u0142 w konflikt z grup\u0105 super z\u0142oczy\u0144c\u00f3w znan\u0105 jako Vicious 6.",
+                    "runtime": 0,
+                    "tagline": "",
+                    "title": "Minionki: Wej\u015bcie Gru"
+                }
+            },
+            {
+                "iso_3166_1": "BR",
+                "iso_639_1": "pt",
+                "name": "Portugu\u00eas",
+                "english_name": "Portuguese",
+                "data": {
+                    "homepage": "",
+                    "overview": "A continua\u00e7\u00e3o das aventuras dos Minions, sempre em busca de um l\u00edder tir\u00e2nico. Dessa vez, eles ajudam um Gru ainda crian\u00e7a, descobrindo como ser vil\u00e3o.",
+                    "runtime": 0,
+                    "tagline": "",
+                    "title": "Minions: A Origem de Gru"
+                }
+            },
+            {
+                "iso_3166_1": "PT",
+                "iso_639_1": "pt",
+                "name": "Portugu\u00eas",
+                "english_name": "Portuguese",
+                "data": {
+                    "homepage": "https://www.minimos.pt/",
+                    "overview": "F\u00e3 de um grupo de supervil\u00f5es conhecido como Vicious 6, Gru, tra\u00e7a um plano de forma a tornar-se suficientemente mau para se juntar a eles, com o apoio dos seus seguidores, os M\u00ednimos.",
+                    "runtime": 0,
+                    "tagline": "Prepara-te",
+                    "title": "M\u00ednimos 2: A Ascens\u00e3o de Gru"
+                }
+            },
+            {
+                "iso_3166_1": "RO",
+                "iso_639_1": "ro",
+                "name": "Rom\u00e2n\u0103",
+                "english_name": "Romanian",
+                "data": {
+                    "homepage": "",
+                    "overview": "Plasat imediat dup\u0103 evenimentele din primul film, de data aceasta \u00een anii 1970, un Gru de 12 ani cre\u0219te \u00een suburbii. Un fanboy al unui grup de super-r\u0103i cunoscut sub numele de Vicious 6, Gru pune la cale un plan pentru a deveni suficient de r\u0103u pentru a li se al\u0103tura. C\u00e2nd Vicious 6 \u00eel concediaz\u0103 pe liderul lor, legendarul lupt\u0103tor Wild Knuckles, Gru este intervievat pentru a deveni cel mai nou membru al lor.",
+                    "runtime": 87,
+                    "tagline": "Un r\u0103uf\u0103c\u0103tor se va ridica.",
+                    "title": "Minionii 2"
+                }
+            },
+            {
+                "iso_3166_1": "RU",
+                "iso_639_1": "ru",
+                "name": "P\u0443\u0441\u0441\u043a\u0438\u0439",
+                "english_name": "Russian",
+                "data": {
+                    "homepage": "https://www.universalpictures.ru/micro/minions2",
+                    "overview": "\u041c\u0438\u043b\u043b\u0438\u043e\u043d \u043b\u0435\u0442 \u043c\u0438\u043d\u044c\u043e\u043d\u044b \u0438\u0441\u043a\u0430\u043b\u0438 \u0441\u0430\u043c\u043e\u0433\u043e \u0432\u0435\u043b\u0438\u043a\u043e\u0433\u043e \u0438 \u0443\u0436\u0430\u0441\u043d\u043e\u0433\u043e \u043f\u0440\u0435\u0434\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044f, \u043f\u043e\u043a\u0430 \u043d\u0435 \u0432\u0441\u0442\u0440\u0435\u0442\u0438\u043b\u0438 \u0415\u0413\u041e. \u0417\u043d\u0430\u043a\u043e\u043c\u044c\u0442\u0435\u0441\u044c - \u0413\u0440\u044e. \u041f\u0443\u0441\u0442\u044c \u043e\u043d \u0435\u0449\u0435 \u043e\u0447\u0435\u043d\u044c \u043c\u043e\u043b\u043e\u0434, \u043d\u043e \u0443 \u043d\u0435\u0433\u043e \u0432 \u043f\u043b\u0430\u043d\u0430\u0445 \u043f\u043e-\u043d\u0430\u0441\u0442\u043e\u044f\u0449\u0435\u043c\u0443 \u0433\u0430\u0434\u043a\u0438\u0435 \u0434\u0435\u043b\u0430, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0437\u0430\u0441\u0442\u0430\u0432\u044f\u0442 \u043f\u043b\u0430\u043d\u0435\u0442\u0443 \u0441\u043e\u0434\u0440\u043e\u0433\u043d\u0443\u0442\u044c\u0441\u044f.",
+                    "runtime": 0,
+                    "tagline": "\u0413\u0440\u044f\u0434\u0451\u0442 \u043c\u0438\u043d\u044c\u043e\u043d\u043e\u0442\u0435\u0440\u0430\u043f\u0438\u044f",
+                    "title": "\u041c\u0438\u043d\u044c\u043e\u043d\u044b: \u0413\u0440\u044e\u0432\u0438\u0442\u0430\u0446\u0438\u044f"
+                }
+            },
+            {
+                "iso_3166_1": "SK",
+                "iso_639_1": "sk",
+                "name": "Sloven\u010dina",
+                "english_name": "Slovak",
+                "data": {
+                    "homepage": "",
+                    "overview": "V neut\u00edchaj\u00facej snahe n\u00e1js\u0165 toho najv\u00e4\u010d\u0161ieho zloducha v\u0161etk\u00fdch \u010dias a verne mu sl\u00fa\u017ei\u0165, narazia Mimoni na mal\u00e9ho nosat\u00e9ho \u010diernovlas\u00e9ho chlapca, ktor\u00fd vyrast\u00e1 len so svojou nemeckou matkou. Vol\u00e1 sa Gru a bez toho aby to tu\u0161il, toto stretnutie mu z\u00e1sadne zmen\u00ed \u017eivot.",
+                    "runtime": 0,
+                    "tagline": "Pripravi\u0165 sa, stroj\u010dek.... \u0161tart !",
+                    "title": "Mimoni 2: Zloduch prich\u00e1dza"
+                }
+            },
+            {
+                "iso_3166_1": "RS",
+                "iso_639_1": "sr",
+                "name": "Srpski",
+                "english_name": "Serbian",
+                "data": {
+                    "homepage": "",
+                    "overview": "\u041d\u0430\u0441\u0442\u0430\u0432\u0430\u043a \u0430\u0432\u0430\u043d\u0442\u0443\u0440\u0430 \u041c\u0430\u043b\u0446\u0438 \u043a\u043e\u0458\u0438 \u0441\u0443 \u0443\u0432\u0435\u043a \u0443 \u043f\u043e\u0442\u0440\u0430\u0437\u0438 \u0437\u0430 \u0432\u043e\u0452\u043e\u043c \u0442\u0438\u0440\u0430\u043d\u0438\u043d\u043e\u043c \u2026 \u0424\u0438\u043b\u043c \u043f\u0440\u0430\u0442\u0438 \u0441\u0430\u043d 12-\u0433\u043e\u0434\u0438\u0448\u045a\u0430\u043a\u0430, \u0413\u0440\u0443-\u0430, \u043a\u043e\u0458\u0438 \u0436\u0435\u043b\u0438 \u0434\u0430 \u043f\u043e\u0441\u0442\u0430\u043d\u0435 \u043d\u0430\u0458\u0432\u0435\u045b\u0438 \u0441\u0432\u0435\u0442\u0441\u043a\u0438 \u0437\u043b\u0438\u043a\u043e\u0432\u0430\u0446.",
+                    "runtime": 0,
+                    "tagline": "",
+                    "title": "\u041c\u0430\u043b\u0446\u0438 2: \u0413\u0440\u0443\u043e\u0432 \u043f\u043e\u0447\u0435\u0442\u0430\u043a"
+                }
+            },
+            {
+                "iso_3166_1": "SE",
+                "iso_639_1": "sv",
+                "name": "svenska",
+                "english_name": "Swedish",
+                "data": {
+                    "homepage": "",
+                    "overview": "I mitten av 1970-talet v\u00e4xer Gru upp i en f\u00f6rort, mitt i en uppsj\u00f6 av fj\u00e4drar i h\u00e5ret och utsv\u00e4ngda jeans. Gru \u00e4r ett stort fan av en grupp superskurkar k\u00e4nd som Grymlingarna och kl\u00e4cker en plan f\u00f6r att bli tillr\u00e4ckligt ond f\u00f6r att g\u00e5 med i gruppen. Lyckligtvis f\u00e5r han viss kaosartad hj\u00e4lp av sina lojala f\u00f6ljare, minionerna. Kevin, Stuart, Bob och Otto - en ny minion med tandst\u00e4llning och ett desperat behov av att behaga - anv\u00e4nder sina talanger n\u00e4r de tillsammans med Gru bygger sitt f\u00f6rsta hemliga g\u00f6mst\u00e4lle, experimenterar med sina f\u00f6rsta vapen och f\u00f6rs\u00f6ker lyckas med sina f\u00f6rsta uppdrag. N\u00e4r Grymlingarna g\u00f6r sig av med sin ledare, legendariske fightern Wild Knuckles, blir Gru intervjuad f\u00f6r att bli deras nyaste medlem.",
+                    "runtime": 0,
+                    "tagline": "En skurks v\u00e4g till toppen",
+                    "title": "Minioner: Ber\u00e4ttelsen om Gru"
+                }
+            },
+            {
+                "iso_3166_1": "TH",
+                "iso_639_1": "th",
+                "name": "\u0e20\u0e32\u0e29\u0e32\u0e44\u0e17\u0e22",
+                "english_name": "Thai",
+                "data": {
+                    "homepage": "",
+                    "overview": "\u0e2b\u0e25\u0e31\u0e07\u0e08\u0e32\u0e01\u0e17\u0e35\u0e48\u0e1e\u0e27\u0e01\u0e21\u0e34\u0e19\u0e40\u0e19\u0e35\u0e48\u0e22\u0e19\u0e2d\u0e2d\u0e01\u0e15\u0e32\u0e21\u0e2b\u0e32\u0e1a\u0e23\u0e23\u0e14\u0e32\u0e27\u0e32\u0e22\u0e23\u0e49\u0e32\u0e22\u0e2a\u0e38\u0e14\u0e42\u0e09\u0e14\u0e21\u0e32\u0e17\u0e38\u0e01\u0e22\u0e38\u0e04\u0e17\u0e38\u0e01\u0e2a\u0e21\u0e31\u0e22 \u0e1b\u0e31\u0e48\u0e19\u0e1b\u0e48\u0e27\u0e19\u0e08\u0e19\u0e21\u0e32\u0e40\u0e08\u0e2d\u0e01\u0e31\u0e1a\u0e2b\u0e19\u0e39\u0e19\u0e49\u0e2d\u0e22 \u0e01\u0e23\u0e39 \u0e40\u0e14\u0e47\u0e01\u0e2b\u0e19\u0e38\u0e48\u0e21\u0e19\u0e49\u0e2d\u0e22\u0e17\u0e35\u0e48\u0e27\u0e32\u0e14\u0e1d\u0e31\u0e19\u0e08\u0e30\u0e01\u0e25\u0e32\u0e22\u0e40\u0e1b\u0e47\u0e19\u0e27\u0e32\u0e22\u0e23\u0e49\u0e32\u0e22\u0e17\u0e35\u0e48\u0e22\u0e34\u0e48\u0e07\u0e43\u0e2b\u0e0d\u0e48\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14\u0e43\u0e19\u0e42\u0e25\u0e01 \u0e1e\u0e23\u0e49\u0e2d\u0e21\u0e14\u0e49\u0e27\u0e22\u0e1a\u0e23\u0e23\u0e14\u0e32\u0e25\u0e39\u0e01\u0e2a\u0e21\u0e38\u0e19\u0e15\u0e31\u0e27\u0e2a\u0e35\u0e40\u0e2b\u0e25\u0e37\u0e2d\u0e07\u0e17\u0e35\u0e48\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e08\u0e30\u0e0a\u0e48\u0e27\u0e22 \u0e41\u0e15\u0e48\u0e14\u0e31\u0e19\u0e1b\u0e48\u0e27\u0e19\u0e21\u0e32\u0e01\u0e01\u0e27\u0e48\u0e32 \u0e04\u0e23\u0e32\u0e27\u0e19\u0e35\u0e49\u0e01\u0e23\u0e39\u0e44\u0e14\u0e49\u0e40\u0e14\u0e34\u0e19\u0e17\u0e32\u0e07\u0e44\u0e1b\u0e22\u0e31\u0e07\u0e2a\u0e16\u0e32\u0e19\u0e17\u0e35\u0e48\u0e40\u0e1b\u0e47\u0e19\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e2a\u0e20\u0e32\u0e02\u0e2d\u0e07\u0e1a\u0e23\u0e23\u0e14\u0e32\u0e27\u0e32\u0e22\u0e23\u0e49\u0e32\u0e22\u0e17\u0e35\u0e48\u0e0a\u0e37\u0e48\u0e2d Vicious 6 \u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e15\u0e49\u0e2d\u0e07\u0e01\u0e32\u0e23\u0e40\u0e1b\u0e47\u0e19\u0e27\u0e32\u0e22\u0e23\u0e49\u0e32\u0e22\u0e40\u0e15\u0e47\u0e21\u0e15\u0e31\u0e27 \u0e41\u0e15\u0e48\u0e14\u0e49\u0e27\u0e22\u0e04\u0e27\u0e32\u0e21\u0e17\u0e35\u0e48\u0e40\u0e02\u0e32\u0e22\u0e31\u0e07\u0e40\u0e1b\u0e47\u0e19\u0e40\u0e14\u0e47\u0e01 \u0e17\u0e33\u0e43\u0e2b\u0e49\u0e1a\u0e23\u0e23\u0e14\u0e32\u0e27\u0e32\u0e22\u0e23\u0e49\u0e32\u0e22\u0e44\u0e21\u0e48\u0e22\u0e2d\u0e21\u0e23\u0e31\u0e1a  \u0e41\u0e19\u0e48\u0e19\u0e2d\u0e19\u0e27\u0e48\u0e32\u0e04\u0e27\u0e32\u0e21\u0e1d\u0e31\u0e19\u0e02\u0e2d\u0e07\u0e01\u0e23\u0e39\u0e41\u0e19\u0e48\u0e27\u0e41\u0e19\u0e48\u0e40\u0e01\u0e34\u0e19\u0e2a\u0e34\u0e48\u0e07\u0e43\u0e14 \u0e40\u0e02\u0e32\u0e40\u0e25\u0e22\u0e15\u0e31\u0e14\u0e2a\u0e34\u0e19\u0e43\u0e08\u0e1e\u0e34\u0e2a\u0e39\u0e08\u0e19\u0e4c\u0e15\u0e31\u0e27\u0e40\u0e2d\u0e07\u0e14\u0e49\u0e27\u0e22\u0e01\u0e32\u0e23\u0e02\u0e42\u0e21\u0e22\u0e2d\u0e31\u0e0d\u0e21\u0e13\u0e35\u0e25\u0e49\u0e33\u0e04\u0e48\u0e32\u0e02\u0e2d\u0e07\u0e27\u0e32\u0e22\u0e23\u0e49\u0e32\u0e22\u0e15\u0e31\u0e27\u0e41\u0e21\u0e48 Belle Bottom \u0e17\u0e33\u0e43\u0e2b\u0e49\u0e27\u0e32\u0e22\u0e23\u0e49\u0e32\u0e22\u0e17\u0e31\u0e49\u0e07\u0e2b\u0e21\u0e14\u0e41\u0e2b\u0e48\u0e07 Vicious 6 \u0e2d\u0e2d\u0e01\u0e15\u0e32\u0e21\u0e25\u0e48\u0e32\u0e40\u0e02\u0e32\u0e43\u0e19\u0e17\u0e31\u0e19\u0e17\u0e35 \u0e44\u0e21\u0e48\u0e27\u0e48\u0e32\u0e08\u0e30\u0e40\u0e1b\u0e47\u0e19\u0e27\u0e32\u0e22\u0e23\u0e49\u0e32\u0e22\u0e08\u0e2d\u0e21\u0e1e\u0e25\u0e31\u0e07, \u0e41\u0e21\u0e48\u0e0a\u0e35\u0e2a\u0e32\u0e22\u0e1a\u0e39\u0e4a\u0e1c\u0e39\u0e49\u0e21\u0e35\u0e01\u0e23\u0e30\u0e1a\u0e2d\u0e07\u0e2a\u0e2d\u0e07\u0e17\u0e48\u0e2d\u0e19\u0e40\u0e1b\u0e47\u0e19\u0e2d\u0e32\u0e27\u0e38\u0e18 \u0e2b\u0e23\u0e37\u0e2d\u0e08\u0e30\u0e40\u0e1b\u0e47\u0e19\u0e21\u0e19\u0e38\u0e29\u0e22\u0e4c\u0e17\u0e35\u0e48\u0e21\u0e35\u0e41\u0e02\u0e19\u0e40\u0e1b\u0e47\u0e19\u0e01\u0e49\u0e32\u0e21\u0e1b\u0e39 \u0e41\u0e15\u0e48\u0e01\u0e23\u0e39\u0e01\u0e47\u0e44\u0e21\u0e48\u0e19\u0e49\u0e2d\u0e22\u0e2b\u0e19\u0e49\u0e32 \u0e40\u0e1e\u0e23\u0e32\u0e30\u0e40\u0e02\u0e32\u0e21\u0e35\u0e1a\u0e23\u0e23\u0e14\u0e32\u0e40\u0e2b\u0e25\u0e48\u0e32\u0e21\u0e34\u0e19\u0e40\u0e19\u0e35\u0e22\u0e19\u0e41\u0e25\u0e30\u0e08\u0e31\u0e01\u0e23\u0e22\u0e32\u0e19\u0e15\u0e34\u0e14\u0e44\u0e2d\u0e1e\u0e48\u0e19\u0e04\u0e39\u0e48\u0e43\u0e08 \u0e01\u0e23\u0e39\u0e15\u0e31\u0e14\u0e2a\u0e34\u0e19\u0e43\u0e08\u0e43\u0e0a\u0e49\u0e41\u0e1c\u0e19\u0e41\u0e22\u0e01\u0e22\u0e49\u0e32\u0e22\u0e2b\u0e25\u0e2d\u0e01\u0e25\u0e48\u0e2d \u0e42\u0e14\u0e22\u0e43\u0e2b\u0e49\u0e2b\u0e19\u0e36\u0e48\u0e07\u0e43\u0e19\u0e21\u0e34\u0e19\u0e40\u0e19\u0e35\u0e22\u0e19\u0e17\u0e35\u0e48\u0e0a\u0e37\u0e48\u0e2d \u0e2d\u0e47\u0e2d\u0e15\u0e42\u0e15\u0e49 \u0e40\u0e2d\u0e32\u0e2d\u0e31\u0e0d\u0e21\u0e13\u0e35\u0e2b\u0e19\u0e35\u0e41\u0e22\u0e01\u0e44\u0e1b\u0e2d\u0e35\u0e01\u0e17\u0e32\u0e07 \u0e2a\u0e48\u0e27\u0e19\u0e40\u0e02\u0e32\u0e08\u0e30\u0e40\u0e1b\u0e47\u0e19\u0e04\u0e19\u0e25\u0e48\u0e2d\u0e1e\u0e27\u0e01\u0e27\u0e32\u0e22\u0e23\u0e49\u0e32\u0e22\u0e40\u0e2d\u0e07",
+                    "runtime": 0,
+                    "tagline": "\u0e27\u0e32\u0e22\u0e23\u0e49\u0e32\u0e22 \u0e08\u0e30\u0e1c\u0e07\u0e32\u0e14",
+                    "title": "\u0e21\u0e34\u0e19\u0e40\u0e19\u0e35\u0e48\u0e22\u0e19 2"
+                }
+            },
+            {
+                "iso_3166_1": "TR",
+                "iso_639_1": "tr",
+                "name": "T\u00fcrk\u00e7e",
+                "english_name": "Turkish",
+                "data": {
+                    "homepage": "",
+                    "overview": "Stuart, Kevin ve Bob bir s\u00fcpermarketten muzlar\u0131n\u0131 alamad\u0131klar\u0131 i\u00e7in olduk\u00e7a sinirlidir. Bu duruma \u00e7\u00f6z\u00fcm bulmak isteyen ekip, Beyaz Saray\u2019a do\u011fru yola koyulurlar. Durumu \u015fikayet etmek i\u00e7in Beyaz Saray\u2019a geldiklerinde ise kendilerini kap\u0131n\u0131n \u00f6n\u00fcnde bulurlar. Kovulduklar\u0131 i\u00e7in \u015fa\u015fk\u0131n ve bir o kadar da sinirli olan Stuart, Kevin ve Bob, kendilerine yap\u0131lanlar\u0131n intikam\u0131n\u0131 almak i\u00e7in ABD h\u00fck\u00fcmetini devirmek i\u00e7in zorlu bir maceraya at\u0131l\u0131r. Bu maceralar\u0131nda onlara Gru da e\u015flik edecektir.",
+                    "runtime": 0,
+                    "tagline": "Bir K\u00f6t\u00fc Do\u011fuyor!",
+                    "title": "Minyonlar 2: Gru'nun Y\u00fckseli\u015fi"
+                }
+            },
+            {
+                "iso_3166_1": "UA",
+                "iso_639_1": "uk",
+                "name": "\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0438\u0439",
+                "english_name": "Ukrainian",
+                "data": {
+                    "homepage": "",
+                    "overview": "\u041f\u043e\u0441\u0456\u043f\u0430\u043a\u0438, \u0436\u043e\u0432\u0442\u0456 \u0456 \u043d\u0435\u0432\u0433\u0430\u043c\u043e\u0432\u043d\u0456 \u043f\u043e\u0432\u0435\u043b\u0438\u0442\u0435\u043b\u0456 \u043c\u0456\u043b\u044c\u0439\u043e\u043d\u0456\u0432, \u043f\u0440\u043e\u0432\u0435\u0434\u0443\u0442\u044c \u0432\u0430\u0441 \u0442\u0443\u0434\u0438, \u0434\u0435 \u0432\u0441\u0435 \u043f\u043e\u0447\u0430\u043b\u043e\u0441\u044f. \u0412\u0438\u0431\u0443\u0445\u043e\u0432\u0438\u0439 \u0433\u0443\u043c\u043e\u0440 \u0432\u0456\u0434 Illumination \u0456 \u0432\u0435\u043b\u0438\u043a\u0430 \u043c\u0440\u0456\u044f \u043e\u0434\u043d\u043e\u0433\u043e \u0445\u043b\u043e\u043f\u0446\u044f \u0441\u0442\u0430\u0442\u0438 \u043d\u0430\u0439\u0432\u0435\u043b\u0438\u0447\u043d\u0456\u0448\u0438\u043c \u043b\u0438\u0445\u043e\u0434\u0456\u0454\u043c \u043b\u044e\u0434\u0441\u0442\u0432\u0430.",
+                    "runtime": 0,
+                    "tagline": "\u0413\u043e\u0442\u0443\u0439\u0441\u044f!",
+                    "title": "\u041f\u043e\u0441\u0456\u043f\u0430\u043a\u0438: \u0421\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u044f \u043b\u0438\u0445\u043e\u0434\u0456\u044f"
+                }
+            },
+            {
+                "iso_3166_1": "VN",
+                "iso_639_1": "vi",
+                "name": "Ti\u1ebfng Vi\u1ec7t",
+                "english_name": "Vietnamese",
+                "data": {
+                    "homepage": "",
+                    "overview": "L\u00e0 m\u1ed9t fanboy c\u1ee7a m\u1ed9t si\u00eau nh\u00f3m si\u00eau t\u1ed9i ph\u1ea1m \u0111\u01b0\u1ee3c g\u1ecdi l\u00e0 Vicious 6, Gru \u1ea5p \u1ee7 m\u1ed9t k\u1ebf ho\u1ea1ch tr\u1edf n\u00ean x\u1ea5u xa \u0111\u1ee7 \u0111\u1ec3 tham gia c\u00f9ng h\u1ecd, v\u1edbi s\u1ef1 h\u1ed7 tr\u1ee3 c\u1ee7a nh\u1eefng ng\u01b0\u1eddi theo d\u00f5i anh ta, Minions.",
+                    "runtime": 0,
+                    "tagline": "",
+                    "title": "Minions: S\u1ef1 Tr\u1ed7i D\u1eady c\u1ee7a Gru"
+                }
+            },
+            {
+                "iso_3166_1": "CN",
+                "iso_639_1": "zh",
+                "name": "\u666e\u901a\u8bdd",
+                "english_name": "Mandarin",
+                "data": {
+                    "homepage": "",
+                    "overview": "\u8fd9\u90e8\u65b0\u7247\u5c06\u662f2015\u5e74\u63a8\u51fa\u7684\u5c0f\u9ec4\u4eba\u72ec\u7acb\u7535\u5f71\u300a\u5c0f\u9ec4\u4eba\u300b\u7684\u76f4\u63a5\u7eed\u96c6\u3002\u5b83\u4f5c\u4e3a\u300a\u795e\u5077\u5976\u7238\u300b\u7684\u884d\u751f\u4f5c\u54c1\uff0c\u8bb2\u8ff0\u4e86\u5c0f\u9ec4\u4eba\u4eec\u5728\u201c\u524d\u683c\u9c81\u201d\u65f6\u4ee3\u4e3a\u5176\u4ed6\u4e3b\u4eba\u670d\u52a1\u7684\u7ecf\u5386\uff0c\u4e0d\u8fc7\u5c11\u5e74\u683c\u9c81\u66fe\u7ecf\u51fa\u73b0\u5728\u8fd9\u90e8\u884d\u751f\u7535\u5f71\u91cc\uff0c\u7eed\u96c6\u5c06\u56f4\u7ed5\u4ed6\u4e0e\u5c0f\u9ec4\u4eba\u4eec\u7ed3\u7f18\u7684\u8fc7\u7a0b\u5c55\u5f00\u5267\u60c5\u3002",
+                    "runtime": 0,
+                    "tagline": "",
+                    "title": "\u5c0f\u9ec4\u4eba\u5927\u773c\u840c\uff1a\u795e\u5077\u5976\u7238\u524d\u4f20"
+                }
+            },
+            {
+                "iso_3166_1": "HK",
+                "iso_639_1": "zh",
+                "name": "\u666e\u901a\u8bdd",
+                "english_name": "Mandarin",
+                "data": {
+                    "homepage": "",
+                    "overview": "\u6545\u4e8b\u5f9e\u53ea\u662f\u500b12\u6b72\u9109\u4e0b\u4ed4\u7684\u7280\u5229\u54e5\u8aaa\u8d77\u3002\u4ed6\u5e74\u7d00\u7d30\u7d30\u5df2\u6eff\u8179\u90aa\u60e1\u5927\u8a08\uff0c\u5922\u60f3\u7a31\u9738\u5730\u7403\uff0c\u53ef\u60dc\u8655\u8655\u8e2b\u58c1\uff0c\u76f4\u81f3\u78b0\u5230\u8ff7\u4f60\u5175\u5718\uff0c\u806f\u624b\u6253\u9020\u5927\u672c\u71df\u53ca\u5f37\u52c1\u6b66\u5668\uff0c\u7e3d\u7b97\u4f3c\u6a21\u4f3c\u6a23\u3002\u7576\u60e1\u540d\u662d\u5f70\u7684\u8d85\u7d1a\u516d\u60e1\u4eba\u806f\u76df\uff0c\u4f5c\u53cd\u8e22\u8d70\u4e86\u5927\u4f6c\u5a01\u9f8d\u54e5\u5f8c\uff0c\u7280\u5229\u54e5\u4f5c\u70ba\u806f\u76df\u300c\u5fe0\u7c89\u300d\uff0c\u628a\u63e1\u5347\u5462\u6a5f\u6703\u9042\u81ea\u85a6\u52a0\u76df\uff1b\u4f46\u7280\u5229\u54e5\u7684\u8db3\u667a\u591a\u8b00\u60f9\u6012\u4e86\u516d\u60e1\u4eba\uff0c\u8ff7\u4f60\u5175\u5718\u9019\u73ed\u300c\u6700\u4f73\u640d\u53cb\u300d\u70ba\u4e86\u62ef\u6551\u4ed6\uff0c\u7adf\u81e8\u6025\u62b1\u4f5b\u8173\u82e6\u5b78\u529f\u592b\uff0c\u9f4a\u5fc3\u5408\u529b\u5411\u516d\u60e1\u4eba\u6311\u6a5f\u22ef\u22ef",
+                    "runtime": 88,
+                    "tagline": "",
+                    "title": "\u8ff7\u4f60\u5175\u5718 2"
+                }
+            },
+            {
+                "iso_3166_1": "TW",
+                "iso_639_1": "zh",
+                "name": "\u666e\u901a\u8bdd",
+                "english_name": "Mandarin",
+                "data": {
+                    "homepage": "",
+                    "overview": "\u7f8e\u570b1970\u5e74\u4ee3\u4e2d\u8449\uff0c\u7576\u62ab\u982d\u6563\u9aee\u642d\u914d\u5587\u53ed\u725b\u4ed4\u8932\u7684\u5b09\u76ae\u98a8\u6f6e\u4ecd\u672a\u892a\u6d41\u884c\u4e4b\u6642\uff0c\u683c\u9b6f (\u53f2\u63d0\u592b\u5361\u723e \u914d\u97f3) \u9084\u662f\u4e00\u500b\u4f4f\u5728\u90ca\u5340\u7684\u5c0f\u5c41\u5b69\uff0c\u4ed6\u4e5f\u662f\u4e00\u500b\u4e16\u4e0a\u6700\u5f37\u8d85\u7d1a\u5927\u58de\u86cb\u7d44\u5408\u201c\u58de\u58de\u516d\u4eba\u7d44\u201d\u7684\u5927\u7c89\u7d72\uff0c\u4ed6\u60f3\u51fa\u4e86\u4e00\u500b\u8a08\u5283\uff0c\u5e0c\u671b\u80fd\u5920\u8b8a\u5f97\u5920\u58de\u7136\u5f8c\u52a0\u5165\u4ed6\u5011\u3002\u5e78\u597d\u4ed6\u6709\u4e00\u7fa4\u5fe0\u5fc3\u803f\u803f\u7684\u8ffd\u96a8\u8005\u5c0f\u5c0f\u5175\u6703\u5e6b\u52a9\u4ed6\u5927\u641e\u7834\u58de\u3002\u51f1\u6587\u3001\u53f2\u90fd\u83ef\u3001\u863f\u8514\u548c\u201c\u62d6\u62d6\u201d\uff0d\u4e00\u500b\u65b0\u52a0\u5165\u7684\u5c0f\u5c0f\u5175\uff0c\u4ed6\u9084\u5728\u5e36\u7259\u5957\u800c\u4e14\u8d85\u60f3\u8981\u8a0e\u4ed6\u4e3b\u5b50\u7684\u6b61\u5fc3\uff0d\u4ed6\u5011\u975e\u5e38\u6709\u201c\u7b11\u201d\u7387\u5730\u767c\u63ee\u4ed6\u5011\u5404\u7a2e\u8d85\u310e\u4e00\u3124\u7684\u6280\u80fd\uff0c\u548c\u683c\u9b6f\u4e00\u8d77\u6253\u9020\u4e86\u4ed6\u5011\u7684\u7b2c\u4e00\u500b\u90aa\u60e1\u57fa\u5730\u3001\u6e2c\u8a66\u4ed6\u5011\u767c\u660e\u7684\u7b2c\u4e00\u6279\u6b66\u5668\uff0c\u4e26\u4e14\u6210\u529f\u5b8c\u6210\u4e86\u4ed6\u5011\u7684\u7b2c\u4e00\u9805\u90aa\u60e1\u4efb\u52d9\u3002  \u7576\u201c\u58de\u58de\u516d\u4eba\u7d44\u201d\u628a\u4ed6\u5011\u7684\u9996\u9818\u5a01\u9177\u9b54\u738b (\u4e9e\u502b\u963f\u91d1 \u914d\u97f3) \u8d95\u8d70\u4e4b\u5f8c\uff0c\u683c\u9b6f\u6c7a\u5b9a\u53bb\u201c\u58de\u58de\u516d\u4eba\u7d44\u201d\u7684\u8fa6\u516c\u5ba4\u9762\u8a66\uff0c\u60f3\u8981\u6210\u70ba\u4ed6\u5011\u6700\u65b0\u7684\u6210\u54e1\uff0c\u4f46\u4e8b\u60c5\u9032\u884c\u5f97\u4e26\u4e0d\u9806\u5229 (\u7c21\u76f4\u662f\u4e00\u5834\u5927\u707d\u96e3) \uff0c\u800c\u4e14\u60c5\u6cc1\u6108\u8b8a\u6108\u7cdf\uff0c\u56e0\u70ba\u683c\u9b6f\u7528\u4ed6\u8070\u660e\u7684\u5c0f\u8166\u888b\u547c\u56a8\u4e86\u4ed6\u5011\uff0c\u7136\u5f8c\u5c31\u7a81\u7136\u767c\u73fe\u81ea\u5df1\u6210\u70ba\u4e16\u4e0a\u6700\u90aa\u60e1\u7d44\u5408\u201c\u58de\u58de\u516d\u4eba\u7d44\u201d\u7684\u6b7b\u5c0d\u982d\u3002\u65bc\u662f\u683c\u9b6f\u5c31\u4e0d\u5f97\u4e0d\u843d\u8dd1\uff0c\u4ed6\u5728\u8dd1\u8def\u7684\u6642\u5019\u5411\u8ab0\u90fd\u6599\u60f3\u4e0d\u5230\u7684\u4e00\u500b\u4eba\u8acb\u6c42\u6307\u5c0e\uff0c\u90a3\u5c31\u662f\u88ab\u8d95\u51fa\u201c\u58de\u58de\u516d\u4eba\u7d44\u201d\u7684\u5a01\u9177\u9b54\u738b\u672c\u4eba\uff0c\u4e26\u4e14\u9818\u609f\u5230\u5c31\u7b97\u662f\u5b87\u5b99\u8d85\u7d1a\u7121\u6575\u5927\u58de\u86cb\u4e5f\u9700\u8981\u670b\u53cb\u7684\u5e6b\u52a9\u3002",
+                    "runtime": 0,
+                    "tagline": "\u632f\u4f5c!!",
+                    "title": "\u5c0f\u5c0f\u51752\uff1a\u683c\u9b6f\u7684\u5d1b\u8d77"
+                }
+            }
+        ]
+    },
+    "release_dates": {
+        "results": [
+            {
+                "iso_3166_1": "SG",
+                "release_dates": [
+                    {
+                        "certification": "",
+                        "iso_639_1": null,
+                        "note": "",
+                        "release_date": "2022-06-30T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "PL",
+                "release_dates": [
+                    {
+                        "certification": "",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-07-01T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "AE",
+                "release_dates": [
+                    {
+                        "certification": "",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-06-30T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "AT",
+                "release_dates": [
+                    {
+                        "certification": "",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-06-30T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "HU",
+                "release_dates": [
+                    {
+                        "certification": "12",
+                        "iso_639_1": null,
+                        "note": "",
+                        "release_date": "2022-06-30T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "TR",
+                "release_dates": [
+                    {
+                        "certification": "",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-07-01T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "BE",
+                "release_dates": [
+                    {
+                        "certification": "",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-07-06T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "HR",
+                "release_dates": [
+                    {
+                        "certification": "",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-06-30T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "PE",
+                "release_dates": [
+                    {
+                        "certification": "",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-06-29T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "GB",
+                "release_dates": [
+                    {
+                        "certification": "U",
+                        "iso_639_1": null,
+                        "note": "",
+                        "release_date": "2022-07-01T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "MY",
+                "release_dates": [
+                    {
+                        "certification": "P13",
+                        "iso_639_1": "en",
+                        "note": "",
+                        "release_date": "2022-06-30T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "AU",
+                "release_dates": [
+                    {
+                        "certification": "PG",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-07-04T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "MX",
+                "release_dates": [
+                    {
+                        "certification": "",
+                        "iso_639_1": null,
+                        "note": "",
+                        "release_date": "2022-06-30T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "DK",
+                "release_dates": [
+                    {
+                        "certification": "7",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-06-30T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "RO",
+                "release_dates": [
+                    {
+                        "certification": "",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-07-01T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "DE",
+                "release_dates": [
+                    {
+                        "certification": "6",
+                        "iso_639_1": null,
+                        "note": "",
+                        "release_date": "2022-06-30T00:00:00.000Z",
+                        "type": 3
+                    },
+                    {
+                        "certification": "6",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-09-01T00:00:00.000Z",
+                        "type": 4
+                    },
+                    {
+                        "certification": "6",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-09-15T00:00:00.000Z",
+                        "type": 5
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "JP",
+                "release_dates": [
+                    {
+                        "certification": "",
+                        "iso_639_1": "ja",
+                        "note": "",
+                        "release_date": "2022-07-15T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "IL",
+                "release_dates": [
+                    {
+                        "certification": "",
+                        "iso_639_1": null,
+                        "note": "",
+                        "release_date": "2022-06-30T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "FR",
+                "release_dates": [
+                    {
+                        "certification": "U",
+                        "iso_639_1": null,
+                        "note": "",
+                        "release_date": "2022-07-06T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "SA",
+                "release_dates": [
+                    {
+                        "certification": "",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-06-30T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "IT",
+                "release_dates": [
+                    {
+                        "certification": "",
+                        "iso_639_1": "it",
+                        "note": "",
+                        "release_date": "2022-08-18T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "CN",
+                "release_dates": [
+                    {
+                        "certification": "",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-08-19T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "HK",
+                "release_dates": [
+                    {
+                        "certification": "I",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-06-29T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "IE",
+                "release_dates": [
+                    {
+                        "certification": "G",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-07-01T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "US",
+                "release_dates": [
+                    {
+                        "certification": "PG",
+                        "iso_639_1": "en",
+                        "note": "",
+                        "release_date": "2022-07-01T00:00:00.000Z",
+                        "type": 3
+                    },
+                    {
+                        "certification": "",
+                        "iso_639_1": "",
+                        "note": "iTunes",
+                        "release_date": "2022-08-02T00:00:00.000Z",
+                        "type": 4
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "UA",
+                "release_dates": [
+                    {
+                        "certification": "",
+                        "iso_639_1": null,
+                        "note": "",
+                        "release_date": "2022-07-07T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "PT",
+                "release_dates": [
+                    {
+                        "certification": "M/6",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-06-30T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "BR",
+                "release_dates": [
+                    {
+                        "certification": "L",
+                        "iso_639_1": null,
+                        "note": "",
+                        "release_date": "2022-06-30T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "SE",
+                "release_dates": [
+                    {
+                        "certification": "7",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-07-01T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "CZ",
+                "release_dates": [
+                    {
+                        "certification": "0+",
+                        "iso_639_1": "cs",
+                        "note": "",
+                        "release_date": "2022-06-30T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "NL",
+                "release_dates": [
+                    {
+                        "certification": "",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-06-29T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "TH",
+                "release_dates": [
+                    {
+                        "certification": "",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-07-07T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "ES",
+                "release_dates": [
+                    {
+                        "certification": "APTA",
+                        "iso_639_1": "[object Object]",
+                        "note": "",
+                        "release_date": "2022-07-01T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "RU",
+                "release_dates": [
+                    {
+                        "certification": "6+",
+                        "iso_639_1": "ru",
+                        "note": "",
+                        "release_date": "2022-06-30T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "FI",
+                "release_dates": [
+                    {
+                        "certification": "",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-07-01T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            },
+            {
+                "iso_3166_1": "CA",
+                "release_dates": [
+                    {
+                        "certification": "",
+                        "iso_639_1": "",
+                        "note": "",
+                        "release_date": "2022-07-01T00:00:00.000Z",
+                        "type": 3
+                    }
+                ]
+            }
+        ]
+    },
+    "trailers": {
+        "quicktime": [],
+        "youtube": [
+            {
+                "name": "Minions 2 : Il \u00c9tait Une Fois Gru - Bande Annonce [VF]",
+                "size": "HD",
+                "source": "E9X9OTMP7_A",
+                "type": "Trailer"
+            },
+            {
+                "name": "Minions 2 : Il \u00c9tait Une Fois Gru - Bande Annonce [VOST]",
+                "size": "HD",
+                "source": "dRvjlz5G-KI",
+                "type": "Trailer"
+            },
+            {
+                "name": "Les Minions 2 - \"Joyeuses F\u00eates\" [VF]",
+                "size": "HD",
+                "source": "XlknPDrooNU",
+                "type": "Clip"
+            },
+            {
+                "name": "Les Minions 2 : Il \u00c9tait Une Fois Gru - Bande annonce VF [Au cin\u00e9ma le 6 juillet]",
+                "size": "HD",
+                "source": "Cm6wpegvRpA",
+                "type": "Trailer"
+            }
+        ]
+    }
+}
