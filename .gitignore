@@ -132,4 +132,5 @@ dmypy.json
 .vscode
 .dccache
 /cache
-/database
+*.db
+*.sqbpro

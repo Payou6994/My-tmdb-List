@@ -31,3 +31,21 @@ type=="movie"%}
   </div>
 </div>
 {% endfor %} {% endmacro %}
+
+{% macro displayCast(casts,type) %} {% for cast in casts %}
+<div class="mouse_hands" style="height: 258px; left: 0px; top: 0px; width: 159px; padding: 10px"
+  onclick="window.location='/cast/{{cast.id}}'">
+  <div>
+    <a>
+      <img class="IndexPoster-image" style="width: 139px; height: 205px" loading="lazy"
+        src="https://image.tmdb.org/t/p/w220_and_h330_face{{cast.profile_path}}" alt="" />
+    </a>
+  </div>
+  <div class="IndexPoster-title">
+    <a title="{{cast.name}}">{{cast.name}}</a>
+  </div>
+  <div class="IndexPoster-date">
+    <a>{{cast.character}}</a>
+  </div>
+</div>
+{% endfor %} {% endmacro %}

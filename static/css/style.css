@@ -310,3 +310,13 @@ div.mouse_hands {
   font-weight: 300;
   font-size: 17px;
 }
+
+.MovieDetails-selectedTab {
+  border-bottom: 4px solid #5d9cec;
+}
+
+.MovieHistoryTableContent-casting {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
