@@ -1,20 +1,1582 @@
 {%extends "base.html"%} {% block content %}
-<div class="content">
-  <!-- Poster background -->
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 posterPath">
-      <img src="https://image.tmdb.org/t/p/w500{{entity.poster_path}}" alt="{{entity.title}}" class="img-responsive" />
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 movie-details">
-      <div class="thumbnail" style="border: none">
-        <h1>{{ entity.title }}</h1>
-        <p class="overview">{{ entity.overview }}</p>
-        <p class="ratings">
-          <b> {{ entity.vote_average*10 | round(0) | int }}%</b> -
-          <i>{{entity.vote_count}} votes </i>
-        </p>
+<main class="relative top-16 z-0 focus:outline-none" tabindex="0">
+  <div class="mb-6">
+    <div class="max-w-8xl mx-auto px-4">
+      <div class="media-page" style="height: 493px;">
+        <div class="media-page-bg-image"><span
+            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+              alt="" src="https://image.tmdb.org/t/p/w1920_and_h800_multi_faces//pfAZP7JvTTxqgq7n6A1OYgkAdEW.jpg"
+              decoding="async" data-nimg="fill"
+              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
+          <div class="absolute inset-0"
+            style="background-image: linear-gradient(rgba(17, 24, 39, 0.47) 0%, rgb(17, 24, 39) 100%);"></div>
+        </div>
+        <div class="media-header">
+          <div class="media-poster"><span
+              style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"><span
+                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 150% 0px 0px;"></span><img
+                alt="" src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/5p6Q5dsqgT7dknImjtoRvNx50k9.jpg"
+                decoding="async" data-nimg="responsive"
+                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"></span>
+          </div>
+          <div class="media-title">
+            <div class="media-status"><a
+                href="https://jf.payou.myds.me/web/index.html#!/details?id=6eb10f7a7febf96e9554ade7def68355&amp;context=home&amp;serverId=dcebd94e712e439f99b96cffe4d325f7"
+                target="_blank" rel="noopener noreferrer"
+                class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full whitespace-nowrap transition cursor-pointer !no-underline bg-green-500 bg-opacity-80 border border-green-500 !text-green-100 hover:bg-green-500 hover:bg-opacity-100">
+                <div class="flex items-center"><span>Disponible</span></div>
+              </a></div>
+            <h1 data-testid="media-title">Werewolf by Night <span class="media-year">(2022)</span></h1><span
+              class="media-attributes"><span><span
+                  class="rounded-md border p-0.5 py-0">16</span></span><span>|</span><span>54
+                minutes</span><span>|</span><span><a class="hover:underline"
+                  href="/discover/movies/genre/28">Action</a>, <a class="hover:underline"
+                  href="/discover/movies/genre/14">Fantastique</a>, <a class="hover:underline"
+                  href="/discover/movies/genre/27">Horreur</a>, <a class="hover:underline"
+                  href="/discover/movies/genre/10770">Téléfilm</a></span></span>
+          </div>
+          <div class="media-actions"><span class="relative inline-flex h-full rounded-md shadow-sm"><button
+                type="button"
+                class="relative z-10 inline-flex h-full items-center px-4 py-2 text-sm font-medium leading-5 transition duration-150 ease-in-out hover:z-20 focus:z-20 focus:outline-none button-md text-white border bg-transparent border-gray-600 hover:border-gray-200 focus:border-gray-100 active:border-gray-100 rounded-l-md undefined"><svg
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                  stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
+                  </path>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg><span>Play on Jellyfin</span></button><span class="relative -ml-px block"><button type="button"
+                  class="relative z-10 inline-flex h-full items-center rounded-r-md px-2 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out hover:z-20 focus:z-20 button-md text-white border bg-transparent border-gray-600 hover:border-gray-200 focus:border-gray-100 active:border-gray-100"
+                  aria-label="Expand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
+                  </svg></button></span></span><button
+              class="inline-flex items-center justify-center border border-transparent leading-5 font-medium rounded-md focus:outline-none transition ease-in-out duration-150 cursor-pointer disabled:opacity-50 whitespace-nowrap text-white border border-yellow-500 bg-yellow-500 bg-opacity-80 hover:bg-opacity-100 hover:border-yellow-400 focus:border-yellow-700 focus:ring-yellow active:bg-opacity-100 active:border-yellow-700 px-4 py-2 text-sm button-md ml-2 first:ml-0"><span
+                class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke-width="2" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                  </path>
+                </svg></span></button><button
+              class="inline-flex items-center justify-center border border-transparent leading-5 font-medium rounded-md focus:outline-none transition ease-in-out duration-150 cursor-pointer disabled:opacity-50 whitespace-nowrap text-white bg-transaprent border-gray-600 hover:border-gray-200 focus:border-gray-100 active:border-gray-100 px-4 py-2 text-sm button-md relative ml-2 first:ml-0"><span
+                class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke-width="2" stroke="currentColor" aria-hidden="true" class="!mr-0">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                  </path>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg></span></button></div>
+        </div>
+        <div class="media-overview">
+          <div class="media-overview-left">
+            <div class="tagline">On ne peut échapper à la nuit.</div>
+            <h2>Résumé</h2>
+            <p>Par une nuit sombre, une cabale secrète de chasseurs de monstres sort de l'ombre et se réunit dans un
+              sinistre temple après la mort de leur chef. Dans un mémorial étrange et macabre, les participants sont
+              poussés dans une compétition mystérieuse et mortelle pour une relique puissante - une chasse qui les
+              amènera finalement à faire face à un monstre dangereux.</p>
+            <ul class="media-crew">
+              <li><span>Director</span><a class="crew-name" href="/person/15347">Michael Giacchino</a></li>
+              <li><span>Editor</span><a class="crew-name" href="/person/35176">Jeffrey Ford</a></li>
+              <li><span>Producer</span><a class="crew-name" href="/person/1382498">Leeann Stonebreaker</a></li>
+              <li><span>Co-Producer</span><a class="crew-name" href="/person/3322701">Heather Quinn</a></li>
+              <li><span>Executive Producer</span><a class="crew-name" href="/person/10850">Kevin Feige</a></li>
+              <li><span>Executive Producer</span><a class="crew-name" href="/person/57027">Louis D'Esposito</a></li>
+            </ul>
+            <div class="mt-4 flex justify-end"><a
+                class="flex items-center text-gray-400 transition duration-300 hover:text-gray-100"
+                href="/movie/894205/crew"><span>Voir l'équipe complète</span><svg xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"
+                  class="ml-1.5 inline-block h-5 w-5">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg></a></div>
+          </div>
+          <div class="media-overview-right">
+            <div class="media-facts">
+              <div class="media-ratings"><a href="https://www.themoviedb.org/movie/894205?language=fr"
+                  class="media-rating" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 190.24 81.52" class="mr-1 w-6">
+                    <defs>
+                      <linearGradient id="tmdb_logo_svg__a" y1="40.76" x2="190.24" y2="40.76"
+                        gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#90cea1"></stop>
+                        <stop offset="0.56" stop-color="#3cbec9"></stop>
+                        <stop offset="1" stop-color="#00b3e5"></stop>
+                      </linearGradient>
+                    </defs>
+                    <path
+                      d="M105.67 36.06h66.9a17.67 17.67 0 0 0 17.67-17.66A17.67 17.67 0 0 0 172.57.73h-66.9A17.67 17.67 0 0 0 88 18.4a17.67 17.67 0 0 0 17.67 17.66zm-88 45h76.9a17.67 17.67 0 0 0 17.67-17.66 17.67 17.67 0 0 0-17.67-17.67h-76.9A17.67 17.67 0 0 0 0 63.4a17.67 17.67 0 0 0 17.67 17.66zm-7.26-45.64h7.8V6.92h10.1V0h-28v6.9h10.1zm28.1 0h7.8V8.25h.1l9 27.15h6l9.3-27.15h.1V35.4h7.8V0H66.76l-8.2 23.1h-.1L50.31 0h-11.8zm113.92 20.25a15.07 15.07 0 0 0-4.52-5.52 18.57 18.57 0 0 0-6.68-3.08 33.54 33.54 0 0 0-8.07-1h-11.7v35.4h12.75a24.58 24.58 0 0 0 7.55-1.15 19.34 19.34 0 0 0 6.35-3.32 16.27 16.27 0 0 0 4.37-5.5 16.91 16.91 0 0 0 1.63-7.58 18.5 18.5 0 0 0-1.68-8.25zM145 68.6a8.8 8.8 0 0 1-2.64 3.4 10.7 10.7 0 0 1-4 1.82 21.57 21.57 0 0 1-5 .55h-4.05v-21h4.6a17 17 0 0 1 4.67.63 11.66 11.66 0 0 1 3.88 1.87A9.14 9.14 0 0 1 145 59a9.87 9.87 0 0 1 1 4.52 11.89 11.89 0 0 1-1 5.08zm44.63-.13a8 8 0 0 0-1.58-2.62 8.38 8.38 0 0 0-2.42-1.85 10.31 10.31 0 0 0-3.17-1v-.1a9.22 9.22 0 0 0 4.42-2.82 7.43 7.43 0 0 0 1.68-5 8.42 8.42 0 0 0-1.15-4.65 8.09 8.09 0 0 0-3-2.72 12.56 12.56 0 0 0-4.18-1.3 32.84 32.84 0 0 0-4.62-.33h-13.2v35.4h14.5a22.41 22.41 0 0 0 4.72-.5 13.53 13.53 0 0 0 4.28-1.65 9.42 9.42 0 0 0 3.1-3 8.52 8.52 0 0 0 1.2-4.68 9.39 9.39 0 0 0-.55-3.18zm-19.42-15.75h5.3a10 10 0 0 1 1.85.18 6.18 6.18 0 0 1 1.7.57 3.39 3.39 0 0 1 1.22 1.13 3.22 3.22 0 0 1 .48 1.82 3.63 3.63 0 0 1-.43 1.8 3.4 3.4 0 0 1-1.12 1.2 4.92 4.92 0 0 1-1.58.65 7.51 7.51 0 0 1-1.77.2h-5.65zm11.72 20a3.9 3.9 0 0 1-1.22 1.3 4.64 4.64 0 0 1-1.68.7 8.18 8.18 0 0 1-1.82.2h-7v-8h5.9a15.35 15.35 0 0 1 2 .15 8.47 8.47 0 0 1 2.05.55 4 4 0 0 1 1.57 1.18 3.11 3.11 0 0 1 .63 2 3.71 3.71 0 0 1-.43 1.92z"
+                      fill="url(#tmdb_logo_svg__a)"></path>
+                  </svg><span>71%</span></a></div>
+              <div class="media-fact"><span>Titre original</span><span class="media-fact-value">Werewolf by Night</span>
+              </div>
+              <div class="media-fact"><span>Statut</span><span class="media-fact-value">Released</span></div>
+              <div class="media-fact"><span>Date de sortie</span><span class="media-fact-value"><span
+                    class="flex items-center justify-end"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="h-4 w-4">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z">
+                      </path>
+                    </svg><span class="ml-1.5">7 octobre 2022</span></span></span></div>
+              <div class="media-fact"><span>Langue originale</span><span class="media-fact-value"><a
+                    href="/discover/movies/language/en">anglais</a></span></div>
+              <div class="media-fact"><span>Pays de production</span><span class="media-fact-value"><span
+                    class="flex items-center justify-end"><span
+                      class="mr-1.5 text-xs leading-5 flag:US"></span><span>États-Unis</span></span></span></div>
+              <div class="media-fact"><span>Studios</span><span class="media-fact-value"><a class="block"
+                    href="/discover/movies/studio/420">Marvel Studios</a><a class="block"
+                    href="/discover/movies/studio/176762">Kevin Feige Productions</a></span></div>
+              <div class="media-fact"><span>Actuellement diffusé sur</span><span class="media-fact-value"><span
+                    class="block">Disney Plus</span></span></div>
+              <div class="media-fact">
+                <div class="flex w-full items-center justify-center space-x-5"><a
+                    href="https://jf.payou.myds.me/web/index.html#!/details?id=6eb10f7a7febf96e9554ade7def68355&amp;context=home&amp;serverId=dcebd94e712e439f99b96cffe4d325f7"
+                    class="w-12 opacity-50 transition duration-300 hover:opacity-100" target="_blank"
+                    rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 512">
+                      <defs>
+                        <linearGradient id="jellyfin_svg__a" x1="110.25" y1="213.3" x2="496.14" y2="436.09"
+                          gradientUnits="userSpaceOnUse">
+                          <stop offset="0" stop-color="#aa5cc3"></stop>
+                          <stop offset="1" stop-color="#00a4dc"></stop>
+                        </linearGradient>
+                      </defs>
+                      <g fill="url(#jellyfin_svg__a)">
+                        <path
+                          d="M261.42 201.62c-20.44 0-86.24 119.29-76.2 139.43s142.48 19.92 152.4 0-55.76-139.42-76.2-139.43Z">
+                        </path>
+                        <path
+                          d="M261.42 23.3C199.83 23.3 1.57 382.73 31.8 443.43s429.34 60 459.24 0S323 23.3 261.42 23.3ZM411.9 390.76c-19.59 39.33-281.08 39.77-300.9 0s110.1-275.28 150.45-275.28S431.49 351.42 411.9 390.76Z">
+                        </path>
+                      </g>
+                      <g fill="#fff" style="isolation: isolate;">
+                        <path
+                          d="M600.44 350.75a67 67 0 0 1-22.87-27.47 8.91 8.91 0 0 1-1.49-4.75 7.42 7.42 0 0 1 2.83-5.94 9.25 9.25 0 0 1 6.09-2.38c3.16 0 5.94 1.69 8.31 5.05a48.09 48.09 0 0 0 16.34 20.34 40.59 40.59 0 0 0 24 7.58q20.51 0 33.27-12.62t12.77-33.12V159a8.44 8.44 0 0 1 2.67-6.39 9.56 9.56 0 0 1 6.83-2.52 9 9 0 0 1 6.68 2.52 8.7 8.7 0 0 1 2.53 6.39v138.4a64.7 64.7 0 0 1-8.32 32.67 59 59 0 0 1-23 22.72Q652.42 361 633.7 361a57.21 57.21 0 0 1-33.26-10.25ZM875.46 279.47a8.77 8.77 0 0 1-6.24 2.53H756.96q0 17.82 7.27 31.92a54.91 54.91 0 0 0 20.79 22.28q13.51 8.18 31.93 8.17a54 54 0 0 0 25.54-5.94 52.7 52.7 0 0 0 18.12-15.15 10 10 0 0 1 6.24-2.67 8.14 8.14 0 0 1 7.72 7.72 8.81 8.81 0 0 1-3 6.24 74.7 74.7 0 0 1-23.91 19 65.56 65.56 0 0 1-30.41 7.43q-22.87 0-40.4-9.8a69.51 69.51 0 0 1-27.32-27.48q-9.79-17.66-9.8-40.83 0-24.36 9.65-42.62t25.69-27.92a65.2 65.2 0 0 1 34.16-9.65 70 70 0 0 1 33.41 8.3 65.78 65.78 0 0 1 25.39 24.36q9.81 16 10.1 38a8.07 8.07 0 0 1-2.67 6.11ZM777.3 231.8q-14.7 11.88-18.86 34.2h101.28v-2.38a46.91 46.91 0 0 0-8.92-23.35 48.47 48.47 0 0 0-18.56-15.15 54 54 0 0 0-23-5.2q-17.24 0-31.94 11.88ZM932.04 355.5a8.92 8.92 0 0 1-15.3-6.38v-202a8.91 8.91 0 1 1 17.82 0v202a8.65 8.65 0 0 1-2.52 6.38ZM1000.35 355.5a8.92 8.92 0 0 1-15.3-6.38v-202a8.91 8.91 0 1 1 17.82 0v202a8.65 8.65 0 0 1-2.52 6.38ZM1166.66 206.11a8.7 8.7 0 0 1 2.53 6.39v131q0 23.44-9.21 40.09a61.58 61.58 0 0 1-25.54 25.25q-16.34 8.61-36.83 8.61a96.73 96.73 0 0 1-23.31-2.68 61.72 61.72 0 0 1-18-7.12q-6.24-3.87-6.24-8.62a17.94 17.94 0 0 1 .6-3 8.06 8.06 0 0 1 3-4.45 7.49 7.49 0 0 1 4.45-1.49 7.91 7.91 0 0 1 3.56.89q19 10.39 36.24 10.4 24.65 0 39.06-15.44t14.4-42.18v-10.38a54.37 54.37 0 0 1-21.38 20 62.55 62.55 0 0 1-30.3 7.58q-25.83 0-39.2-15.45t-13.37-41.87V212.5a8.91 8.91 0 1 1 17.82 0V301q0 21.39 9.36 32.38t29.25 11a48 48 0 0 0 23.32-6.09 49.88 49.88 0 0 0 17.82-16 37.44 37.44 0 0 0 6.68-21.24V212.5a9 9 0 0 1 15.29-6.39ZM1253.98 161.41q-5.21 6.24-5.2 17.23v30.59h33.27a8.19 8.19 0 0 1 5.79 2.38 8.26 8.26 0 0 1 0 11.88 8.22 8.22 0 0 1-5.79 2.37h-33.25v123.26a8.91 8.91 0 1 1-17.82 0V225.86h-21.68a7.83 7.83 0 0 1-5.94-2.52 8.21 8.21 0 0 1-2.37-5.79 8 8 0 0 1 2.37-6.09 8.33 8.33 0 0 1 5.94-2.23h21.68v-30.59q0-18.7 10.84-29t29-10.24a46.1 46.1 0 0 1 15.45 2.52q7.13 2.53 7.12 8.17a8.07 8.07 0 0 1-2.37 5.94 7.37 7.37 0 0 1-5.35 2.37 18.81 18.81 0 0 1-6.53-1.48 42 42 0 0 0-10.4-1.78q-9.57.04-14.76 6.27Zm65.82 19.46c-2.19-1.88-3.27-4.61-3.27-8.17v-3q0-5.34 3.41-8.17t9.36-2.82q11.88 0 11.88 11v3c0 3.56-1 6.29-3.12 8.17s-5.1 2.82-9.06 2.82-7.06-.95-9.2-2.83Zm15.59 174.63a8.92 8.92 0 0 1-15.3-6.38V212.5a8.91 8.91 0 1 1 17.82 0v136.62a8.65 8.65 0 0 1-2.55 6.38ZM1496.33 218.88q12.92 16.2 12.92 42.92v87.32a8.4 8.4 0 0 1-2.67 6.38 8.8 8.8 0 0 1-6.24 2.53 8.64 8.64 0 0 1-8.91-8.91v-86.43q0-19.31-9.65-31.33t-29.85-12a53.28 53.28 0 0 0-42.77 21.83 36.24 36.24 0 0 0-7.13 21.53v86.43a8.91 8.91 0 1 1-17.82 0V216.06a8.91 8.91 0 1 1 17.82 0v16.34q8-12.77 23-21.24a61.84 61.84 0 0 1 30.77-8.46q27.61 0 40.53 16.18Z">
+                        </path>
+                      </g>
+                    </svg></a><a href="https://www.themoviedb.org/movie/894205?language=fr"
+                    class="w-8 opacity-50 transition duration-300 hover:opacity-100" target="_blank"
+                    rel="noreferrer"><svg viewBox="0 0 185.04 133.4" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient id="tmdb_svg__a" x2="185.04" y1="66.7" y2="66.7" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#90cea1" offset="0"></stop>
+                          <stop stop-color="#3cbec9" offset="0.56"></stop>
+                          <stop stop-color="#00b3e5" offset="1"></stop>
+                        </linearGradient>
+                      </defs>
+                      <path
+                        d="M51.06 66.7A17.67 17.67 0 0 1 68.73 49h-.1A17.67 17.67 0 0 1 86.3 66.7a17.67 17.67 0 0 1-17.67 17.67h.1A17.67 17.67 0 0 1 51.06 66.7Zm82.67-31.33h32.9A17.67 17.67 0 0 0 184.3 17.7 17.67 17.67 0 0 0 166.63 0h-32.9a17.67 17.67 0 0 0-17.67 17.7 17.67 17.67 0 0 0 17.67 17.67Zm-113 98h63.9a17.67 17.67 0 0 0 17.67-17.67A17.67 17.67 0 0 0 84.63 98h-63.9a17.67 17.67 0 0 0-17.67 17.7 17.67 17.67 0 0 0 17.67 17.67Zm83.92-49h6.25L125.5 49h-8.35l-8.9 23.2h-.1L99.4 49h-8.9Zm32.45 0h7.8V49h-7.8Zm22.2 0h24.95V77.2H167.1V70h15.35v-7.2H167.1v-6.6h16.25V49h-24ZM10.1 35.4h7.8V6.9H28V0H0v6.9h10.1Zm28.9 0h7.8V20.1h15.1v15.3h7.8V0h-7.8v13.2H46.75V0H39Zm41.25 0h25v-7.2H88V21h15.35v-7.2H88V7.2h16.25V0h-24Zm-79 49H9V57.25h.1l9 27.15H24l9.3-27.15h.1V84.4h7.8V49H29.45l-8.2 23.1h-.1L13 49H1.2Zm112.09 49H126a24.59 24.59 0 0 0 7.56-1.15 19.52 19.52 0 0 0 6.35-3.37 16.37 16.37 0 0 0 4.37-5.5 16.91 16.91 0 0 0 1.72-7.58 18.5 18.5 0 0 0-1.68-8.25 15.1 15.1 0 0 0-4.52-5.53 18.55 18.55 0 0 0-6.73-3.02 33.54 33.54 0 0 0-8.07-1h-11.71Zm7.81-28.2h4.6a17.43 17.43 0 0 1 4.67.62 11.68 11.68 0 0 1 3.88 1.88 9 9 0 0 1 2.62 3.18 9.87 9.87 0 0 1 1 4.52 11.92 11.92 0 0 1-1 5.08 8.69 8.69 0 0 1-2.67 3.34 10.87 10.87 0 0 1-4 1.83 21.57 21.57 0 0 1-5 .55h-4.15Zm36.14 28.2h14.5a23.11 23.11 0 0 0 4.73-.5 13.38 13.38 0 0 0 4.27-1.65 9.42 9.42 0 0 0 3.1-3 8.52 8.52 0 0 0 1.2-4.68 9.16 9.16 0 0 0-.55-3.2 7.79 7.79 0 0 0-1.57-2.62 8.38 8.38 0 0 0-2.45-1.85 10 10 0 0 0-3.18-1v-.1a9.28 9.28 0 0 0 4.43-2.82 7.42 7.42 0 0 0 1.67-5 8.34 8.34 0 0 0-1.15-4.65 7.88 7.88 0 0 0-3-2.73 12.9 12.9 0 0 0-4.17-1.3 34.42 34.42 0 0 0-4.63-.32h-13.2Zm7.8-28.8h5.3a10.79 10.79 0 0 1 1.85.17 5.77 5.77 0 0 1 1.7.58 3.33 3.33 0 0 1 1.23 1.13 3.22 3.22 0 0 1 .47 1.82 3.63 3.63 0 0 1-.42 1.8 3.34 3.34 0 0 1-1.13 1.2 4.78 4.78 0 0 1-1.57.65 8.16 8.16 0 0 1-1.78.2H165Zm0 14.15h5.9a15.12 15.12 0 0 1 2.05.15 7.83 7.83 0 0 1 2 .55 4 4 0 0 1 1.58 1.17 3.13 3.13 0 0 1 .62 2 3.71 3.71 0 0 1-.47 1.95 4 4 0 0 1-1.23 1.3 4.78 4.78 0 0 1-1.67.7 8.91 8.91 0 0 1-1.83.2h-7Z"
+                        style="fill: url(&quot;#tmdb_svg__a&quot;);"></path>
+                    </svg></a><a href="https://www.imdb.com/title/tt15318872"
+                    class="w-8 opacity-50 transition duration-300 hover:opacity-100" target="_blank"
+                    rel="noreferrer"><svg viewBox="0 0 575 289.83" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="#f6c700"
+                        d="M575 24.91C573.44 12.15 563.97 1.98 551.91 0H23.32C10.11 2.17 0 14.16 0 28.61v232.25c0 16 12.37 28.97 27.64 28.97h519.95c14.06 0 25.67-11.01 27.41-25.26V24.91z">
+                      </path>
+                      <path stroke="#000"
+                        d="M69.35 58.24h45.63v175.65H69.35V58.24zM201.2 139.15c-3.92-26.77-6.1-41.65-6.53-44.62-1.91-14.33-3.73-26.8-5.47-37.44h-59.16v175.65h39.97l.14-115.98 16.82 115.98h28.47l15.95-118.56.15 118.56h39.84V57.09h-59.61l-10.57 82.06zM346.71 93.63c.5 2.24.76 7.32.76 15.26v68.1c0 11.69-.76 18.85-2.27 21.49-1.52 2.64-5.56 3.95-12.11 3.95V87.13c4.97 0 8.36.53 10.16 1.57 1.8 1.05 2.96 2.69 3.46 4.93zm20.61 137.32c5.43-1.19 9.99-3.29 13.69-6.28 3.69-3 6.28-7.15 7.76-12.46 1.49-5.3 2.37-15.83 2.37-31.58v-61.68c0-16.62-.65-27.76-1.66-33.42-1.02-5.67-3.55-10.82-7.6-15.44-4.06-4.62-9.98-7.94-17.76-9.96-7.79-2.02-20.49-3.04-42.58-3.04H287.5v175.65h55.28c12.74-.4 20.92-.99 24.54-1.79zM464.76 204.7c-.84 2.23-4.52 3.36-7.3 3.36-2.72 0-4.53-1.08-5.45-3.25-.92-2.16-1.37-7.09-1.37-14.81v-46.42c0-8 .4-12.99 1.21-14.98.8-1.97 2.56-2.97 5.28-2.97 2.78 0 6.51 1.13 7.47 3.4.95 2.27 1.43 7.12 1.43 14.55v45.01c-.29 9.25-.71 14.62-1.27 16.11zm-58.08 26.51h41.08c1.71-6.71 2.65-10.44 2.84-11.19 3.72 4.5 7.81 7.88 12.3 10.12 4.47 2.25 11.16 3.37 16.34 3.37 7.21 0 13.43-1.89 18.68-5.68 5.24-3.78 8.58-8.26 10-13.41 1.42-5.16 2.13-13 2.13-23.54V141.6c0-10.6-.24-17.52-.71-20.77s-1.87-6.56-4.2-9.95-5.72-6.02-10.16-7.9-9.68-2.82-15.72-2.82c-5.25 0-11.97 1.05-16.45 3.12-4.47 2.07-8.53 5.21-12.17 9.42V55.56h-43.96v175.65z">
+                      </path>
+                    </svg></a><a href="https://www.rottentomatoes.com/m/werewolf_by_night"
+                    class="w-14 opacity-50 transition duration-300 hover:opacity-100" target="_blank"
+                    rel="noreferrer"><svg viewBox="0 0 691 197" xmlns="http://www.w3.org/2000/svg">
+                      <g fill="#F93208">
+                        <path
+                          d="m104.8 101.98-8.017-.104V.638h24.186c26.088 0 28.29.125 34.659 1.973 10.334 2.998 18.223 9.496 22.57 18.591 2.114 4.422 2.942 7.959 3.16 13.486.49 12.49-4.809 23.35-14.189 29.082-2.81 1.717-2.94 1.853-2.482 2.58 1.234 1.961 20.736 35.548 20.736 35.713 0 .102-7.443.186-16.54.186h-16.538l-9.6-16.167c-5.28-8.892-9.803-16.445-10.051-16.784-.336-.46-1.193-.668-3.358-.817l-2.906-.199.182 16.983.181 16.983-6.988-.083c-3.843-.045-10.596-.13-15.005-.187v.002zm35.703-56.479c6.767-1.424 10.228-4.667 10.607-9.938.265-3.687-.611-6.202-2.954-8.482-3.104-3.023-7.437-4.07-16.926-4.092l-5.008-.01.234 3.298c.129 1.814.234 7.108.234 11.766v8.467l5.675-.245c3.122-.135 6.784-.479 8.138-.764z">
+                        </path>
+                        <path
+                          d="M217.68 103.68c-8.925-1.007-16.797-4.98-23.157-11.686-7.223-7.617-11.109-16.992-11.521-27.797-.221-5.788.216-9.62 1.598-14 5.206-16.508 19.973-26.343 40.714-27.116 3.541-.132 6.66-.043 8.828.25 17.8 2.417 30.89 14.82 34.788 32.96.824 3.837.816 12.629-.014 16.27-3.436 15.074-14.036 25.494-29.983 29.476-6.315 1.577-15.528 2.289-21.255 1.642l.002.001zm9.79-12.053c3.497-1.039 4.937-2.945 4.899-6.487-.013-1.189-.284-2.85-.603-3.693-1.675-4.433-1.661-4.376-1.255-5.267.218-.478.788-1.048 1.267-1.266 1.155-.526 1.845-.073 3.406 2.238 2.216 3.28 6.208 7.01 8.8 8.224 2.078.972 2.662 1.089 4.843.965 2.166-.122 2.733-.314 4.474-1.513 2.286-1.574 2.901-2.856 2.88-5.996-.022-3.146-1.654-5.743-4.899-7.795-1.985-1.256-6.21-2.548-9.285-2.84-3.92-.373-5.304-1.012-5.804-2.684-.487-1.625.025-2.958 1.578-4.107.791-.586 1.76-.783 4.684-.954 2.354-.137 4.09-.429 4.804-.807 5.106-2.702 5.438-11.468.563-14.856-1.364-.948-1.868-1.084-3.964-1.072-4.827.027-8.092 3.187-9.632 9.326-.125.496-.608 1.313-1.075 1.816-.986 1.064-2.84 1.226-4.458.39-1.63-.844-1.84-2.694-.901-7.985 1.167-6.583.533-9.34-2.563-11.154-1.971-1.155-5.475-1.56-7.557-.873-1.836.606-4.227 3.061-4.778 4.905-1.11 3.718-.23 6.074 3.888 10.396 1.73 1.816 3.25 3.635 3.38 4.042.59 1.861-1.654 3.997-3.723 3.543-1.18-.26-2.303-1.403-4.129-4.207-2.934-4.507-7.032-5.946-11.069-3.886-3.473 1.772-4.372 5.775-2.066 9.197 1.338 1.986 3.74 3.31 7.44 4.1 5.358 1.145 6.867 2.308 5.405 4.166-.758.964-.83.98-3.325.708-3.765-.409-5.224-.258-7.315.757-2.18 1.058-3.13 2.228-3.723 4.584-1.19 4.725 2.14 8.911 7.07 8.89 2.596-.012 4.567-1.084 7.862-4.274 3.64-3.525 4.29-3.897 5.465-3.127 1.286.843 1.447 2.092.566 4.395-2.004 5.236-.155 10.68 4.15 12.214 1.804.643 2.5.641 4.7-.012v-.001zm82.26 10.613c-13.527-.865-20.855-4.63-24.882-12.779-2.793-5.653-3.454-10.408-3.796-27.295l-.231-11.44h-1.89c-1.04 0-2.643-.103-3.562-.23l-1.672-.228V25.504h7.567V3.884h29.546v21.62h12.251v25.584H310.81l.001 11.44c.001 10.71.046 11.514.705 12.594 1.23 2.017 2.192 2.27 8.644 2.27h5.783v25.221l-6.035-.054c-3.32-.03-7.9-.173-10.179-.318l.001-.001zm54.85-.37c-15.629-1.51-22.78-7.814-25.148-22.169-.42-2.541-.655-7.163-.82-16.06-.127-6.87-.366-12.627-.531-12.791-.165-.165-1.827-.356-3.694-.425l-3.393-.124V25.147h8.013l-.266-10.81-.266-10.81h29.632v21.98h12.251v25.222H368.07l.108 11.62c.099 10.534.17 11.71.765 12.586 1.407 2.073 2.088 2.266 8.442 2.398l5.855.12v24.8l-7.837-.048c-4.31-.027-9.18-.18-10.823-.338v.003zm59.82-15.484c-12.392-1.561-23.904-7.774-29.557-15.952-5.345-7.732-8.064-16.437-8.07-25.834-.008-13.574 5.91-24.516 17.388-32.154 7.19-4.784 12.745-6.35 23.58-6.65 5.522-.152 6.994-.074 9.91.529 5.732 1.185 10.724 3.54 14.889 7.024 3.71 3.104 7.857 9.221 9.949 14.676 2.507 6.539 3.926 17.032 3.034 22.43l-.224 1.351h-26.076c-14.342 0-26.076.137-26.076.305 0 .167.623 1.267 1.383 2.444 3.325 5.144 8.623 7.708 15.898 7.695 5.447-.01 10.592-1.443 14.27-3.973l1.48-1.019 8.257 7.755a4956.96 4956.96 0 0 1 8.742 8.222c.752.723.057 1.652-3.155 4.222-4.948 3.96-11.022 6.685-18.337 8.23-4.039.853-13.138 1.22-17.284.698l-.001.001zm15.261-50.147c-.597-3.732-2.794-6.524-6.497-8.257-4.053-1.897-9.342-1.732-13.564.422-2.864 1.46-5.53 4.875-6.237 7.985l-.222.976 2.976.122c1.637.067 7.659.154 13.381.195l10.405.073-.242-1.516zm32.579 27.459V24.783h29.186v5.405c0 2.973.122 5.404.27 5.402.149 0 1.081-.988 2.072-2.192 3.332-4.05 8.5-7.667 13.356-9.348 15.184-5.257 31.395 6.568 33.65 24.545.23 1.846.377 12.826.377 28.336v25.322h-29.546v-45.98l-.956-1.92c-1.574-3.157-4.716-4.998-8.593-5.033-4.357-.039-7.609 2.62-9.305 7.61-.746 2.196-.773 2.913-.885 23.974l-.115 21.71h-29.51V63.699l-.001-.001zm10.48 130.792c-8.788-1.23-17.227-5.075-22.84-10.407-6.942-6.595-11.058-16.86-11.058-27.579 0-11.183 5.073-21.063 14.659-28.549 1.667-1.302 2.971-2.426 2.898-2.498-.072-.073-2.839.052-6.147.278-3.308.226-6.11.316-6.225.2-.355-.355 1.922-3.364 3.48-4.598 3.19-2.526 7.199-3.42 11.017-2.46 2.864.722 2.76.012-.53-3.59l-2.936-3.218 1.948-1.665c1.072-.915 2.027-1.664 2.122-1.664.095 0 1.345 1.867 2.778 4.149s2.738 4.23 2.9 4.33c.16.1.881-.706 1.602-1.791 3.104-4.677 7.504-6.781 11.726-5.609 2.828.786 2.828.95.009 4.474-1.401 1.752-2.548 3.213-2.548 3.248 0 .035 2.897-.005 6.438-.089 12.435-.293 20.725 1.609 27.681 6.351 2.383 1.624 5.892 5.185 7.65 7.763 1.36 1.992 5.074 9.644 5.943 12.24 1.872 5.603 2.154 15.51.606 21.324-1.093 4.105-3.901 9.586-6.676 13.032-6.267 7.783-16.447 13.536-27.95 15.794-3.569.7-13.148 1.01-16.548.534h.001zm94.74 1.06c-7.835-.993-14.881-3.57-21.428-7.837-7.49-4.881-13.128-13.98-15.556-25.105-.785-3.595-1.041-10.974-.508-14.619 1.861-12.729 9.63-22.96 22.28-29.339 2.397-1.209 4.443-1.904 7.706-2.617 4.038-.883 5.132-.972 12.01-.973 6.762 0 7.893.087 10.63.826 12.802 3.455 21.615 13.546 24.914 28.527.692 3.142.834 4.852.841 10.089l.008 6.305-26.206.18-26.206.18 1.103 1.931c3.137 5.493 8.726 8.339 16.375 8.339 5.387 0 11.187-1.673 14.461-4.17l1.178-.898 8.854 8.356 8.854 8.356-1.369 1.41c-7.941 8.184-23.91 12.838-37.942 11.06l.001-.001zm15.344-49.787c-.772-4.894-4.58-8.372-10.226-9.34-7.301-1.252-14.551 3.02-16.122 9.502-.235.97-.23.973 2.05 1.102 1.258.07 7.294.16 13.414.198l11.126.07-.242-1.532zm55.816 50.167c-4.146-.47-9.524-1.676-13.109-2.941-5.022-1.772-12.654-5.866-12.654-6.787 0-.3 10.534-18.822 11.044-19.42.071-.084 2.358.992 5.082 2.39 7.474 3.837 10.895 4.86 16.123 4.82 4.207-.033 6.906-.753 8.198-2.187 1.801-2 .976-4.904-1.627-5.729-.641-.203-3.68-.355-6.75-.337-3.905.022-6.358-.14-8.15-.543-10.216-2.29-18.196-8.883-21.45-17.724-.648-1.757-.8-2.961-.822-6.482l-.026-4.324 1.55-3.242c4.486-9.385 13.202-16.08 23.78-18.263 2.902-.6 4.445-.694 9.08-.559 6.014.176 9.605.82 15.15 2.717 5.699 1.95 13.459 5.599 13.42 6.312-.008.163-2.262 4.098-5.008 8.744-3.833 6.486-5.12 8.391-5.54 8.204-2.02-.9-11.14-3.8-13.518-4.3-1.586-.333-4.511-.626-6.501-.65-3.841-.047-4.94.31-6.373 2.073-.98 1.206-.833 3.52.29 4.576.892.838 1.163.878 6.577.973 13.405.235 21.78 3.14 27.71 9.613 3.54 3.862 5.384 8.272 5.743 13.73.511 7.753-2.25 14.496-8.28 20.224-4.138 3.93-5.794 4.937-11.207 6.813-5.89 2.041-15.988 3.062-22.733 2.298l.001.001zm-222.06-2.5c-3.115-.15-8.503-.882-10.832-1.473-10.841-2.75-16.058-8.96-18.094-21.535-.278-1.718-.477-6.2-.685-15.446l-.293-13.025-1.673-.158a47.682 47.682 0 0 0-3.647-.16l-1.975-.002v-25.224h7.878l-.122-9.108c-.068-5.01-.17-9.883-.23-10.828l-.107-1.72h29.78v21.912h12.23v25.478h-12.23l.002 10.892c0 6.814.101 11.252.269 11.855.332 1.197 1.622 2.697 2.711 3.152.61.254 2.32.344 6.565.344h5.74v25.224l-6.815-.049c-3.749-.027-7.56-.085-8.472-.129zm-100.01 2.48c-6.068-.899-12.181-4.26-18.039-9.92-3.615-3.492-5.672-6.254-7.7-10.338-3.03-6.103-4.177-10.835-4.387-18.104-.2-6.972.594-12.343 2.752-18.6 2.233-6.477 4.445-10.212 8.365-14.125 8.465-8.451 18.63-11.802 28.321-9.337 5.607 1.426 10.185 4.096 15.083 8.798l2.23 2.14v-9.5h27.772v76.946h-27.772v-4.84c0-2.663-.075-4.842-.167-4.842-.091 0-1.22 1.06-2.509 2.357-7.064 7.107-15.892 10.559-23.95 9.366l.001-.001zm17.685-28.317c5.786-2.845 9.1-11.159 6.994-17.547-1.157-3.512-4.26-6.42-8.273-7.753-3.876-1.286-6.61-1.145-10.106.524-4.513 2.154-7.192 6.602-7.192 11.943 0 3.888 1.271 7.003 3.95 9.682 4.024 4.024 10.164 5.347 14.627 3.152v-.001zM259.84 188.73c-.092-2.965-.179-11.364-.192-18.663-.013-7.3-.1-15.45-.192-18.113-.19-5.502-.425-6.309-2.411-8.306-2.323-2.336-6.327-3.183-9.46-2.001-2.747 1.036-4.837 3.8-5.47 7.233-.187 1.017-.278 8.578-.278 23.122v21.61h-14.778c-8.128 0-14.801-.03-14.829-.064-.028-.035-.114-10.383-.191-22.995l-.14-22.931-.866-1.597c-.997-1.838-2.242-3.055-4.157-4.062-1.198-.63-1.614-.708-3.767-.709-2.035 0-2.595.093-3.514.583-2.416 1.288-4.24 4.048-5.087 7.696-.406 1.753-.435 3.667-.35 23.122l.092 21.21h-29.53l-.17-22.972c-.092-12.635-.169-30.12-.169-38.855v-15.882h29.286l.071 3.627c.06 3.107.13 3.64.484 3.707.243.047 1.341-.84 2.675-2.162 2.7-2.676 5.053-4.087 9.126-5.475 11.078-3.774 22.042-1.153 30.246 7.23l2.203 2.251.692-1.181c3.247-5.54 12.361-9.526 21.781-9.526 7.805 0 14.775 2.657 19.708 7.512 5.118 5.037 8.184 12.777 8.68 21.916.077 1.401.205 13.239.286 26.307l.146 23.759h-29.758l-.168-5.392.001.001zm-153.06 6.29c-6.093-.998-10.52-2.705-15.396-5.935-11.61-7.69-18.797-22.407-18.135-37.134.81-18.046 12.392-31.634 30.62-35.927 7.981-1.88 17.076-2.158 24.066-.737 12.231 2.488 22.77 10.864 28.179 22.395 5.266 11.228 5.435 24.038.458 34.76-5.597 12.056-17.13 19.866-32.956 22.316-3.758.582-13.917.74-16.834.262h-.002zm13.14-27.525c4.448-.934 8.12-3.694 10.055-7.56 1-1.998 1.029-2.126 1.025-4.637-.004-3.002-.47-5.242-1.543-7.42-3.681-7.48-12.83-10.42-20.566-6.612-3.791 1.866-7.05 6.222-7.762 10.373-1.12 6.54 3.808 14.306 10.256 16.163 1.4.403 5.928.24 8.536-.307h-.001z">
+                        </path>
+                        <path
+                          d="M27.559 157.18v-36.689H.807V91.889l40.448.188c22.246.104 40.534.24 40.639.303.105.063.191 6.356.191 13.985v13.87H56.097v73.635H27.561v-36.69h-.002z">
+                        </path>
+                      </g>
+                    </svg></a><a href="https://trakt.tv/search/tmdb/894205?id_type=movie"
+                    class="w-8 opacity-50 transition duration-300 hover:opacity-100" target="_blank"
+                    rel="noreferrer"><svg viewBox="0 0 144.8 144.8" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="72.4" cy="72.4" r="72.4" fill="#fff"></circle>
+                      <path d="M29.5 111.8c10.6 11.6 25.9 18.8 42.9 18.8 8.7 0 16.9-1.9 24.3-5.3L56.3 85l-26.8 26.8z"
+                        fill="#ED2224"></path>
+                      <path
+                        d="M56.1 60.6 25.5 91.1 21.4 87l32.2-32.2 37.6-37.6c-5.9-2-12.2-3.1-18.8-3.1-32.2 0-58.3 26.1-58.3 58.3 0 13.1 4.3 25.2 11.7 35l30.5-30.5 2.1 2 43.7 43.7c.9-.5 1.7-1 2.5-1.6L56.3 72.7 27 102l-4.1-4.1 33.4-33.4 2.1 2 51 50.9c.8-.6 1.5-1.3 2.2-1.9l-55-55-.5.1z"
+                        fill="#ED2224"></path>
+                      <path
+                        d="M115.7 111.4c9.3-10.3 15-24 15-39 0-23.4-13.8-43.5-33.6-52.8L60.4 56.2l55.3 55.2zM74.5 66.8l-4.1-4.1 28.9-28.9 4.1 4.1-28.9 28.9zm27.4-39.7L68.6 60.4l-4.1-4.1L97.8 23l4.1 4.1z"
+                        fill="#ED1C24"></path>
+                      <path
+                        d="M72.4 144.8C32.5 144.8 0 112.3 0 72.4S32.5 0 72.4 0s72.4 32.5 72.4 72.4-32.5 72.4-72.4 72.4zm0-137.5C36.5 7.3 7.3 36.5 7.3 72.4s29.2 65.1 65.1 65.1 65.1-29.2 65.1-65.1S108.3 7.3 72.4 7.3z"
+                        fill="#ED2224"></path>
+                    </svg></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-header"><a class="slider-title" href="/movie/894205/cast"><span>Casting</span><svg
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg></a></div>
+        <div class="relative" data-testid="media-slider">
+          <div class="absolute right-0 -mt-10 flex text-gray-400"><button class="text-gray-800" disabled=""><svg
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+              </svg></button><button class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+              </svg></button></div>
+          <div
+            class="hide-scrollbar relative -my-2 -ml-4 -mr-4 overflow-y-auto overflow-x-scroll overscroll-x-contain whitespace-nowrap px-2 py-2">
+            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
+                href="/person/258">
+                <div
+                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
+                  <div style="padding-bottom: 150%;">
+                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
+                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
+                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
+                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                              alt=""
+                              src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/7mq3EQN1oJfYNXkv9xKXKu6Ccw5.jpg"
+                              decoding="async" data-nimg="fill"
+                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
+                        </div>
+                      </div>
+                      <div class="w-full truncate text-center font-bold">Gael García Bernal</div>
+                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
+                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
+                        Jack Russell</div>
+                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a></div>
+            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
+                href="/person/95706">
+                <div
+                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
+                  <div style="padding-bottom: 150%;">
+                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
+                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
+                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
+                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                              alt=""
+                              src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/osajwo2LqtHSLOrH3E3dTVZHP1Z.jpg"
+                              decoding="async" data-nimg="fill"
+                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
+                        </div>
+                      </div>
+                      <div class="w-full truncate text-center font-bold">Laura Donnelly</div>
+                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
+                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
+                        Elsa Bloodstone</div>
+                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a></div>
+            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
+                href="/person/538">
+                <div
+                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
+                  <div style="padding-bottom: 150%;">
+                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
+                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
+                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
+                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                              alt=""
+                              src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/1ShvYCWkZycAGb27ZivGrLx1PhS.jpg"
+                              decoding="async" data-nimg="fill"
+                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
+                        </div>
+                      </div>
+                      <div class="w-full truncate text-center font-bold">Harriet Sansom Harris</div>
+                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
+                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
+                        Verussa Bloodstone</div>
+                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a></div>
+            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
+                href="/person/145446">
+                <div
+                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
+                  <div style="padding-bottom: 150%;">
+                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
+                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
+                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
+                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                              alt=""
+                              src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/tC3lxuff2li0h6jks9EM0d53mFw.jpg"
+                              decoding="async" data-nimg="fill"
+                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
+                        </div>
+                      </div>
+                      <div class="w-full truncate text-center font-bold">Kirk R. Thatcher</div>
+                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
+                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
+                        Jovan</div>
+                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a></div>
+            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
+                href="/person/1317693">
+                <div
+                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
+                  <div style="padding-bottom: 150%;">
+                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
+                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
+                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
+                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                              alt=""
+                              src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/9ULAELEKNha7VCJhRWoer58NcJe.jpg"
+                              decoding="async" data-nimg="fill"
+                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
+                        </div>
+                      </div>
+                      <div class="w-full truncate text-center font-bold">Eugenie Bondurant</div>
+                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
+                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
+                        Azarel</div>
+                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a></div>
+            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
+                href="/person/24200">
+                <div
+                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
+                  <div style="padding-bottom: 150%;">
+                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
+                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
+                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
+                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                              alt=""
+                              src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/qZfTztsK99FFaEwLI0bILlMnQki.jpg"
+                              decoding="async" data-nimg="fill"
+                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
+                        </div>
+                      </div>
+                      <div class="w-full truncate text-center font-bold">Leonardo Nam</div>
+                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
+                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
+                        Liorn</div>
+                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a></div>
+            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
+                href="/person/1292452">
+                <div
+                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
+                  <div style="padding-bottom: 150%;">
+                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
+                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
+                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
+                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                              alt=""
+                              src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/yzsburXAHWg7XOvWeBtYNnm5giD.jpg"
+                              decoding="async" data-nimg="fill"
+                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
+                        </div>
+                      </div>
+                      <div class="w-full truncate text-center font-bold">Daniel J. Watts</div>
+                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
+                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
+                        Barasso</div>
+                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a></div>
+            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
+                href="/person/2547673">
+                <div
+                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
+                  <div style="padding-bottom: 150%;">
+                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
+                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
+                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
+                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                              alt=""
+                              src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/u5QxguVAJDIkF8npPvpxjRjJ7Ft.jpg"
+                              decoding="async" data-nimg="fill"
+                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                        </div>
+                      </div>
+                      <div class="w-full truncate text-center font-bold">Al Hamacher</div>
+                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
+                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
+                        Billy Swan</div>
+                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a></div>
+            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
+                href="/person/1015924">
+                <div
+                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
+                  <div style="padding-bottom: 150%;">
+                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
+                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
+                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
+                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                              alt=""
+                              src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/yZ3Fidqk7sU5TmdaubCMssJZxAR.jpg"
+                              decoding="async" data-nimg="fill"
+                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                        </div>
+                      </div>
+                      <div class="w-full truncate text-center font-bold">Carey Jones</div>
+                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
+                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
+                        Ted (Man-Thing)</div>
+                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a></div>
+            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
+                href="/person/197">
+                <div
+                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
+                  <div style="padding-bottom: 150%;">
+                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
+                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
+                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
+                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                              alt=""
+                              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                              decoding="async" data-nimg="fill"
+                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                        </div>
+                      </div>
+                      <div class="w-full truncate text-center font-bold">David Silverman</div>
+                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
+                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
+                        The Flaming Tuba</div>
+                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a></div>
+            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
+                href="/person/106774">
+                <div
+                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
+                  <div style="padding-bottom: 150%;">
+                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
+                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
+                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
+                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                              alt=""
+                              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                              decoding="async" data-nimg="fill"
+                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                        </div>
+                      </div>
+                      <div class="w-full truncate text-center font-bold">Rick D. Wasserman</div>
+                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
+                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
+                        Narrator (voice)</div>
+                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a></div>
+            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
+                href="/person/1222025">
+                <div
+                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
+                  <div style="padding-bottom: 150%;">
+                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
+                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
+                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
+                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                              alt=""
+                              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                              decoding="async" data-nimg="fill"
+                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                        </div>
+                      </div>
+                      <div class="w-full truncate text-center font-bold">Richard Dixon</div>
+                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
+                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
+                        Ulysses Bloodstone (voice)</div>
+                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a></div>
+            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
+                href="/person/35176">
+                <div
+                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
+                  <div style="padding-bottom: 150%;">
+                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
+                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
+                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
+                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                              alt=""
+                              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                              decoding="async" data-nimg="fill"
+                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                        </div>
+                      </div>
+                      <div class="w-full truncate text-center font-bold">Jeffrey Ford</div>
+                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
+                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
+                        Additional Man-Thing Vocalizations (voice)</div>
+                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a></div>
+            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
+                href="/person/1184357">
+                <div
+                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
+                  <div style="padding-bottom: 150%;">
+                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
+                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center"><svg
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+                          class="h-full">
+                          <path fill-rule="evenodd"
+                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                            clip-rule="evenodd"></path>
+                        </svg></div>
+                      <div class="w-full truncate text-center font-bold">Erik Beck</div>
+                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
+                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
+                        Puppeteer</div>
+                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a></div>
+          </div>
+        </div>
+        <div class="slider-header"><a class="slider-title"
+            href="/movie/894205/recommendations"><span>Recommandations</span><svg xmlns="http://www.w3.org/2000/svg"
+              fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg></a></div>
+        <div class="relative" data-testid="media-slider">
+          <div class="absolute right-0 -mt-10 flex text-gray-400"><button class="text-gray-800" disabled=""><svg
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+              </svg></button><button class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+              </svg></button></div>
+          <div
+            class="hide-scrollbar relative -my-2 -ml-4 -mr-4 overflow-y-auto overflow-x-scroll overscroll-x-contain whitespace-nowrap px-2 py-2">
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="https://image.tmdb.org/t/p/w300_and_h450_face/3kbtoJw6ZN0UUQhSuiRbAatr2kV.jpg"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="https://image.tmdb.org/t/p/w300_and_h450_face/6dK9T9qx1lp64sKoOkncDyy4Uhg.jpg"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40">
+                        <div
+                          class="flex h-4 w-4 items-center justify-center rounded-full bg-indigo-500 text-white shadow sm:h-5 sm:w-5">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            aria-hidden="true" class="h-3 w-3 sm:h-4 sm:w-4">
+                            <path fill-rule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                              clip-rule="evenodd"></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
+                href="/movie/894205/recommendations">
+                <div
+                  class="relative w-36 transform-gpu cursor-pointer
+         overflow-hidden rounded-xl text-white shadow-lg ring-1 transition duration-150 ease-in-out sm:w-36 md:w-44 scale-100 bg-gray-800 ring-gray-700">
+                  <div style="padding-bottom: 150%;">
+                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
+                      <div class="relative z-10 flex h-full flex-wrap items-center justify-center opacity-30">
+                        <div class="w-1/2 p-1"><img
+                            src="//image.tmdb.org/t/p/w300_and_h450_face/umi7z6ifZrAYYSDM0Hv1eIpF7lW.jpg" alt=""
+                            class="w-full rounded-md"></div>
+                        <div class="w-1/2 p-1"><img
+                            src="//image.tmdb.org/t/p/w300_and_h450_face/zhShDRbXuTakFsnIt7g0I1LAbMR.jpg" alt=""
+                            class="w-full rounded-md"></div>
+                        <div class="w-1/2 p-1"><img
+                            src="//image.tmdb.org/t/p/w300_and_h450_face/aGBuiirBIQ7o64FmJxO53eYDuro.jpg" alt=""
+                            class="w-full rounded-md"></div>
+                        <div class="w-1/2 p-1"><img
+                            src="//image.tmdb.org/t/p/w300_and_h450_face/uU3YoLSaVBOaMryzhuiiRWDFbIw.jpg" alt=""
+                            class="w-full rounded-md"></div>
+                      </div>
+                      <div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-white"><svg
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+                          class="w-14">
+                          <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                        <div class="mt-2 font-extrabold">Voir plus</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a></div>
+          </div>
+        </div>
+        <div class="slider-header"><a class="slider-title" href="/movie/894205/similar"><span>Titres
+              similaires</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+              stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg></a></div>
+        <div class="relative" data-testid="media-slider">
+          <div class="absolute right-0 -mt-10 flex text-gray-400"><button class="text-gray-800" disabled=""><svg
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+              </svg></button><button class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+              </svg></button></div>
+          <div
+            class="hide-scrollbar relative -my-2 -ml-4 -mr-4 overflow-y-auto overflow-x-scroll overscroll-x-contain whitespace-nowrap px-2 py-2">
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top">
+              <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
+                <div
+                  class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                  role="link" tabindex="0" style="padding-bottom: 150%;">
+                  <div class="absolute inset-0 h-full w-full overflow-hidden"><span
+                      style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                        alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                    <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                      <div class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                        <div
+                          class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                          Film</div>
+                      </div>
+                      <div class="pointer-events-none z-40"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
+                href="/movie/894205/similar">
+                <div
+                  class="relative w-36 transform-gpu cursor-pointer
+         overflow-hidden rounded-xl text-white shadow-lg ring-1 transition duration-150 ease-in-out sm:w-36 md:w-44 scale-100 bg-gray-800 ring-gray-700">
+                  <div style="padding-bottom: 150%;">
+                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
+                      <div class="relative z-10 flex h-full flex-wrap items-center justify-center opacity-30">
+                        <div class="w-1/2 p-1"><img
+                            src="//image.tmdb.org/t/p/w300_and_h450_face/q6YlGKA7iZzKF32UsuUuYVLfHVa.jpg" alt=""
+                            class="w-full rounded-md"></div>
+                        <div class="w-1/2 p-1"><img
+                            src="//image.tmdb.org/t/p/w300_and_h450_face/qfl8jEQQO16UPelu0EgYo9hktHP.jpg" alt=""
+                            class="w-full rounded-md"></div>
+                        <div class="w-1/2 p-1"><img
+                            src="//image.tmdb.org/t/p/w300_and_h450_face/am0tfrcD2cjhy3aOLMzn1xzRrz.jpg" alt=""
+                            class="w-full rounded-md"></div>
+                        <div class="w-1/2 p-1"><img
+                            src="//image.tmdb.org/t/p/w300_and_h450_face/rSaQi9yz50YuAsG4IuzmBvgXdoM.jpg" alt=""
+                            class="w-full rounded-md"></div>
+                      </div>
+                      <div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-white"><svg
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+                          class="w-14">
+                          <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                        <div class="mt-2 font-extrabold">Voir plus</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a></div>
+          </div>
+        </div>
+        <div class="pb-8"></div>
       </div>
     </div>
   </div>
-</div>
+</main>
 {%endblock%}

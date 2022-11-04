@@ -11,6 +11,7 @@ tmdb = tmdb.Tmdb()
 tmdb.api_key = os.getenv("API_KEY")
 tmdb.language = os.getenv("LANGUAGE")
 tmdb.date_format = os.getenv("DATE_FORMAT")
+tmdb.from_json = os.getenv("FROM_JSON")
 
 movies = movies.Movies()
 tv = tv.TV()
@@ -35,7 +36,7 @@ def index():
 def movie_details(movie_id: int):
     movie = movies.details(movie_id)
     return render_template(
-        "movie-dev.html",
+        "movie.html",
         entity=movie,
         casts=movie["casts"]["cast"],
         date_format=tmdb.date_format,

@@ -1,34 +1,186 @@
 {%extends "base.html"%} {% import 'macros.html' as macro%} {% block content %}
 {% block head%} {{ super() }} {% endblock %}
-<div class="content">
-  <div>
-    <!--Movies-->
-    <section>
-      <div class="column_header">
-        <span class="Index-Title">Films Populaires</span>
+<main class="relative top-16 z-0 focus:outline-none" tabindex="0">
+  <div class="mb-6">
+    <div class="max-w-8xl mx-auto px-4">
+      <!--Trending-->
+      <div class="slider-header">
+        <a class="slider-title" href="">
+          <span>Tendances</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </a>
       </div>
-      <div style="display: flex; flex-wrap: wrap; justify-content: center">
-        {{macro.displayMovieList(popularsMovies,"movie")}}
+      <div class="relative" data-testid="media-slider">
+        <div class="absolute right-0 -mt-10 flex text-gray-400">
+          <button id="slideBack" class="text-gray-800" disabled="">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+              stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+          <button id='slide' class="hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+              stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+        <div id='container'
+          class="hide-scrollbar relative -my-2 -ml-4 -mr-4 overflow-y-auto overflow-x-scroll overscroll-x-contain whitespace-nowrap px-2 py-2">
+          {{macro.displayMovieList(trendings)}}
+        </div>
+        <script>
+          var button = document.getElementById('slide');
+          button.onclick = function () {
+            var container = document.getElementById('container');
+            sideScroll(container, 'right', 25, 100, 20);
+          };
+
+          var back = document.getElementById('slideBack');
+          back.onclick = function () {
+            var container = document.getElementById('container');
+            sideScroll(container, 'left', 25, 100, 20);
+          };
+
+          function sideScroll(element, direction, speed, distance, step) {
+            scrollAmount = 0;
+            var slideTimer = setInterval(function () {
+              if (direction == 'left') {
+                element.scrollLeft -= step;
+              } else {
+                element.scrollLeft += step;
+              }
+              scrollAmount += step;
+              if (scrollAmount >= distance) {
+                window.clearInterval(slideTimer);
+              }
+            }, speed);
+          }
+        </script>
       </div>
-    </section>
-    <!-- Show -->
-    <section>
-      <div class="column_header">
-        <span class="Index-Title">Serie Populaires</span>
+      <!--Populars movies-->
+      <div class="slider-header">
+        <a class="slider-title" href="">
+          <span>Films populaires</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </a>
       </div>
-      <div style="display: flex; flex-wrap: wrap; justify-content: center">
-        {{macro.displayMovieList(popularsTvs,"tv")}}
+      <div class="relative" data-testid="media-slider">
+        <div class="absolute right-0 -mt-10 flex text-gray-400">
+          <button id="slideBack" class="text-gray-800" disabled="">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+              stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+          <button id='slide' class="hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+              stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+        <div id='container'
+          class="hide-scrollbar relative -my-2 -ml-4 -mr-4 overflow-y-auto overflow-x-scroll overscroll-x-contain whitespace-nowrap px-2 py-2">
+          {{macro.displayMovieList(popularsMovies)}}
+        </div>
+        <script>
+          var button = document.getElementById('slide');
+          button.onclick = function () {
+            var container = document.getElementById('container');
+            sideScroll(container, 'right', 25, 100, 20);
+          };
+
+          var back = document.getElementById('slideBack');
+          back.onclick = function () {
+            var container = document.getElementById('container');
+            sideScroll(container, 'left', 25, 100, 20);
+          };
+
+          function sideScroll(element, direction, speed, distance, step) {
+            scrollAmount = 0;
+            var slideTimer = setInterval(function () {
+              if (direction == 'left') {
+                element.scrollLeft -= step;
+              } else {
+                element.scrollLeft += step;
+              }
+              scrollAmount += step;
+              if (scrollAmount >= distance) {
+                window.clearInterval(slideTimer);
+              }
+            }, speed);
+          }
+        </script>
       </div>
-    </section>
-    <!--Trendings-->
-    <section>
-      <div class="column_header">
-        <span class="Index-Title">Tendances ajourd'hui</span>
+      <!--Populars TV-->
+      <div class="slider-header">
+        <a class="slider-title" href="">
+          <span>Séries populaires</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </a>
       </div>
-      <div style="display: flex; flex-wrap: wrap; justify-content: center">
-        {{ macro.displayMovieList(trendings,"movie")}}
+      <div class="relative" data-testid="media-slider">
+        <div class="absolute right-0 -mt-10 flex text-gray-400">
+          <button id="slideBack" class="text-gray-800" disabled="">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+              stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+          <button id='slide' class="hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+              stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+        <div id='container'
+          class="hide-scrollbar relative -my-2 -ml-4 -mr-4 overflow-y-auto overflow-x-scroll overscroll-x-contain whitespace-nowrap px-2 py-2">
+          {{macro.displayMovieList(popularsTvs)}}
+        </div>
+        <script>
+          var button = document.getElementById('slide');
+          button.onclick = function () {
+            var container = document.getElementById('container');
+            sideScroll(container, 'right', 25, 100, 20);
+          };
+
+          var back = document.getElementById('slideBack');
+          back.onclick = function () {
+            var container = document.getElementById('container');
+            sideScroll(container, 'left', 25, 100, 20);
+          };
+
+          function sideScroll(element, direction, speed, distance, step) {
+            scrollAmount = 0;
+            var slideTimer = setInterval(function () {
+              if (direction == 'left') {
+                element.scrollLeft -= step;
+              } else {
+                element.scrollLeft += step;
+              }
+              scrollAmount += step;
+              if (scrollAmount >= distance) {
+                window.clearInterval(slideTimer);
+              }
+            }, speed);
+          }
+        </script>
       </div>
-    </section>
+    </div>
   </div>
-</div>
+</main>
 {% endblock %}

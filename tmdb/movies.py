@@ -1,6 +1,3 @@
-# from datetime import datetime
-# import json
-import json
 from .tmdb import Tmdb
 from .exceptions import TMDbException
 
@@ -31,15 +28,12 @@ class Movies(Tmdb):
     }
 
     def populars(self: object):
-        return self._call(self._urls["popular"], "")
+        result = self._call(self._urls["popular"], "")
+        return result
 
     def details(self: object, movie_id: int):
         result = self._call(
             self._urls["details"] % movie_id,
             "videos,trailers,images,casts,translations,keywords,release_dates",
         )
-        result = json.dumps(result)
-        with open("sample.json", "w") as outfile:
-            outfile.write(result)
-        result = json.loads(result)
         return result

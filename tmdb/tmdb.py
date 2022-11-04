@@ -2,6 +2,7 @@ import os
 import requests
 from .exceptions import TMDbException
 import sqlite3
+import json
 
 
 def insert_to_db(db, data):
@@ -19,6 +20,7 @@ class Tmdb:
     TMDB_API_KEY = "TMDB_API_KEY"
     TMDB_LANGUAGE = "TMDB_LANGUAGE"
     DATE_FORMAT = "DATE_FORMAT"
+    FROM_JSON = "FROM_JSON"
 
     def __init__(self):
         self._base = "https://api.themoviedb.org/3"
@@ -52,27 +54,42 @@ class Tmdb:
     def date_format(self: object, format: str):
         os.environ[self.DATE_FORMAT] = format
 
+    @property
+    def from_json(self: object):
+        return os.environ.get(self.FROM_JSON)
+
+    @from_json.setter
+    def from_json(self: object, from_json: str):
+        os.environ[self.FROM_JSON] = from_json
+
     def _call(self: object, action: str, append_to_response=""):
         if self.api_key is None or self.api_key == "":
             raise TMDbException("No API key found.")
 
-        if append_to_response:
-            url = (
-                f"{self._base}{action}?api_key={self.api_key}"
-                f"&language={self.language}"
-                f"&append_to_response={append_to_response}"
-            )
+        if self.from_json == "1":
+            json_file = open(f"./json/{action}.json")
+            rslt_json = json.load(json_file)
         else:
-            url = (
-                f"{self._base}{action}?api_key={self.api_key}"
-                f"&language={self.language}"
-            )
+            if append_to_response:
+                url = (
+                    f"{self._base}{action}?api_key={self.api_key}"
+                    f"&language={self.language}"
+                    f"&append_to_response={append_to_response}"
+                )
+            else:
+                url = (
+                    f"{self._base}{action}?api_key={self.api_key}"
+                    f"&language={self.language}"
+                )
 
-        rslt_json = requests.get(url).json()
-        # rslt_json = result.json()
+            rslt_json = requests.get(url).json()
+            rslt_json = json.dumps(rslt_json)
+            with open(f"./json{action}.json", "w") as outfile:
+                outfile.write(rslt_json)
+            rslt_json = json.loads(rslt_json)
 
-        if "success" in rslt_json and rslt_json["success"] is False:
-            raise TMDbException(rslt_json["status_message"])
+            if "success" in rslt_json and rslt_json["success"] is False:
+                raise TMDbException(rslt_json["status_message"])
 
         if "results" in rslt_json:
             return rslt_json["results"]
