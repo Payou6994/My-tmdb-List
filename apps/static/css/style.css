@@ -1991,6 +1991,7 @@ input[type=checkbox] {
 
 input[type=checkbox],
 input[type=password],
+input[type=email],
 input[type=text],
 select,
 textarea {
@@ -2003,6 +2004,7 @@ textarea {
 }
 
 input[type=password],
+input[type=email],
 input[type=text],
 select,
 textarea {
@@ -2022,6 +2024,7 @@ textarea {
 @media (min-width:640px) {
 
   input[type=password],
+  input[type=email],
   input[type=text],
   select,
   textarea {

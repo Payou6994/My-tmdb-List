@@ -3,6 +3,7 @@
 <head>
   {% block head %}
   <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename= 'css/flag.css') }}" />
   <script type="text/javascript" src="{{ url_for('static', filename= 'js/script.js') }}"></script>
 
   <script src="https://kit.fontawesome.com/6e23ac54c3.js" crossorigin="anonymous"></script>
@@ -15,9 +16,9 @@
 <body>
   <div>
     <div class="flex h-full min-h-full min-w-0 bg-gray-900">
-      {% block navbar %} {% include 'navbar.html' %} {% endblock %}
+      {% block navbar %} {% include 'includes/navbar.html' %} {% endblock %}
       <div class="relative mb-16 flex w-0 min-w-0 flex-1 flex-col lg:ml-64">
-        {% include 'searchBar.html' %}
+        {% include 'includes/searchBar.html' %}
         {% block content %} {% endblock %}
       </div>
     </div>

@@ -1,0 +1,40 @@
+{% extends 'layouts/base-fullscreen.html' %} {% block content %}
+<form role="form text-left" method="post" action="">
+    {{ form.hidden_tag() }}
+    <div class="sm:border-t sm:border-gray-800">
+        <label for="username" class="text-label">Username</label>
+        <div class="mt-1 mb-2 sm:col-span-2 sm:mt-0">
+            {{ form.username(placeholder="Username", class="flex max-w-lg rounded-md shadow-sm")
+            }}
+        </div>
+        <label for="password" class="text-label">Mot de passe</label>
+        <div class="mt-1 mb-2 sm:col-span-2 sm:mt-0">
+            {{ form.password(placeholder="Password", class="flex max-w-lg rounded-md shadow-sm", type="password") }}
+        </div>
+    </div>
+    <div class="mt-8 border-t border-gray-700 pt-5">
+        <div class="flex justify-between">
+            <span class="inline-flex rounded-md shadow-sm">
+                <a class="inline-flex items-center justify-center border border-transparent leading-5 font-medium rounded-md focus:outline-none transition ease-in-out duration-150 cursor-pointer disabled:opacity-50 whitespace-nowrap text-white bg-transaprent border-gray-600 hover:border-gray-200 focus:border-gray-100 active:border-gray-100 px-4 py-2 text-sm button-md "
+                    href="http://192.168.1.1:8096/web/index.html#!/forgotpassword.html">
+                    <span class="flex items-center">Mot de passe oublié ?</span>
+                </a>
+            </span>
+            <span class="inline-flex rounded-md shadow-sm">
+                <button type="submit" name="login"
+                    class="inline-flex items-center justify-center border border-transparent leading-5 font-medium rounded-md focus:outline-none transition ease-in-out duration-150 cursor-pointer disabled:opacity-50 whitespace-nowrap text-white border border-indigo-500 bg-indigo-600 bg-opacity-80 hover:bg-opacity-100 hover:border-indigo-500 focus:border-indigo-700 focus:ring-indigo active:bg-opacity-100 active:border-indigo-700 px-4 py-2 text-sm button-md">
+                    <span class="flex items-center">Connexion</span>
+                </button>
+            </span>
+        </div>
+    </div>
+    <div class="pt-6 text-center">
+        <span class="inline-flex items-center">
+            <label>
+                Don't have an account?
+                <a href="register">Sign up</a>
+            </label>
+        </span>
+    </div>
+</form>
+{% endblock content %}

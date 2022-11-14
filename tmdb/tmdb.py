@@ -3,6 +3,7 @@ import requests
 from .exceptions import TMDbException
 import sqlite3
 import json
+from datetime import datetime
 
 
 def insert_to_db(db, data):
@@ -83,15 +84,11 @@ class Tmdb:
                 )
 
             rslt_json = requests.get(url).json()
-            rslt_json = json.dumps(rslt_json)
-            with open(f"./json{action}.json", "w") as outfile:
-                outfile.write(rslt_json)
-            rslt_json = json.loads(rslt_json)
 
             if "success" in rslt_json and rslt_json["success"] is False:
                 raise TMDbException(rslt_json["status_message"])
 
         if "results" in rslt_json:
-            return rslt_json["results"]
-        else:
-            return rslt_json
+            rslt_json = rslt_json["results"]
+
+        return rslt_json

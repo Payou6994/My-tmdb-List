@@ -28,12 +28,13 @@ class Movies(Tmdb):
     }
 
     def populars(self: object):
-        result = self._call(self._urls["popular"], "")
-        return result
+        return self._call(self._urls["popular"], "")
 
     def details(self: object, movie_id: int):
-        result = self._call(
+        return self._call(
             self._urls["details"] % movie_id,
             "videos,trailers,images,casts,translations,keywords,release_dates",
         )
-        return result
+
+    def watch_providers(self: object, movie_id: int):
+        return self._call(self._urls["watch_providers"] % movie_id)

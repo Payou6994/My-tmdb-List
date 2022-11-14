@@ -1,42 +1,50 @@
-{%extends "base.html"%} {% block content %}
+{%extends "base.html"%} {% import 'includes/macros.html' as macro%} {% block content %}
+{% block head%} {{ super() }} {% endblock %}
 <main class="relative top-16 z-0 focus:outline-none" tabindex="0">
   <div class="mb-6">
     <div class="max-w-8xl mx-auto px-4">
       <div class="media-page" style="height: 493px;">
-        <div class="media-page-bg-image"><span
+        <div class="media-page-bg-image">
+          <span
             style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
-              alt="" src="https://image.tmdb.org/t/p/w1920_and_h800_multi_faces//pfAZP7JvTTxqgq7n6A1OYgkAdEW.jpg"
+              alt="" src="https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/{{entity.backdrop_path}}"
               decoding="async" data-nimg="fill"
               style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
           <div class="absolute inset-0"
             style="background-image: linear-gradient(rgba(17, 24, 39, 0.47) 0%, rgb(17, 24, 39) 100%);"></div>
         </div>
         <div class="media-header">
-          <div class="media-poster"><span
+          <div class="media-poster">
+            <span
               style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"><span
                 style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 150% 0px 0px;"></span><img
-                alt="" src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/5p6Q5dsqgT7dknImjtoRvNx50k9.jpg"
-                decoding="async" data-nimg="responsive"
+                alt="" src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{entity.poster_path}}" decoding="async"
+                data-nimg="responsive"
                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"></span>
           </div>
           <div class="media-title">
-            <div class="media-status"><a
-                href="https://jf.payou.myds.me/web/index.html#!/details?id=6eb10f7a7febf96e9554ade7def68355&amp;context=home&amp;serverId=dcebd94e712e439f99b96cffe4d325f7"
-                target="_blank" rel="noopener noreferrer"
-                class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full whitespace-nowrap transition cursor-pointer !no-underline bg-green-500 bg-opacity-80 border border-green-500 !text-green-100 hover:bg-green-500 hover:bg-opacity-100">
-                <div class="flex items-center"><span>Disponible</span></div>
-              </a></div>
-            <h1 data-testid="media-title">Werewolf by Night <span class="media-year">(2022)</span></h1><span
-              class="media-attributes"><span><span
-                  class="rounded-md border p-0.5 py-0">16</span></span><span>|</span><span>54
-                minutes</span><span>|</span><span><a class="hover:underline"
-                  href="/discover/movies/genre/28">Action</a>, <a class="hover:underline"
-                  href="/discover/movies/genre/14">Fantastique</a>, <a class="hover:underline"
-                  href="/discover/movies/genre/27">Horreur</a>, <a class="hover:underline"
-                  href="/discover/movies/genre/10770">Téléfilm</a></span></span>
+            <h1 data-testid="media-title">
+              {{entity.title}}
+              <span class="media-year">({{entity.release_date[0:4]}})</span>
+            </h1>
+            <span class="media-attributes">
+              <span>
+                <span class="rounded-md border p-0.5 py-0">16</span>
+              </span>
+              <span>|</span>
+              <span>{{entity.runtime}} minutes</span>
+              <span>|</span>
+
+              {%- for genre in entity.genres%}
+              <a class="hover:underline" href="/discover/movies/genre/{{genre.id}}">{{genre.name}}{{ "," if not
+                loop.last }}</a>
+              {%- endfor %}
+            </span>
+            </span>
           </div>
-          <div class="media-actions"><span class="relative inline-flex h-full rounded-md shadow-sm"><button
-                type="button"
+          <div class="media-actions">
+            <span class="relative inline-flex h-full rounded-md shadow-sm">
+              <button type="button"
                 class="relative z-10 inline-flex h-full items-center px-4 py-2 text-sm font-medium leading-5 transition duration-150 ease-in-out hover:z-20 focus:z-20 focus:outline-none button-md text-white border bg-transparent border-gray-600 hover:border-gray-200 focus:border-gray-100 active:border-gray-100 rounded-l-md undefined"><svg
                   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                   stroke="currentColor" aria-hidden="true">
@@ -66,16 +74,14 @@
                     d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
                   </path>
                   <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                </svg></span></button></div>
+                </svg></span></button>
+          </div>
         </div>
         <div class="media-overview">
           <div class="media-overview-left">
-            <div class="tagline">On ne peut échapper à la nuit.</div>
+            <div class="tagline">{{entity.tagline}}</div>
             <h2>Résumé</h2>
-            <p>Par une nuit sombre, une cabale secrète de chasseurs de monstres sort de l'ombre et se réunit dans un
-              sinistre temple après la mort de leur chef. Dans un mémorial étrange et macabre, les participants sont
-              poussés dans une compétition mystérieuse et mortelle pour une relique puissante - une chasse qui les
-              amènera finalement à faire face à un monstre dangereux.</p>
+            <p>{{entity.overview}}</p>
             <ul class="media-crew">
               <li><span>Director</span><a class="crew-name" href="/person/15347">Michael Giacchino</a></li>
               <li><span>Editor</span><a class="crew-name" href="/person/35176">Jeffrey Ford</a></li>
@@ -95,9 +101,10 @@
           </div>
           <div class="media-overview-right">
             <div class="media-facts">
-              <div class="media-ratings"><a href="https://www.themoviedb.org/movie/894205?language=fr"
-                  class="media-rating" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 190.24 81.52" class="mr-1 w-6">
+              <div class="media-ratings">
+                <a href="https://www.themoviedb.org/movie/{{entity.id}}?language=fr" class="media-rating"
+                  target="_blank" rel="noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190.24 81.52" class="mr-1 w-6">
                     <defs>
                       <linearGradient id="tmdb_logo_svg__a" y1="40.76" x2="190.24" y2="40.76"
                         gradientUnits="userSpaceOnUse">
@@ -109,27 +116,49 @@
                     <path
                       d="M105.67 36.06h66.9a17.67 17.67 0 0 0 17.67-17.66A17.67 17.67 0 0 0 172.57.73h-66.9A17.67 17.67 0 0 0 88 18.4a17.67 17.67 0 0 0 17.67 17.66zm-88 45h76.9a17.67 17.67 0 0 0 17.67-17.66 17.67 17.67 0 0 0-17.67-17.67h-76.9A17.67 17.67 0 0 0 0 63.4a17.67 17.67 0 0 0 17.67 17.66zm-7.26-45.64h7.8V6.92h10.1V0h-28v6.9h10.1zm28.1 0h7.8V8.25h.1l9 27.15h6l9.3-27.15h.1V35.4h7.8V0H66.76l-8.2 23.1h-.1L50.31 0h-11.8zm113.92 20.25a15.07 15.07 0 0 0-4.52-5.52 18.57 18.57 0 0 0-6.68-3.08 33.54 33.54 0 0 0-8.07-1h-11.7v35.4h12.75a24.58 24.58 0 0 0 7.55-1.15 19.34 19.34 0 0 0 6.35-3.32 16.27 16.27 0 0 0 4.37-5.5 16.91 16.91 0 0 0 1.63-7.58 18.5 18.5 0 0 0-1.68-8.25zM145 68.6a8.8 8.8 0 0 1-2.64 3.4 10.7 10.7 0 0 1-4 1.82 21.57 21.57 0 0 1-5 .55h-4.05v-21h4.6a17 17 0 0 1 4.67.63 11.66 11.66 0 0 1 3.88 1.87A9.14 9.14 0 0 1 145 59a9.87 9.87 0 0 1 1 4.52 11.89 11.89 0 0 1-1 5.08zm44.63-.13a8 8 0 0 0-1.58-2.62 8.38 8.38 0 0 0-2.42-1.85 10.31 10.31 0 0 0-3.17-1v-.1a9.22 9.22 0 0 0 4.42-2.82 7.43 7.43 0 0 0 1.68-5 8.42 8.42 0 0 0-1.15-4.65 8.09 8.09 0 0 0-3-2.72 12.56 12.56 0 0 0-4.18-1.3 32.84 32.84 0 0 0-4.62-.33h-13.2v35.4h14.5a22.41 22.41 0 0 0 4.72-.5 13.53 13.53 0 0 0 4.28-1.65 9.42 9.42 0 0 0 3.1-3 8.52 8.52 0 0 0 1.2-4.68 9.39 9.39 0 0 0-.55-3.18zm-19.42-15.75h5.3a10 10 0 0 1 1.85.18 6.18 6.18 0 0 1 1.7.57 3.39 3.39 0 0 1 1.22 1.13 3.22 3.22 0 0 1 .48 1.82 3.63 3.63 0 0 1-.43 1.8 3.4 3.4 0 0 1-1.12 1.2 4.92 4.92 0 0 1-1.58.65 7.51 7.51 0 0 1-1.77.2h-5.65zm11.72 20a3.9 3.9 0 0 1-1.22 1.3 4.64 4.64 0 0 1-1.68.7 8.18 8.18 0 0 1-1.82.2h-7v-8h5.9a15.35 15.35 0 0 1 2 .15 8.47 8.47 0 0 1 2.05.55 4 4 0 0 1 1.57 1.18 3.11 3.11 0 0 1 .63 2 3.71 3.71 0 0 1-.43 1.92z"
                       fill="url(#tmdb_logo_svg__a)"></path>
-                  </svg><span>71%</span></a></div>
-              <div class="media-fact"><span>Titre original</span><span class="media-fact-value">Werewolf by Night</span>
+                  </svg>
+                  <span>{{entity.vote_average*10 | round(0 | int)}}%</span>
+                </a>
               </div>
-              <div class="media-fact"><span>Statut</span><span class="media-fact-value">Released</span></div>
+              <div class="media-fact">
+                <span>Titre original</span><span class="media-fact-value">{{entity.original_title}}</span>
+              </div>
+              <div class="media-fact"><span>Statut</span><span class="media-fact-value">{{entity.status}}</span></div>
               <div class="media-fact"><span>Date de sortie</span><span class="media-fact-value"><span
                     class="flex items-center justify-end"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
                       viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="h-4 w-4">
                       <path stroke-linecap="round" stroke-linejoin="round"
                         d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z">
                       </path>
-                    </svg><span class="ml-1.5">7 octobre 2022</span></span></span></div>
+                    </svg><span class="ml-1.5">{{entity.release_date}}</span></span></span></div>
               <div class="media-fact"><span>Langue originale</span><span class="media-fact-value"><a
-                    href="/discover/movies/language/en">anglais</a></span></div>
-              <div class="media-fact"><span>Pays de production</span><span class="media-fact-value"><span
-                    class="flex items-center justify-end"><span
-                      class="mr-1.5 text-xs leading-5 flag:US"></span><span>États-Unis</span></span></span></div>
-              <div class="media-fact"><span>Studios</span><span class="media-fact-value"><a class="block"
-                    href="/discover/movies/studio/420">Marvel Studios</a><a class="block"
-                    href="/discover/movies/studio/176762">Kevin Feige Productions</a></span></div>
-              <div class="media-fact"><span>Actuellement diffusé sur</span><span class="media-fact-value"><span
-                    class="block">Disney Plus</span></span></div>
+                    href="/discover/movies/language/en">{{entity.original_language}}</a></span></div>
+              <div class="media-fact">
+                <span>Pays de production</span>
+                <span class="media-fact-value">
+                  {%for country in entity.production_countries%}
+                  <span class="flex items-center justify-end">
+                    <span class="mr-1.5 text-xs leading-5 flag:{{country.iso_3166_1}}"></span>
+                    <span>{{country.name}}</span>
+                  </span>
+                  {%endfor%}
+                </span>
+              </div>
+              <div class="media-fact">
+                <span>Studios</span>
+                <span class="media-fact-value">
+                  {%for studio in entity.production_companies%}
+                  <a class="block" href="/discover/movies/studio/{{studio.id}}">{{studio.name}}</a>
+                  {%endfor%}
+                </span>
+              </div>
+              <div class="media-fact">
+                <span>Actuellement diffusé sur</span>
+                <span class="media-fact-value">
+                  <span class="block"> A faire
+                  </span>
+                </span>
+              </div>
               <div class="media-fact">
                 <div class="flex w-full items-center justify-center space-x-5"><a
                     href="https://jf.payou.myds.me/web/index.html#!/details?id=6eb10f7a7febf96e9554ade7def68355&amp;context=home&amp;serverId=dcebd94e712e439f99b96cffe4d325f7"
@@ -211,371 +240,34 @@
             </div>
           </div>
         </div>
-        <div class="slider-header"><a class="slider-title" href="/movie/894205/cast"><span>Casting</span><svg
-              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-              aria-hidden="true">
+        <div class="slider-header">
+          <a class="slider-title" href="/movie/894205/cast">
+            <span>Casting</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+              stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round"
                 d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg></a></div>
+            </svg>
+          </a>
+        </div>
         <div class="relative" data-testid="media-slider">
-          <div class="absolute right-0 -mt-10 flex text-gray-400"><button class="text-gray-800" disabled=""><svg
-                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+          <div class="absolute right-0 -mt-10 flex text-gray-400">
+            <button class="text-gray-800" disabled="">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" aria-hidden="true" class="h-6 w-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
-              </svg></button><button class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+              </svg>
+            </button>
+            <button class="hover:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" aria-hidden="true" class="h-6 w-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
-              </svg></button></div>
+              </svg>
+            </button>
+          </div>
           <div
             class="hide-scrollbar relative -my-2 -ml-4 -mr-4 overflow-y-auto overflow-x-scroll overscroll-x-contain whitespace-nowrap px-2 py-2">
-            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
-                href="/person/258">
-                <div
-                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
-                  <div style="padding-bottom: 150%;">
-                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
-                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
-                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
-                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
-                              alt=""
-                              src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/7mq3EQN1oJfYNXkv9xKXKu6Ccw5.jpg"
-                              decoding="async" data-nimg="fill"
-                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
-                        </div>
-                      </div>
-                      <div class="w-full truncate text-center font-bold">Gael García Bernal</div>
-                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
-                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
-                        Jack Russell</div>
-                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a></div>
-            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
-                href="/person/95706">
-                <div
-                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
-                  <div style="padding-bottom: 150%;">
-                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
-                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
-                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
-                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
-                              alt=""
-                              src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/osajwo2LqtHSLOrH3E3dTVZHP1Z.jpg"
-                              decoding="async" data-nimg="fill"
-                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
-                        </div>
-                      </div>
-                      <div class="w-full truncate text-center font-bold">Laura Donnelly</div>
-                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
-                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
-                        Elsa Bloodstone</div>
-                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a></div>
-            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
-                href="/person/538">
-                <div
-                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
-                  <div style="padding-bottom: 150%;">
-                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
-                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
-                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
-                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
-                              alt=""
-                              src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/1ShvYCWkZycAGb27ZivGrLx1PhS.jpg"
-                              decoding="async" data-nimg="fill"
-                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
-                        </div>
-                      </div>
-                      <div class="w-full truncate text-center font-bold">Harriet Sansom Harris</div>
-                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
-                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
-                        Verussa Bloodstone</div>
-                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a></div>
-            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
-                href="/person/145446">
-                <div
-                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
-                  <div style="padding-bottom: 150%;">
-                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
-                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
-                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
-                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
-                              alt=""
-                              src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/tC3lxuff2li0h6jks9EM0d53mFw.jpg"
-                              decoding="async" data-nimg="fill"
-                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
-                        </div>
-                      </div>
-                      <div class="w-full truncate text-center font-bold">Kirk R. Thatcher</div>
-                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
-                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
-                        Jovan</div>
-                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a></div>
-            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
-                href="/person/1317693">
-                <div
-                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
-                  <div style="padding-bottom: 150%;">
-                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
-                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
-                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
-                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
-                              alt=""
-                              src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/9ULAELEKNha7VCJhRWoer58NcJe.jpg"
-                              decoding="async" data-nimg="fill"
-                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
-                        </div>
-                      </div>
-                      <div class="w-full truncate text-center font-bold">Eugenie Bondurant</div>
-                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
-                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
-                        Azarel</div>
-                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a></div>
-            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
-                href="/person/24200">
-                <div
-                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
-                  <div style="padding-bottom: 150%;">
-                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
-                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
-                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
-                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
-                              alt=""
-                              src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/qZfTztsK99FFaEwLI0bILlMnQki.jpg"
-                              decoding="async" data-nimg="fill"
-                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
-                        </div>
-                      </div>
-                      <div class="w-full truncate text-center font-bold">Leonardo Nam</div>
-                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
-                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
-                        Liorn</div>
-                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a></div>
-            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
-                href="/person/1292452">
-                <div
-                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
-                  <div style="padding-bottom: 150%;">
-                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
-                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
-                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
-                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
-                              alt=""
-                              src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/yzsburXAHWg7XOvWeBtYNnm5giD.jpg"
-                              decoding="async" data-nimg="fill"
-                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
-                        </div>
-                      </div>
-                      <div class="w-full truncate text-center font-bold">Daniel J. Watts</div>
-                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
-                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
-                        Barasso</div>
-                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a></div>
-            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
-                href="/person/2547673">
-                <div
-                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
-                  <div style="padding-bottom: 150%;">
-                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
-                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
-                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
-                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
-                              alt=""
-                              src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/u5QxguVAJDIkF8npPvpxjRjJ7Ft.jpg"
-                              decoding="async" data-nimg="fill"
-                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
-                        </div>
-                      </div>
-                      <div class="w-full truncate text-center font-bold">Al Hamacher</div>
-                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
-                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
-                        Billy Swan</div>
-                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a></div>
-            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
-                href="/person/1015924">
-                <div
-                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
-                  <div style="padding-bottom: 150%;">
-                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
-                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
-                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
-                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
-                              alt=""
-                              src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/yZ3Fidqk7sU5TmdaubCMssJZxAR.jpg"
-                              decoding="async" data-nimg="fill"
-                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
-                        </div>
-                      </div>
-                      <div class="w-full truncate text-center font-bold">Carey Jones</div>
-                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
-                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
-                        Ted (Man-Thing)</div>
-                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a></div>
-            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
-                href="/person/197">
-                <div
-                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
-                  <div style="padding-bottom: 150%;">
-                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
-                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
-                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
-                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
-                              alt=""
-                              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                              decoding="async" data-nimg="fill"
-                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
-                        </div>
-                      </div>
-                      <div class="w-full truncate text-center font-bold">David Silverman</div>
-                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
-                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
-                        The Flaming Tuba</div>
-                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a></div>
-            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
-                href="/person/106774">
-                <div
-                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
-                  <div style="padding-bottom: 150%;">
-                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
-                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
-                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
-                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
-                              alt=""
-                              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                              decoding="async" data-nimg="fill"
-                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
-                        </div>
-                      </div>
-                      <div class="w-full truncate text-center font-bold">Rick D. Wasserman</div>
-                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
-                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
-                        Narrator (voice)</div>
-                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a></div>
-            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
-                href="/person/1222025">
-                <div
-                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
-                  <div style="padding-bottom: 150%;">
-                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
-                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
-                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
-                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
-                              alt=""
-                              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                              decoding="async" data-nimg="fill"
-                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
-                        </div>
-                      </div>
-                      <div class="w-full truncate text-center font-bold">Richard Dixon</div>
-                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
-                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
-                        Ulysses Bloodstone (voice)</div>
-                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a></div>
-            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
-                href="/person/35176">
-                <div
-                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
-                  <div style="padding-bottom: 150%;">
-                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
-                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center">
-                        <div class="relative h-full w-3/4 overflow-hidden rounded-full ring-1 ring-gray-700"><span
-                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
-                              alt=""
-                              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                              decoding="async" data-nimg="fill"
-                              style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
-                        </div>
-                      </div>
-                      <div class="w-full truncate text-center font-bold">Jeffrey Ford</div>
-                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
-                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
-                        Additional Man-Thing Vocalizations (voice)</div>
-                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a></div>
-            <div class="inline-block px-2 align-top"><a class="w-36 sm:w-36 md:w-44" role="link" tabindex="0"
-                href="/person/1184357">
-                <div
-                  class="relative w-36 sm:w-36 md:w-44 transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
-                  <div style="padding-bottom: 150%;">
-                    <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
-                      <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center"><svg
-                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
-                          class="h-full">
-                          <path fill-rule="evenodd"
-                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
-                            clip-rule="evenodd"></path>
-                        </svg></div>
-                      <div class="w-full truncate text-center font-bold">Erik Beck</div>
-                      <div class="overflow-hidden whitespace-normal text-center text-sm text-gray-300"
-                        style="-webkit-line-clamp: 2; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical;">
-                        Puppeteer</div>
-                      <div class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a></div>
+            {{macro.DisplayPerson(entity)}}
           </div>
         </div>
         <div class="slider-header"><a class="slider-title"

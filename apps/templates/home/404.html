@@ -1,0 +1,28 @@
+{% extends 'layouts/base-fullscreen.html' %}
+
+{% block title %} Error 404 {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<main class="relative top-16 z-0 focus:outline-none" tabindex="0">
+  <div class="mb-6">
+    <div class="max-w-8xl mx-auto px-4">
+      <div class="error-message">
+        <div class="text-4xl">404 - La page n'a pas été trouvée</div><a class="mt-2 flex" href="/">Retourner à
+          l'acceuil<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+            stroke="currentColor" aria-hidden="true" class="ml-2 h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg></a>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE -->
+{% block javascripts %}{% endblock javascripts %}

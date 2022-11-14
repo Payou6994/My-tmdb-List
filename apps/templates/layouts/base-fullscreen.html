@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/flag.css') }}" />
+    <script type="text/javascript" src="{{ url_for('static', filename= 'js/script.js') }}"></script>
+
+    <script src="https://kit.fontawesome.com/6e23ac54c3.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{% block title %}{% endblock %} Mylist</title>
+    {% endblock %}
+</head>
+
+<body>
+    <div id="__next">
+        <div class="relative flex min-h-screen flex-col bg-gray-900 py-14">
+            <div class="relative z-40 mt-10 flex flex-col items-center px-4 sm:mx-auto sm:w-full sm:max-w-md">
+                <!-- <img src="/logo_stacked.svg" class="mb-10 max-w-full" alt="Logo"> -->
+                <h2 class="mt-2 text-center text-3xl font-extrabold leading-9 text-gray-100">Connectez-vous pour
+                    continuer</h2>
+            </div>
+            <div class="relative z-50 mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+                <div class="bg-gray-800 bg-opacity-50 shadow sm:rounded-lg" style="backdrop-filter:blur(5px)">
+                    <div style="height:auto;overflow:visible" aria-hidden="false"
+                        class="rah-static rah-static--height-auto">
+                        <div>
+                            <div class="px-10 py-8">
+                                <div>
+                                    {% block content %}{% endblock content %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- plugin for scrollbar  -->
+<!-- <script src="{{ config.ASSETS_ROOT }}/js/plugins/perfect-scrollbar.min.js" async></script>
+<script src="{{ config.ASSETS_ROOT }}/js/navbar-collapse.js" async></script> -->
+
+<!-- Specific JS goes HERE -->
+<!-- {% block javascripts %}{% endblock javascripts %} -->
+
+</html>

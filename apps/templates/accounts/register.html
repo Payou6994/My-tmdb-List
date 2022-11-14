@@ -1,0 +1,38 @@
+{% extends 'layouts/base-fullscreen.html' %} {% block content %}
+<form role="form text-left" method="post" action="">
+  {{ form.hidden_tag() }}
+  <div class="sm:border-t sm:border-gray-800">
+    <label for="username" class="text-label">Username</label>
+    <div class="mt-1 mb-2 sm:col-span-2 sm:mt-0">
+      {{ form.username(placeholder="Username", class="flex max-w-lg rounded-md shadow-sm")
+      }}
+    </div>
+
+    <label for="username" class="text-label">Email</label>
+    <div class="mt-1 mb-2 sm:col-span-2 sm:mt-0">
+      {{ form.email(placeholder="Email", class="flex max-w-lg rounded-md shadow-sm",type="email") }}
+    </div>
+    <label for="password" class="text-label">Mot de passe</label>
+    <div class="mt-1 mb-2 sm:col-span-2 sm:mt-0">
+      {{ form.password(placeholder="Password", class="flex max-w-lg rounded-md shadow-sm", type="password") }}
+    </div>
+  </div>
+  <div class="mt-8 border-t border-gray-700 pt-5">
+    <div class="flex justify-between">
+      <span class="inline-flex rounded-md shadow-sm">
+        <button
+          class="inline-flex items-center justify-center border border-transparent leading-5 font-medium rounded-md focus:outline-none transition ease-in-out duration-150 cursor-pointer disabled:opacity-50 whitespace-nowrap text-white border border-indigo-500 bg-indigo-600 bg-opacity-80 hover:bg-opacity-100 hover:border-indigo-500 focus:border-indigo-700 focus:ring-indigo active:bg-opacity-100 active:border-indigo-700 px-4 py-2 text-sm button-md"
+          type="submit" name="register" href="{{ url_for('authentication_blueprint.login') }}">
+          <span class="flex items-center">S'enregister</span>
+        </button>
+      </span>
+      <span class="inline-flex items-center">
+        <label>
+          Have an account?
+          <a href="login">Sign in</a>
+        </label>
+      </span>
+    </div>
+  </div>
+</form>
+{% endblock content %}

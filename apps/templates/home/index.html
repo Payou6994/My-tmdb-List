@@ -1,4 +1,4 @@
-{%extends "base.html"%} {% import 'macros.html' as macro%} {% block content %}
+{%extends "layouts/base.html"%} {% import 'includes/macros.html' as macro%} {% block content %}
 {% block head%} {{ super() }} {% endblock %}
 <main class="relative top-16 z-0 focus:outline-none" tabindex="0">
   <div class="mb-6">
@@ -31,7 +31,7 @@
         </div>
         <div id='container'
           class="hide-scrollbar relative -my-2 -ml-4 -mr-4 overflow-y-auto overflow-x-scroll overscroll-x-contain whitespace-nowrap px-2 py-2">
-          {{macro.displayMovieList(trendings)}}
+          {{macro.displayMovieList(trendings,'trendings')}}
         </div>
         <script>
           var button = document.getElementById('slide');
@@ -90,7 +90,7 @@
         </div>
         <div id='container'
           class="hide-scrollbar relative -my-2 -ml-4 -mr-4 overflow-y-auto overflow-x-scroll overscroll-x-contain whitespace-nowrap px-2 py-2">
-          {{macro.displayMovieList(popularsMovies)}}
+          {{macro.displayMovieList(popularsMovies,'popularsMovies')}}
         </div>
         <script>
           var button = document.getElementById('slide');
@@ -149,7 +149,7 @@
         </div>
         <div id='container'
           class="hide-scrollbar relative -my-2 -ml-4 -mr-4 overflow-y-auto overflow-x-scroll overscroll-x-contain whitespace-nowrap px-2 py-2">
-          {{macro.displayMovieList(popularsTvs)}}
+          {{macro.displayMovieList(popularsTvs,'popularsTvs')}}
         </div>
         <script>
           var button = document.getElementById('slide');
