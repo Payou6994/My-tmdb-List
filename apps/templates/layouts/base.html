@@ -1,16 +1,17 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-  {% block head %}
-  <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}" />
-  <link rel="stylesheet" href="{{ url_for('static', filename= 'css/flag.css') }}" />
-  <script type="text/javascript" src="{{ url_for('static', filename= 'js/script.js') }}"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="{{ config.ASSETS_ROOT }}/css/style.css" rel="stylesheet" />
+  <link href="{{ config.ASSETS_ROOT }}/css/flag.css" rel="stylesheet" />
 
   <script src="https://kit.fontawesome.com/6e23ac54c3.js" crossorigin="anonymous"></script>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <title>{% block title %}{% endblock %} Mylist</title>
-  {% endblock %}
+  {% block stylesheets %}{% endblock stylesheets %}
 </head>
 
 <body>

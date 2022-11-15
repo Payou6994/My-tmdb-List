@@ -76,7 +76,7 @@ def register():
             )
 
         # else we can create the user
-        user = Users(**request.form)
+        user = Users(request.accept_languages, **request.form)
         db.session.add(user)
         db.session.commit()
 

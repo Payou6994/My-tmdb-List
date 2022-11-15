@@ -1,7 +1,7 @@
 import os
 from apps.home import blueprint
 from flask import render_template, request
-from flask_login import login_required
+from flask_login import login_required, current_user
 from jinja2 import TemplateNotFound
 from tmdb import movies, tmdb, trendings, tv
 from dotenv import load_dotenv
@@ -9,8 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 tmdb = tmdb.Tmdb()
 tmdb.api_key = os.getenv("API_KEY")
-tmdb.language = os.getenv("LANGUAGE")
-tmdb.date_format = os.getenv("DATE_FORMAT")
+# tmdb.language = current_user.language + "-" + current_user.country
 tmdb.from_json = os.getenv("FROM_JSON")
 movies = movies.Movies()
 tv = tv.TV()
@@ -20,7 +19,7 @@ trendings = trendings.Trendings()
 @blueprint.route("/index")
 @login_required
 def index():
-
+    tmdb.language = current_user.language + "-" + current_user.country
     populars_movies = movies.populars()
     populars_tvs = tv.populars()
     trendings_all_day = trendings.all_day()
@@ -66,10 +65,10 @@ def route_template(template):
         return render_template("home/" + template, segment=segment)
 
     except TemplateNotFound:
-        return render_template("home/page-404.html"), 404
+        return render_template("home/404.html"), 404
 
     except:
-        return render_template("home/page-404.html"), 500
+        return render_template("home/404.html"), 500
 
 
 # Helper - Extract current page name from request

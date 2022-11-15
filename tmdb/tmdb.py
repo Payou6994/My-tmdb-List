@@ -1,26 +1,13 @@
 import os
 import requests
 from .exceptions import TMDbException
-import sqlite3
 import json
-from datetime import datetime
-
-
-def insert_to_db(db, data):
-    con = sqlite3.connect("Mylist.db")
-    cur = con.cursor()
-    cur.execute(
-        f"INSERT INTO {db} (tmdb_id,imdb_id)"
-        f"VALUES( {data['id']},'{data['imdb_id']}');"
-    )
-    con.commit()
-    con.close()
 
 
 class Tmdb:
     TMDB_API_KEY = "TMDB_API_KEY"
     TMDB_LANGUAGE = "TMDB_LANGUAGE"
-    DATE_FORMAT = "DATE_FORMAT"
+    # DATE_FORMAT = "DATE_FORMAT"
     FROM_JSON = "FROM_JSON"
 
     def __init__(self):
@@ -28,8 +15,8 @@ class Tmdb:
         if os.environ.get(self.TMDB_LANGUAGE) is None:
             os.environ[self.TMDB_LANGUAGE] = "en-US"
 
-        if os.environ.get(self.DATE_FORMAT) is None:
-            os.environ[self.DATE_FORMAT] = "%Y-%m-%d"
+        # if os.environ.get(self.DATE_FORMAT) is None:
+        #     os.environ[self.DATE_FORMAT] = "%Y-%m-%d"
 
     @property
     def api_key(self: object):
@@ -47,13 +34,13 @@ class Tmdb:
     def language(self: object, language: str):
         os.environ[self.TMDB_LANGUAGE] = language
 
-    @property
-    def date_format(self: object):
-        return os.environ.get(self.DATE_FORMAT)
+    # @property
+    # def date_format(self: object):
+    #     return os.environ.get(self.DATE_FORMAT)
 
-    @date_format.setter
-    def date_format(self: object, format: str):
-        os.environ[self.DATE_FORMAT] = format
+    # @date_format.setter
+    # def date_format(self: object, format: str):
+    #     os.environ[self.DATE_FORMAT] = format
 
     @property
     def from_json(self: object):

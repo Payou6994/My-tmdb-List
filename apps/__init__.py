@@ -11,6 +11,7 @@ from importlib import import_module
 
 db = SQLAlchemy()
 login_manager = LoginManager()
+supported_languages = ["fr-FR", "en-US"]
 
 
 def register_extensions(app):
@@ -19,13 +20,12 @@ def register_extensions(app):
 
 
 def register_blueprints(app):
-    for module_name in ('authentication', 'home'):
-        module = import_module('apps.{}.routes'.format(module_name))
+    for module_name in ("authentication", "home"):
+        module = import_module("apps.{}.routes".format(module_name))
         app.register_blueprint(module.blueprint)
 
 
 def configure_database(app):
-
     @app.before_first_request
     def initialize_database():
         db.create_all()
