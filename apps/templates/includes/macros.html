@@ -32,13 +32,14 @@
                         }
                     </script>
                 </div>
-                <div id='overview-{{type}}-{{entity.id}}' style="visibility: hidden" absolute inset-0 overflow-hidden
-                    rounded-xl><a class="absolute inset-0 h-full w-full cursor-pointer overflow-hidden text-left"
+                <div id='overview-{{type}}-{{entity.id}}' class="invisible absolute inset-0 overflow-hidden
+                    rounded-xl"><a class="absolute inset-0 h-full w-full cursor-pointer overflow-hidden text-left"
                         href="/{% if entity.title %}{{'movie'}}{% elif entity.name %}{{'tv'}}{% endif %}/{{entity.id}}"
                         style="background: linear-gradient(rgba(45, 55, 72, 0.4) 0%, rgba(45, 55, 72, 0.9) 100%);">
                         <div class="flex h-full w-full items-end">
                             <div class="px-2 text-white pb-2">
-                                <div class="text-sm font-medium">{% if entity.release_date %}
+                                <div class="text-sm font-medium">
+                                    {% if entity.release_date %}
                                     {{entity.release_date[0:4]}}
                                     {% elif entity.release_date %}
                                     {{entity.first_air_date[0:4]}}

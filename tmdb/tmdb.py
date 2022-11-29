@@ -1,7 +1,6 @@
 import os
 import requests
 from .exceptions import TMDbException
-import json
 
 
 class Tmdb:
@@ -54,26 +53,18 @@ class Tmdb:
         if self.api_key is None or self.api_key == "":
             raise TMDbException("No API key found.")
 
-        if self.from_json == "1":
-            json_file = open(f"./json/{action}.json")
-            rslt_json = json.load(json_file)
-        else:
-            if append_to_response:
-                url = (
-                    f"{self._base}{action}?api_key={self.api_key}"
-                    f"&language={self.language}"
-                    f"&append_to_response={append_to_response}"
-                )
-            else:
-                url = (
-                    f"{self._base}{action}?api_key={self.api_key}"
-                    f"&language={self.language}"
-                )
+        url = "%s%s?api_key=%s&%s&language=%s" % (
+            self._base,
+            action,
+            self.api_key,
+            append_to_response,
+            self.language,
+        )
 
-            rslt_json = requests.get(url).json()
+        rslt_json = requests.get(url).json()
 
-            if "success" in rslt_json and rslt_json["success"] is False:
-                raise TMDbException(rslt_json["status_message"])
+        if "success" in rslt_json and rslt_json["success"] is False:
+            raise TMDbException(rslt_json["status_message"])
 
         if "results" in rslt_json:
             rslt_json = rslt_json["results"]

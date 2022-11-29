@@ -1,19 +1,20 @@
 import os
 from apps.home import blueprint
-from flask import render_template, request
+from flask import render_template, request, redirect, url_for
 from flask_login import login_required, current_user
 from jinja2 import TemplateNotFound
-from tmdb import movies, tmdb, trendings, tv
+from tmdb import movies, tmdb, trendings, tv, search
 from dotenv import load_dotenv
+from apps.home.forms import SearchFrom
 
 load_dotenv()
 tmdb = tmdb.Tmdb()
 tmdb.api_key = os.getenv("API_KEY")
 # tmdb.language = current_user.language + "-" + current_user.country
-tmdb.from_json = os.getenv("FROM_JSON")
 movies = movies.Movies()
 tv = tv.TV()
 trendings = trendings.Trendings()
+search = search.Search()
 
 
 @blueprint.route("/index")
@@ -23,7 +24,6 @@ def index():
     populars_movies = movies.populars()
     populars_tvs = tv.populars()
     trendings_all_day = trendings.all_day()
-
     return (
         render_template(
             "home/index.html",
@@ -40,13 +40,34 @@ def index():
 @login_required
 def movie_details(movie_id: int):
     movie = movies.details(movie_id)
+    recommendations = movies.recommendations(movie_id)
+    similar = movies.similar(movie_id)
     watch_providers = movies.watch_providers(movie_id)
     return render_template(
-        "movie.html",
+        "home/movie.html",
         entity=movie,
+        recommendations=recommendations,
+        similar=similar,
         watch_providers=watch_providers,
-        date_format=tmdb.date_format,
     )
+
+
+@blueprint.route(
+    "/search",
+    methods=["GET","POST"],
+)
+def post_search():
+    if request.method == "POST":
+        search_word = request.form.get("search")
+        return redirect(
+            url_for("home_blueprint.post_search", query=search_word)
+        )
+    else:
+        search_word = request.args.get("query")
+        entities = search.multi(search_word)
+        return render_template(
+            "home/search.html", entities=entities, search_word=search_word
+        )
 
 
 @blueprint.route("/<template>")

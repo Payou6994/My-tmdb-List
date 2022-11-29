@@ -27,13 +27,25 @@ class Movies(Tmdb):
         "watch_providers": "/movie/%s/watch/providers",
     }
 
-    def populars(self: object):
-        return self._call(self._urls["popular"], "")
-
     def details(self: object, movie_id: int):
         return self._call(
             self._urls["details"] % movie_id,
             "videos,trailers,images,casts,translations,keywords,release_dates",
+        )
+
+    def recommendations(self: object, movie_id: int):
+        return self._call(
+            self._urls["recommendations"] % movie_id,
+            "",
+        )
+
+    def populars(self: object):
+        return self._call(self._urls["popular"], "")
+
+    def similar(self: object, movie_id: int):
+        return self._call(
+            self._urls["similar"] % movie_id,
+            "",
         )
 
     def watch_providers(self: object, movie_id: int):

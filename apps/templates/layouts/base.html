@@ -19,7 +19,7 @@
     <div class="flex h-full min-h-full min-w-0 bg-gray-900">
       {% block navbar %} {% include 'includes/navbar.html' %} {% endblock %}
       <div class="relative mb-16 flex w-0 min-w-0 flex-1 flex-col lg:ml-64">
-        {% include 'includes/searchBar.html' %}
+        {% block searchbar %} {% include 'includes/searchBar.html' %} {% endblock %}
         {% block content %} {% endblock %}
       </div>
     </div>

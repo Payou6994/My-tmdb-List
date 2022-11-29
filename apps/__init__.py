@@ -7,8 +7,10 @@ from flask import Flask
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from importlib import import_module
+from tmdb import tmdb
+import os
 
-
+tmdb.from_json = os.getenv("FROM_JSON")
 db = SQLAlchemy()
 login_manager = LoginManager()
 supported_languages = ["fr-FR", "en-US"]

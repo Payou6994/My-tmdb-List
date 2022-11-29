@@ -2,8 +2,8 @@
 [class^="flag:"] {
     display: inline-block;
     background-size: cover;
-    height: 1em;
-    width: 1.5em;
+    /* height: 1em;
+    width: 1.5em; */
     --CountryFlagIcon-height: 1em;
     height: var(--CountryFlagIcon-height);
     width: calc(var(--CountryFlagIcon-height)*3/2)

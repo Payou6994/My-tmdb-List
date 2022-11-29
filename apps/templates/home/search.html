@@ -1,0 +1,140 @@
+{%extends "layouts/base.html"%} {% import 'includes/macros.html' as macro%} {% block content %}
+<main class="relative top-16 z-0 focus:outline-none" tabindex="0">
+    <div class="mb-6">
+        <div class="max-w-8xl mx-auto px-4">
+            <div class="mt-1 mb-5">
+                <div class="mt-8 md:flex md:items-center md:justify-between">
+                    <div class="min-w-0 flex-1 mx-0">
+                        <h2 class="mb-4 truncate text-2xl font-bold leading-7 text-gray-100 sm:overflow-visible sm:text-4xl sm:leading-9 md:mb-0"
+                            data-testid="page-header"><span class="text-overseerr">Résultats de la recherche</span></h2>
+                    </div>
+                </div>
+            </div>
+            <ul class="cards-vertical">
+                {% for entity in entities%}
+                {% if entity.media_type =="person"%}
+                <li id='{{entity.media_type}}-{{entity.id}}'>
+                    <a class="w-full" role="link" tabindex="0" href="/{{entity.media_type}}/{{entity.id}}">
+                        <div id="{{entity.media_type}}-div-{{entity.id}}"
+                            class="relative w-full transform-gpu cursor-pointer rounded-xl text-white shadow ring-1 transition duration-150 ease-in-out scale-100 bg-gray-800 ring-gray-700">
+                            <div style="padding-bottom: 150%;">
+                                <div class="absolute inset-0 flex h-full w-full flex-col items-center p-2">
+                                    <div class="relative mt-2 mb-4 flex h-1/2 w-full justify-center"><svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                            aria-hidden="true" class="h-full">
+                                            <path fill-rule="evenodd"
+                                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                                                clip-rule="evenodd"></path>
+                                        </svg></div>
+                                    <div class="w-full truncate text-center font-bold">{{entity.name}}</div>
+                                    <div
+                                        class="absolute bottom-0 left-0 right-0 h-12 rounded-b-xl bg-gradient-to-t from-gray-900">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <script>
+                        var el1 = document.getElementById('{{entity.media_type}}-{{entity.id}}');
+                        el1.onmouseover = function (e) {
+                            document.getElementById("{{entity.media_type}}-div-{{entity.id}}").classList.remove('scale-100', 'bg-gray-800', 'ring-gray-700');
+                            document.getElementById("{{entity.media_type}}-div-{{entity.id}}").classList.add('scale-105', 'bg-gray-700', 'ring-gray-500');
+                        }
+
+                        el1.onmouseout = function (e) {
+                            document.getElementById("{{entity.media_type}}-div-{{entity.id}}").classList.remove('scale-105', 'bg-gray-700', 'ring-gray-500');
+                            document.getElementById("{{entity.media_type}}-div-{{entity.id}}").classList.add('scale-100', 'bg-gray-800', 'ring-gray-700');
+                        }
+                    </script>
+                </li>
+                {%else%}
+                <li id='{{entity.media_type}}-{{entity.id}}'>
+                    <div class="w-full" data-testid="title-card">
+                        <div class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
+                            role="link" tabindex="0" style="padding-bottom: 150%;">
+                            <div class="absolute inset-0 h-full w-full overflow-hidden">
+                                <span
+                                    style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;">
+                                    <img alt=""
+                                        src="https://image.tmdb.org/t/p/w300_and_h450_face{{entity.poster_path}}"
+                                        decoding="async" data-nimg="fill" class="absolute inset-0 h-full w-full"
+                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;">
+                                </span>
+                                <div class="absolute left-0 right-0 flex items-center justify-between p-2">
+                                    <div id="type-{{type}}-{{entity.id}}"
+                                        class="pointer-events-none z-40 rounded-full shadow bg-blue-500">
+                                        <div
+                                            class="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
+                                            {{entity.media_type}}
+                                        </div>
+                                    </div>
+                                    <div class="pointer-events-none z-40">
+                                        <div
+                                            class="flex h-4 w-4 items-center justify-center rounded-full bg-indigo-500 text-white shadow sm:h-5 sm:w-5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                fill="currentColor" aria-hidden="true" class="h-3 w-3 sm:h-4 sm:w-4">
+                                                <path fill-rule="evenodd"
+                                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        var title = '{{entity.title}}'
+                                        var name = '{{entity.name}}'
+                                        if (title != '') {
+                                            document.getElementById("type-{{entity.media_type}}-{{entity.id}}").classList.add('bg-blue-500')
+                                        }
+                                        else if (name != '') {
+                                            document.getElementById("type-{{entity.media_type}}-{{entity.id}}").classList.add('bg-purple-600')
+                                        }
+                                    </script>
+                                </div>
+                                <div id='overview-{{entity.media_type}}-{{entity.id}}'
+                                    class="invisible absolute inset-0 overflow-hidden rounded-xl"><a
+                                        class="absolute inset-0 h-full w-full cursor-pointer overflow-hidden text-left"
+                                        href="/{{ entity.media_type }}/{{entity.id}}"
+                                        style="background: linear-gradient(rgba(45, 55, 72, 0.4) 0%, rgba(45, 55, 72, 0.9) 100%);">
+                                        <div class="flex h-full w-full items-end">
+                                            <div class="px-2 text-white pb-2">
+                                                <div class="text-sm font-medium">
+                                                    {% if entity.release_date %}
+                                                    {{entity.release_date[0:4]}}
+                                                    {% elif entity.release_date %}
+                                                    {{entity.first_air_date[0:4]}}
+                                                    {% endif %}</div>
+                                                <h1 class="whitespace-normal text-xl font-bold leading-tight"
+                                                    data-testid="title-card-title"
+                                                    style="-webkit-line-clamp: 3; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; word-break: break-word;">
+                                                    {{entity.title}}</h1>
+                                                <div class="whitespace-normal text-xs"
+                                                    style="-webkit-line-clamp: 5; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; word-break: break-word;">
+                                                    {{entity.overview}}</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="absolute bottom-0 left-0 right-0 flex justify-between px-2 py-2"></div>
+                                    <script>
+                                        var el1 = document.getElementById('{{entity.media_type}}-{{entity.id}}');
+                                        el1.onmouseover = function (e) {
+                                            document.getElementById("overview-{{entity.media_type}}-{{entity.id}}").classList.remove('invisible');
+                                            document.getElementById("overview-{{entity.media_type}}-{{entity.id}}").classList.add('visible');
+                                        }
+
+                                        el1.onmouseout = function (e) {
+                                            document.getElementById("overview-{{entity.media_type}}-{{entity.id}}").classList.remove('visible');
+                                            document.getElementById("overview-{{entity.media_type}}-{{entity.id}}").classList.add('invisible');
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {%endif%}
+                {% endfor%}
+            </ul>
+        </div>
+    </div>
+</main>
+{%endblock%}
