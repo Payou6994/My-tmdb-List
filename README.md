@@ -1,4 +1,4 @@
 # My-tmdb-List
 
 (:warning:WIP:warning:)
-An sample interface to show and store in DB movies and TV shows
+A jellyfin-inspired interface for viewing movies and TV shows based on flask framework

@@ -27,10 +27,14 @@ class Movies(Tmdb):
         "watch_providers": "/movie/%s/watch/providers",
     }
 
-    def details(self: object, movie_id: int):
+    def details(
+        self: object,
+        movie_id: int,
+        append_to_response="videos,trailers,images,casts,translations,keywords,release_dates",
+    ):
         return self._call(
             self._urls["details"] % movie_id,
-            "videos,trailers,images,casts,translations,keywords,release_dates",
+            "append_to_response=" + append_to_response,
         )
 
     def recommendations(self: object, movie_id: int):
@@ -49,4 +53,4 @@ class Movies(Tmdb):
         )
 
     def watch_providers(self: object, movie_id: int):
-        return self._call(self._urls["watch_providers"] % movie_id)
+        return self._call(self._urls["watch_providers"] % movie_id, "")

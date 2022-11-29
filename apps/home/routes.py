@@ -5,7 +5,6 @@ from flask_login import login_required, current_user
 from jinja2 import TemplateNotFound
 from tmdb import movies, tmdb, trendings, tv, search
 from dotenv import load_dotenv
-from apps.home.forms import SearchFrom
 
 load_dotenv()
 tmdb = tmdb.Tmdb()
@@ -54,7 +53,7 @@ def movie_details(movie_id: int):
 
 @blueprint.route(
     "/search",
-    methods=["GET","POST"],
+    methods=["GET", "POST"],
 )
 def post_search():
     if request.method == "POST":

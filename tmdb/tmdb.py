@@ -49,7 +49,7 @@ class Tmdb:
     def from_json(self: object, from_json: str):
         os.environ[self.FROM_JSON] = from_json
 
-    def _call(self: object, action: str, append_to_response=""):
+    def _call(self: object, action: str, append_to_response):
         if self.api_key is None or self.api_key == "":
             raise TMDbException("No API key found.")
 
