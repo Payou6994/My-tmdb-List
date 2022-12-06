@@ -20,5 +20,17 @@ class TV(Tmdb):
         "watch_providers": "/tv/%s/watch/providers",
     }
 
-    def populars(self: object):
-        return self._call(self._urls["popular"], "")
+    def details(
+        self: object,
+        tv_id: int,
+        append_to_response="videos,trailers,images,casts,translations,keywords,release_dates",
+    ):
+        return self._call(
+            self._urls["details"] % tv_id,
+            "append_to_response=" + append_to_response,
+        )
+
+    def populars(self: object, page=1):
+        return self._type(
+            self._call(self._urls["popular"], "page={}".format(page)), "tv"
+        )

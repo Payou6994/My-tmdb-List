@@ -13,13 +13,13 @@ class Trendings(Tmdb):
         "person_week": "/trending/person/week",
     }
 
-    def all_day(self: object):
+    def all_day(self: object, page=1):
         """
         Get all daily trending
         :param page: int
         :return:
         """
-        return self._call(self._urls["all_day"], "")
+        return self._call(self._urls["all_day"], "page={}".format(page))
 
     def all_week(self: object):
         """

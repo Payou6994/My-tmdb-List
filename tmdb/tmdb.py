@@ -70,3 +70,8 @@ class Tmdb:
             rslt_json = rslt_json["results"]
 
         return rslt_json
+
+    def _type(self: object, result: list, type: str):
+        for i in result:
+            i["media_type"] = type
+        return result

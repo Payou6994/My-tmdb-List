@@ -1,19 +1,38 @@
+from io import BytesIO
+
 import os
 from apps.home import blueprint
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, send_file
 from flask_login import login_required, current_user
 from jinja2 import TemplateNotFound
 from tmdb import movies, tmdb, trendings, tv, search
-from dotenv import load_dotenv
+import requests
 
-load_dotenv()
+# from dotenv import load_dotenv
+
+# load_dotenv()
 tmdb = tmdb.Tmdb()
 tmdb.api_key = os.getenv("API_KEY")
 # tmdb.language = current_user.language + "-" + current_user.country
 movies = movies.Movies()
-tv = tv.TV()
+tvs = tv.TV()
 trendings = trendings.Trendings()
 search = search.Search()
+
+
+@blueprint.route("/image/<path:path>/<image_id>")
+@login_required
+def image_proxy(path, image_id):
+    if image_id != "None":
+        url = "https://image.tmdb.org/%s/%s" % (path, image_id)
+        rslt = requests.get(url)
+        buffer_image = BytesIO(rslt.content)
+        buffer_image.seek(0)
+        return send_file(buffer_image, mimetype="image/jpeg")
+    else:
+        return send_file(
+            "./static/assets/img/no_image.jpg", mimetype="image/jpeg"
+        )
 
 
 @blueprint.route("/index")
@@ -21,7 +40,7 @@ search = search.Search()
 def index():
     tmdb.language = current_user.language + "-" + current_user.country
     populars_movies = movies.populars()
-    populars_tvs = tv.populars()
+    populars_tvs = tvs.populars()
     trendings_all_day = trendings.all_day()
     return (
         render_template(
@@ -38,6 +57,7 @@ def index():
 @blueprint.route("/movie/<movie_id>")
 @login_required
 def movie_details(movie_id: int):
+    tmdb.language = current_user.language + "-" + current_user.country
     movie = movies.details(movie_id)
     recommendations = movies.recommendations(movie_id)
     similar = movies.similar(movie_id)
@@ -51,10 +71,28 @@ def movie_details(movie_id: int):
     )
 
 
+@blueprint.route("/tv/<id>")
+@login_required
+def tv_details(id: int):
+    tmdb.language = current_user.language + "-" + current_user.country
+    entity = tvs.details(id)
+    # recommendations = movies.recommendations(movie_id)
+    # similar = movies.similar(movie_id)
+    # watch_providers = movies.watch_providers(movie_id)
+    return render_template(
+        "home/movie.html",
+        entity=entity,
+        # recommendations=recommendations,
+        # similar=similar,
+        # watch_providers=watch_providers,
+    )
+
+
 @blueprint.route(
     "/search",
     methods=["GET", "POST"],
 )
+@login_required
 def post_search():
     if request.method == "POST":
         search_word = request.form.get("search")
@@ -62,11 +100,47 @@ def post_search():
             url_for("home_blueprint.post_search", query=search_word)
         )
     else:
+        tmdb.language = current_user.language + "-" + current_user.country
         search_word = request.args.get("query")
         entities = search.multi(search_word)
-        return render_template(
-            "home/search.html", entities=entities, search_word=search_word
+        return (
+            render_template(
+                "home/list.html",
+                entities=entities,
+                search_word=search_word,
+                title="Résultats de la recherche",
+                segment="search",
+            ),
+            "Search",
         )
+
+
+@blueprint.route(
+    "/discover/<query>",
+)
+@login_required
+def discover_list(query):
+    tmdb.language = current_user.language + "-" + current_user.country
+    max = 5
+    if query == "trendings":
+        entities = trendings.all_day()
+        [entities.extend(trendings.all_day(page)) for page in range(2, max)]
+    elif query == "movies":
+        entities = movies.populars()
+        [entities.extend(movies.populars(page)) for page in range(2, max)]
+    elif query == "tvs":
+        entities = tvs.populars()
+        [entities.extend(tvs.populars(page)) for page in range(2, max)]
+
+    return (
+        render_template(
+            "home/list.html",
+            entities=entities,
+            title="Tendances",
+            segment="trendings",
+        ),
+        "Trendings",
+    )
 
 
 @blueprint.route("/<template>")

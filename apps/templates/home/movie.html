@@ -6,8 +6,8 @@
         <div class="media-page-bg-image">
           <span
             style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
-              alt="" src="https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/{{entity.backdrop_path}}"
-              decoding="async" data-nimg="fill"
+              alt="" src="/image/t/p/w1920_and_h800_multi_faces/{{entity.backdrop_path}}" decoding="async"
+              data-nimg="fill"
               style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
           <div class="absolute inset-0"
             style="background-image: linear-gradient(rgba(17, 24, 39, 0.47) 0%, rgb(17, 24, 39) 100%);"></div>
@@ -17,7 +17,7 @@
             <span
               style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"><span
                 style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 150% 0px 0px;"></span><img
-                alt="" src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{entity.poster_path}}" decoding="async"
+                alt="" src="/image/t/p/w600_and_h900_bestv2/{{entity.poster_path}}" decoding="async"
                 data-nimg="responsive"
                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"></span>
           </div>
@@ -27,10 +27,16 @@
               <span class="media-year">({{entity.release_date[0:4]}})</span>
             </h1>
             <span class="media-attributes">
+              {% for release in entity['release_dates']['results'] %}
+              {% if release['iso_3166_1'] in current_user.country%}
+              {% if release['release_dates'][0]['certification'] != '' %}
               <span>
-                <span class="rounded-md border p-0.5 py-0">16</span>
+                <span class="rounded-md border p-0.5 py-0">{{release['release_dates'][0]['certification']}}</span>
               </span>
               <span>|</span>
+              {%endif%}
+              {%endif%}
+              {% endfor %}
               <span>{{entity.runtime}} minutes</span>
               <span>|</span>
 
@@ -89,14 +95,36 @@
               <li><span>Executive Producer</span><a class="crew-name" href="/person/10850">Kevin Feige</a></li>
               <li><span>Executive Producer</span><a class="crew-name" href="/person/57027">Louis D'Esposito</a></li>
             </ul>
-            <div class="mt-4 flex justify-end"><a
-                class="flex items-center text-gray-400 transition duration-300 hover:text-gray-100"
+            <div class="mt-4 flex justify-end">
+              <a class="flex items-center text-gray-400 transition duration-300 hover:text-gray-100"
                 href="/movie/894205/crew"><span>Voir l'équipe complète</span><svg xmlns="http://www.w3.org/2000/svg"
                   fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"
                   class="ml-1.5 inline-block h-5 w-5">
                   <path stroke-linecap="round" stroke-linejoin="round"
                     d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg></a></div>
+                </svg></a>
+            </div>
+            <h2 class="py-4">Saisons</h2>
+            <div class="flex w-full flex-col space-y-2">
+              <button
+                class="mt-2 flex w-full items-center justify-between space-x-2 border-gray-700 bg-gray-800 px-4 py-2 text-gray-200 rounded-md border"
+                id="headlessui-disclosure-button-:R1pfp36:" type="button" aria-expanded="false"
+                data-headlessui-state="">
+                <div class="flex flex-1 items-center space-x-2 text-lg">
+                  <span>Saison 1</span>
+                  <span
+                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full whitespace-nowrap cursor-default bg-gray-900 !text-gray-400">
+                    8 Episodes</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+                  class=" h-6 w-6 text-gray-500">
+                  <path fill-rule="evenodd"
+                    d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                    clip-rule="evenodd">
+                  </path>
+                </svg>
+              </button>
+            </div>
           </div>
           <div class="media-overview-right">
             <div class="media-facts">
@@ -122,7 +150,10 @@
               <div class="media-fact">
                 <span>Titre original</span><span class="media-fact-value">{{entity.original_title}}</span>
               </div>
-              <div class="media-fact"><span>Statut</span><span class="media-fact-value">{{entity.status}}</span></div>
+              <div class="media-fact">
+                <span>Statut</span>
+                <span class="media-fact-value">{{entity.status}}</span>
+              </div>
               <div class="media-fact">
                 <span>Date de sortie</span>
                 <span class="media-fact-value"><span class="flex items-center justify-end"><svg
@@ -151,18 +182,21 @@
               <div class="media-fact">
                 <span>Studios</span>
                 <span class="media-fact-value">
-                  {%for studio in entity.production_companies%}
+                  {% for studio in entity.production_companies %}
                   <a class="block" href="/discover/movies/studio/{{studio.id}}">{{studio.name}}</a>
-                  {%endfor%}
+                  {% endfor %}
                 </span>
               </div>
+              {% if current_user.country in watch_providers %}
               <div class="media-fact">
                 <span>Actuellement diffusé sur</span>
                 <span class="media-fact-value">
-                  <span class="block"> A faire
-                  </span>
+                  {%for provider in watch_providers[current_user.country]['flatrate'] %}
+                  <span class="block">{{provider.provider_name}}</span>
+                  {% endfor %}
                 </span>
               </div>
+              {% endif %}
               <div class="media-fact">
                 <div class="flex w-full items-center justify-center space-x-5">
                   <a href="https://www.themoviedb.org/movie/{{entity.id}}?language=fr"

@@ -15,7 +15,7 @@ class Users(db.Model, UserMixin):
     password = db.Column(db.LargeBinary)
     language = db.Column(db.String(64))
     country = db.Column(db.String(64))
-    tmdbApi = db.Column(db.String(64))
+    tmdb_api = db.Column(db.String(64))
 
     def __init__(self, requets, **kwargs):
         for property, value in kwargs.items():
@@ -35,7 +35,7 @@ class Users(db.Model, UserMixin):
             if requets.best_match(supported_languages)[x] == "-":
                 language = requets.best_match(supported_languages)[0:x]
                 country = requets.best_match(supported_languages)[
-                    x + 1 : len(requets.best_match(supported_languages))
+                    x + 1:len(requets.best_match(supported_languages))
                 ]
                 setattr(self, "language", language)
                 setattr(self, "country", country)

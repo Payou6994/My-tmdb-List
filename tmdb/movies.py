@@ -43,13 +43,18 @@ class Movies(Tmdb):
             "",
         )
 
-    def populars(self: object):
-        return self._call(self._urls["popular"], "")
+    def populars(self: object, page=1):
+        return self._type(
+            self._call(self._urls["popular"], "page={}".format(page)), "movie"
+        )
 
     def similar(self: object, movie_id: int):
-        return self._call(
-            self._urls["similar"] % movie_id,
-            "",
+        return self._type(
+            self._call(
+                self._urls["similar"] % movie_id,
+                "",
+            ),
+            "moive",
         )
 
     def watch_providers(self: object, movie_id: int):
