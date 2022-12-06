@@ -12,7 +12,7 @@ pip intall -r requirements.txt
 ## Init tailwindcss
 you will need to init tailwindcss with code :
 ```bash
-tailwindcss
+tailwindcss init
 ```
 
 ## Create css file

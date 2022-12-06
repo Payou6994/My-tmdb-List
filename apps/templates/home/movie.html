@@ -28,7 +28,7 @@
             </h1>
             <span class="media-attributes">
               {% for release in entity['release_dates']['results'] %}
-              {% if release['iso_3166_1'] in current_user.country%}
+              {% if release['iso_3166_1'] in current_user.region%}
               {% if release['release_dates'][0]['certification'] != '' %}
               <span>
                 <span class="rounded-md border p-0.5 py-0">{{release['release_dates'][0]['certification']}}</span>
@@ -187,11 +187,11 @@
                   {% endfor %}
                 </span>
               </div>
-              {% if current_user.country in watch_providers %}
+              {% if current_user.region in watch_providers %}
               <div class="media-fact">
                 <span>Actuellement diffusé sur</span>
                 <span class="media-fact-value">
-                  {%for provider in watch_providers[current_user.country]['flatrate'] %}
+                  {%for provider in watch_providers[current_user.region]['flatrate'] %}
                   <span class="block">{{provider.provider_name}}</span>
                   {% endfor %}
                 </span>

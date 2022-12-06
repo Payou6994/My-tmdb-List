@@ -12,8 +12,7 @@ import requests
 
 # load_dotenv()
 tmdb = tmdb.Tmdb()
-tmdb.api_key = os.getenv("API_KEY")
-# tmdb.language = current_user.language + "-" + current_user.country
+# tmdb.api_key = os.getenv("API_KEY")
 movies = movies.Movies()
 tvs = tv.TV()
 trendings = trendings.Trendings()
@@ -38,7 +37,6 @@ def image_proxy(path, image_id):
 @blueprint.route("/index")
 @login_required
 def index():
-    tmdb.language = current_user.language + "-" + current_user.country
     populars_movies = movies.populars()
     populars_tvs = tvs.populars()
     trendings_all_day = trendings.all_day()
@@ -57,7 +55,6 @@ def index():
 @blueprint.route("/movie/<movie_id>")
 @login_required
 def movie_details(movie_id: int):
-    tmdb.language = current_user.language + "-" + current_user.country
     movie = movies.details(movie_id)
     recommendations = movies.recommendations(movie_id)
     similar = movies.similar(movie_id)
@@ -74,7 +71,6 @@ def movie_details(movie_id: int):
 @blueprint.route("/tv/<id>")
 @login_required
 def tv_details(id: int):
-    tmdb.language = current_user.language + "-" + current_user.country
     entity = tvs.details(id)
     # recommendations = movies.recommendations(movie_id)
     # similar = movies.similar(movie_id)
@@ -100,7 +96,6 @@ def post_search():
             url_for("home_blueprint.post_search", query=search_word)
         )
     else:
-        tmdb.language = current_user.language + "-" + current_user.country
         search_word = request.args.get("query")
         entities = search.multi(search_word)
         return (
@@ -120,7 +115,6 @@ def post_search():
 )
 @login_required
 def discover_list(query):
-    tmdb.language = current_user.language + "-" + current_user.country
     max = 5
     if query == "trendings":
         entities = trendings.all_day()

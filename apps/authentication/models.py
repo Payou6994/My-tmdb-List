@@ -14,7 +14,7 @@ class Users(db.Model, UserMixin):
     email = db.Column(db.String(64), unique=True)
     password = db.Column(db.LargeBinary)
     language = db.Column(db.String(64))
-    country = db.Column(db.String(64))
+    region = db.Column(db.String(64))
     tmdb_api = db.Column(db.String(64))
 
     def __init__(self, requets, **kwargs):
@@ -34,11 +34,11 @@ class Users(db.Model, UserMixin):
         for x in range(0, len(requets.best_match(supported_languages))):
             if requets.best_match(supported_languages)[x] == "-":
                 language = requets.best_match(supported_languages)[0:x]
-                country = requets.best_match(supported_languages)[
+                region = requets.best_match(supported_languages)[
                     x + 1:len(requets.best_match(supported_languages))
                 ]
                 setattr(self, "language", language)
-                setattr(self, "country", country)
+                setattr(self, "region", region)
 
     def __repr__(self):
         return str(self.username)
