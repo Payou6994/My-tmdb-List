@@ -35,7 +35,9 @@
                             <div class="px-2 text-white pb-2">
                                 <div class="text-sm font-medium">
                                     {% set date = entity.release_date or entity.first_air_date %}
+                                    {% if date %}
                                     {{date[0:4]}}
+                                    {% endif %}
                                 </div>
                                 <h1 class="whitespace-normal text-xl font-bold leading-tight"
                                     data-testid="title-card-title"
