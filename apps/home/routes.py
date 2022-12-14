@@ -3,9 +3,10 @@ from io import BytesIO
 import os
 from apps.home import blueprint
 from flask import render_template, request, redirect, url_for, send_file
-from flask_login import login_required, current_user
+from flask_login import login_required
 from jinja2 import TemplateNotFound
 from tmdb import movies, tmdb, trendings, tv, search
+from apps.home.util import creditHelpers
 import requests
 
 # from dotenv import load_dotenv
@@ -55,33 +56,27 @@ def index():
 @blueprint.route("/movie/<movie_id>")
 @login_required
 def movie_details(movie_id: int):
-    movie = movies.details(movie_id)
-    recommendations = movies.recommendations(movie_id)
-    similar = movies.similar(movie_id)
-    watch_providers = movies.watch_providers(movie_id)
-    return render_template(
-        "home/movie.html",
-        entity=movie,
-        recommendations=recommendations,
-        similar=similar,
-        watch_providers=watch_providers,
-    )
+    entity = movies.details(movie_id)
+    entity["credits"]["crew"] = creditHelpers(entity["credits"]["crew"])
+    return render_template("home/movie.html", entity=entity)
 
 
 @blueprint.route("/tv/<id>")
 @login_required
 def tv_details(id: int):
     entity = tvs.details(id)
-    # recommendations = movies.recommendations(movie_id)
-    # similar = movies.similar(movie_id)
-    # watch_providers = movies.watch_providers(movie_id)
-    return render_template(
-        "home/movie.html",
-        entity=entity,
-        # recommendations=recommendations,
-        # similar=similar,
-        # watch_providers=watch_providers,
-    )
+    for i in range(len(entity["credits"]["crew"])):
+        if i >= len(entity["created_by"]):
+            break
+        entity["credits"]["crew"].append(
+            {
+                "id": entity["credits"]["crew"][i]["id"],
+                "name": entity["credits"]["crew"][i]["name"],
+                "job": "Creator",
+            }
+        )
+    entity["credits"]["crew"] = creditHelpers(entity["credits"]["crew"])
+    return render_template("home/tv.html", entity=entity)
 
 
 @blueprint.route(

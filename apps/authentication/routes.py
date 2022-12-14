@@ -1,4 +1,4 @@
-from flask import render_template, redirect, request, url_for
+from flask import render_template, redirect, request, url_for, flash
 from flask_login import current_user, login_user, logout_user
 
 from apps import db, login_manager
@@ -36,9 +36,9 @@ def login():
             return redirect(url_for("authentication_blueprint.route_default"))
 
         # Something (user or pass) is not ok
+        flash("Wrong user or password", "error")
         return render_template(
             "accounts/login.html",
-            msg="Wrong user or password",
             form=login_form,
         )
 
@@ -58,9 +58,9 @@ def register():
         # Check usename exists
         user = Users.query.filter_by(username=username).first()
         if user:
+            flash("Username already registered", "error")
             return render_template(
                 "accounts/register.html",
-                msg="Username already registered",
                 success=False,
                 form=create_account_form,
             )
@@ -68,9 +68,9 @@ def register():
         # Check email exists
         user = Users.query.filter_by(email=email).first()
         if user:
+            flash("Email already registered", "error")
             return render_template(
                 "accounts/register.html",
-                msg="Email already registered",
                 success=False,
                 form=create_account_form,
             )
@@ -82,10 +82,9 @@ def register():
 
         # Delete user from session
         logout_user()
-
+        flash("User created successfully")
         return render_template(
             "accounts/register.html",
-            msg="User created successfully.",
             success=True,
             form=create_account_form,
         )

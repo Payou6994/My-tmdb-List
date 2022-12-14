@@ -1,5 +1,5 @@
 {%extends "layouts/base.html"%}
-{% import 'includes/macros.html' as macro%}
+{% import 'includes/utils.html' as utils%}
 {% block content %}
 <main class="relative top-16 z-0 focus:outline-none" tabindex="0">
   <div class="mb-6">
@@ -32,7 +32,7 @@
         </div>
         <div id='container'
           class="hide-scrollbar relative -my-2 -ml-4 -mr-4 overflow-y-auto overflow-x-scroll overscroll-x-contain whitespace-nowrap px-2 py-2">
-          {{macro.displayMovieList(trendings,'trendings')}}
+          {{utils.displayMovieList(trendings,'trendings')}}
         </div>
         <script>
           var button = document.getElementById('slide');
@@ -91,7 +91,7 @@
         </div>
         <div id='container'
           class="hide-scrollbar relative -my-2 -ml-4 -mr-4 overflow-y-auto overflow-x-scroll overscroll-x-contain whitespace-nowrap px-2 py-2">
-          {{macro.displayMovieList(popularsMovies,'popularsMovies')}}
+          {{utils.displayMovieList(popularsMovies,'popularsMovies')}}
         </div>
         <script>
           var button = document.getElementById('slide');
@@ -150,7 +150,7 @@
         </div>
         <div id='container'
           class="hide-scrollbar relative -my-2 -ml-4 -mr-4 overflow-y-auto overflow-x-scroll overscroll-x-contain whitespace-nowrap px-2 py-2">
-          {{macro.displayMovieList(popularsTvs,'popularsTvs')}}
+          {{utils.displayMovieList(popularsTvs,'popularsTvs')}}
         </div>
         <script>
           var button = document.getElementById('slide');

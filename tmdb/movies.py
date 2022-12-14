@@ -30,7 +30,7 @@ class Movies(Tmdb):
     def details(
         self: object,
         movie_id: int,
-        append_to_response="videos,trailers,images,casts,translations,keywords,release_dates",
+        append_to_response="credits,external_ids,videos,release_dates,watch/providers,similar,recommendations",
     ):
         return self._call(
             self._urls["details"] % movie_id,
