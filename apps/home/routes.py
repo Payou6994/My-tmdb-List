@@ -1,6 +1,5 @@
 from io import BytesIO
 
-import os
 from apps.home import blueprint
 from flask import render_template, request, redirect, url_for, send_file
 from flask_login import login_required
@@ -53,12 +52,18 @@ def index():
     )
 
 
-@blueprint.route("/movie/<movie_id>")
+@blueprint.route("/movie/<movie_id>", methods=["GET", "POST"])
 @login_required
 def movie_details(movie_id: int):
+    if request.method == "POST":
+        if request.fomr["watchlist_btn"]:
+            pass
     entity = movies.details(movie_id)
     entity["credits"]["crew"] = creditHelpers(entity["credits"]["crew"])
-    return render_template("home/movie.html", entity=entity)
+    add_to_watch = AddToWatch()
+    return render_template(
+        "home/movie.html", entity=entity, form0=add_to_watch
+    )
 
 
 @blueprint.route("/tv/<id>")
@@ -79,10 +84,7 @@ def tv_details(id: int):
     return render_template("home/tv.html", entity=entity)
 
 
-@blueprint.route(
-    "/search",
-    methods=["GET", "POST"],
-)
+@blueprint.route("/search", methods=["GET", "POST"])
 @login_required
 def post_search():
     if request.method == "POST":
