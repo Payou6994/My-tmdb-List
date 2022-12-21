@@ -1,4 +1,4 @@
-{% macro displayMovieList(entities,type) %} {% for entity in entities %}
+{% macro displayMovieList(entities,watched,watchlist,type) %} {% for entity in entities %}
 <div id='{{type}}-{{entity.id}}' class="inline-block px-2 align-top">
     <div class="w-36 sm:w-36 md:w-44" data-testid="title-card">
         <div class="relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 scale-100 shadow ring-gray-700"
@@ -16,7 +16,37 @@
                             {{ entity.media_type }}
                         </div>
                     </div>
-                    <div class="pointer-events-none z-40"></div>
+                    <!-- Icon vue -->
+                    <div>
+                        {%if entity.id in watched%}
+                        <div class="pointer-events-none z-40">
+                            <div
+                                class="flex h-4 w-4 items-center justify-center rounded-full bg-green-700 text-white shadow sm:h-5 sm:w-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" class="h-3 w-3 sm:h-4 sm:w-4">
+                                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        {%endif%}
+                        <!-- Icon wanted -->
+                        {%if entity.id in watchlist%}
+                        <div class="pointer-events-none z-40">
+                            <div
+                                class="flex h-4 w-4 items-center justify-center rounded-full bg-purple-700 text-white shadow sm:h-5 sm:w-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none"
+                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                    class="h-3 w-3 sm:h-4 sm:w-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        {%endif%}
+                    </div>
                     <script>
                         var type = '{{entity.media_type}}'
                         if (type == 'movie') {
@@ -67,8 +97,8 @@
         </div>
     </div>
 </div>
-
 {% endfor %} {% endmacro %}
+
 {% macro DisplayPerson(entity) %}
 {% set castings = entity.casts or entity.credits %}
 {% for person in castings.cast %}

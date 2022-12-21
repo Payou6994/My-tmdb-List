@@ -1,14 +1,14 @@
 // Toast message
-window.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM fully loaded and parsed');
-    (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
-        const $notification = $delete.parentNode;
+// window.addEventListener('DOMContentLoaded', () => {
+//     console.log('DOM fully loaded and parsed');
+//     (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+//         const $notification = $delete.parentNode;
 
-        $delete.addEventListener('click', () => {
-            $notification.parentNode.removeChild($notification);
-        });
-    });
-});
+//         $delete.addEventListener('click', () => {
+//             $notification.parentNode.removeChild($notification);
+//         });
+//     });
+// });
 var alert_del = document.querySelectorAll('.alert-del');
 var to_delete = document.querySelectorAll('.to_delete');
 const length = alert_del.length;

@@ -32,12 +32,26 @@ def image_proxy(path, image_id):
         buffer_image.seek(0)
         return send_file(buffer_image, mimetype="image/jpeg")
     else:
-        return send_file("./static/assets/img/no_image.jpg", mimetype="image/jpeg")
+        return send_file(
+            "./static/assets/img/no_image.jpg", mimetype="image/jpeg"
+        )
 
 
 @blueprint.route("/index")
 @login_required
 def index():
+    watched = [
+        i["tmdbId"]
+        for i in Watched.query.filter_by(userId=current_user.id)
+        .with_entities(Watched.tmdbId)
+        .all()
+    ]
+    watchlist = [
+        i["tmdbId"]
+        for i in Watchlist.query.filter_by(userId=current_user.id)
+        .with_entities(Watched.tmdbId)
+        .all()
+    ]
     populars_movies = movies.populars()
     populars_tvs = tvs.populars()
     trendings_all_day = trendings.all_day()
@@ -47,6 +61,8 @@ def index():
             popularsMovies=populars_movies,
             popularsTvs=populars_tvs,
             trendings=trendings_all_day,
+            watched=watched,
+            watchlist=watchlist,
             segment="index",
         ),
         "Index",
@@ -56,7 +72,9 @@ def index():
 @blueprint.route("/movie/<movie_id>", methods=["GET", "POST"])
 @login_required
 def movie_details(movie_id: int):
-    watched = Watched.query.filter_by(userId=current_user.id, tmdbId=movie_id).first()
+    watched = Watched.query.filter_by(
+        userId=current_user.id, tmdbId=movie_id
+    ).first()
     watchlist = Watchlist.query.filter_by(
         userId=current_user.id, tmdbId=movie_id
     ).first()
@@ -65,7 +83,9 @@ def movie_details(movie_id: int):
         try:
             if request.form["watched_btn"]:
                 if not watched:
-                    watched = Watched(**{"userId": current_user.id, "tmdbId": movie_id})
+                    watched = Watched(
+                        **{"userId": current_user.id, "tmdbId": movie_id}
+                    )
                     db.session.add(watched)
                 elif watched:
                     db.session.delete(watched)
@@ -118,7 +138,9 @@ def tv_details(id: int):
 def post_search():
     if request.method == "POST":
         search_word = request.form.get("search")
-        return redirect(url_for("home_blueprint.post_search", query=search_word))
+        return redirect(
+            url_for("home_blueprint.post_search", query=search_word)
+        )
     else:
         search_word = request.args.get("query")
         entities = search.multi(search_word)

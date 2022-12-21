@@ -1761,12 +1761,12 @@ button.input-action:active {
   height: 2rem;
 }
 
-.h-1 {
-  height: 0.25rem;
-}
-
 .h-3 {
   height: 0.75rem;
+}
+
+.h-1 {
+  height: 0.25rem;
 }
 
 .h-10 {
@@ -2135,6 +2135,11 @@ button.input-action:active {
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
+.bg-green-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
+}
+
 .bg-red-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 226 226 / var(--tw-bg-opacity));
@@ -2168,6 +2173,21 @@ button.input-action:active {
 .bg-blue-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(30 64 175 / var(--tw-bg-opacity));
+}
+
+.bg-purple-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(192 132 252 / var(--tw-bg-opacity));
+}
+
+.bg-purple-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(126 34 206 / var(--tw-bg-opacity));
+}
+
+.bg-green-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-80 {
@@ -2889,12 +2909,24 @@ button.input-action:active {
     height: 2.5rem;
   }
 
+  .sm\:h-4 {
+    height: 1rem;
+  }
+
   .sm\:w-10 {
     width: 2.5rem;
   }
 
   .sm\:w-36 {
     width: 9rem;
+  }
+
+  .sm\:w-5 {
+    width: 1.25rem;
+  }
+
+  .sm\:w-4 {
+    width: 1rem;
   }
 
   .sm\:w-full {

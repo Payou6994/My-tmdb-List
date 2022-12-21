@@ -32,7 +32,7 @@
         </div>
         <div id='container'
           class="hide-scrollbar relative -my-2 -ml-4 -mr-4 overflow-y-auto overflow-x-scroll overscroll-x-contain whitespace-nowrap px-2 py-2">
-          {{utils.displayMovieList(trendings,'trendings')}}
+          {{utils.displayMovieList(trendings,watched,watchlist,'trendings')}}
         </div>
         <script>
           var button = document.getElementById('slide');
@@ -91,7 +91,7 @@
         </div>
         <div id='container'
           class="hide-scrollbar relative -my-2 -ml-4 -mr-4 overflow-y-auto overflow-x-scroll overscroll-x-contain whitespace-nowrap px-2 py-2">
-          {{utils.displayMovieList(popularsMovies,'popularsMovies')}}
+          {{utils.displayMovieList(popularsMovies,watched,watchlist,'popularsMovies')}}
         </div>
         <script>
           var button = document.getElementById('slide');
@@ -150,7 +150,7 @@
         </div>
         <div id='container'
           class="hide-scrollbar relative -my-2 -ml-4 -mr-4 overflow-y-auto overflow-x-scroll overscroll-x-contain whitespace-nowrap px-2 py-2">
-          {{utils.displayMovieList(popularsTvs,'popularsTvs')}}
+          {{utils.displayMovieList(popularsTvs,watched,watchlist,'popularsTvs')}}
         </div>
         <script>
           var button = document.getElementById('slide');

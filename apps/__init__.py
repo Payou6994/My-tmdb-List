@@ -1,14 +1,12 @@
-# -*- encoding: utf-8 -*-
-"""
-Copyright (c) 2019 - present AppSeed.us
-"""
+import os
+from importlib import import_module
 
+# import flask_sijax
 from flask import Flask
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
-from importlib import import_module
+
 from tmdb import tmdb
-import os
 
 tmdb.from_json = os.getenv("FROM_JSON")
 db = SQLAlchemy()
@@ -39,6 +37,7 @@ def configure_database(app):
 
 def create_app(config):
     app = Flask(__name__)
+    # flask_sijax.Sijax(app)
     app.config.from_object(config)
     register_extensions(app)
     register_blueprints(app)
